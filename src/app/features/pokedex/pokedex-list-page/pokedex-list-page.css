@@ -1,0 +1,239 @@
+.page {
+  display: grid;
+  gap: 1.75rem;
+  padding: 2rem 0 3rem;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-hard);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 0.9rem;
+  align-items: start;
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 1.25rem;
+  box-shadow: 4px 4px 0 var(--ink-900);
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--ink-500);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  min-height: 76px;
+}
+
+.field-control {
+  display: grid;
+  align-items: center;
+  min-height: 42px;
+}
+
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--ink-500);
+  margin: 0 0 0.25rem;
+}
+
+.hint {
+  color: var(--ink-700);
+}
+
+.placeholder {
+  border: 2px dashed var(--ink-900);
+  padding: 2rem;
+  background: var(--paper-2);
+  box-shadow: 4px 4px 0 var(--ink-900);
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  display: block;
+  border: 2px dashed var(--ink-900);
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 4px 4px 0 var(--ink-900);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  background-image: url("/textures/card-shadow-hover.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.15s ease;
+}
+
+.card:hover {
+  transform: translate(-4px, -4px);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 3px;
+}
+
+.card-body {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+}
+
+.name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.meta {
+  margin: 0;
+  color: var(--ink-500);
+  font-size: 0.85rem;
+}
+
+.thumb {
+  width: 64px;
+  height: 64px;
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumb-fallback {
+  font-size: 0.7rem;
+  color: var(--ink-500);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.chip {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--ink-900);
+  background: var(--accent-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  color: var(--ink-900);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  box-shadow: 3px 3px 0 var(--ink-900);
+  cursor: pointer;
+}
+
+.button.ghost {
+  background: var(--accent);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pager-status {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-700);
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.skeleton-card {
+  height: 120px;
+  border: 2px solid var(--ink-900);
+  background: linear-gradient(
+    110deg,
+    rgba(245, 198, 75, 0.2) 8%,
+    rgba(245, 198, 75, 0.4) 18%,
+    rgba(245, 198, 75, 0.2) 33%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: -200%;
+  }
+}

@@ -1,0 +1,100 @@
+<section class="page">
+  <header class="page-header" appTextureLayer>
+    <div>
+      <p class="eyebrow">Pokedex</p>
+      <h1>Detalle</h1>
+    </div>
+    <p class="hint">Base v1: nombre, id, imagenes, tipos y stats.</p>
+  </header>
+
+  @if (detailState().status === 'loading') {
+    <div class="skeleton-detail"></div>
+  } @else if (detailState().status === 'error') {
+    <div class="placeholder" appTextureLayer>
+      <p>{{ detailState().error }}</p>
+    </div>
+  } @else {
+    <section class="detail-card" appTextureLayer>
+      <div class="detail-header">
+        <div class="detail-image" appTextureLayer>
+          @if (imageUrl()) {
+            <img [src]="imageUrl()" [alt]="detailState().pokemon?.name ?? 'pokemon'" />
+          } @else {
+            <div class="image-fallback">Sin imagen</div>
+          }
+        </div>
+        <div class="detail-meta">
+          <p class="eyebrow">#{{ detailState().pokemon?.id }}</p>
+          <h2>{{ detailState().pokemon?.name }}</h2>
+          <div class="chip-row">
+            @for (type of detailState().pokemon?.types ?? []; track type.name) {
+              <span class="chip">{{ type.name }}</span>
+            }
+          </div>
+          <div class="quick-facts">
+            <div class="fact" appTextureLayer>
+              <span>Altura</span>
+              <strong>{{ formatHeight(detailState().pokemon?.height ?? 0) }}</strong>
+            </div>
+            <div class="fact" appTextureLayer>
+              <span>Peso</span>
+              <strong>{{ formatWeight(detailState().pokemon?.weight ?? 0) }}</strong>
+            </div>
+            <div class="fact" appTextureLayer>
+              <span>Exp base</span>
+              <strong>{{ detailState().pokemon?.baseExperience }}</strong>
+            </div>
+            <div class="fact" appTextureLayer>
+              <span>Orden</span>
+              <strong>{{ detailState().pokemon?.order }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-columns">
+        <section class="panel">
+          <h3>Stats base</h3>
+          <p class="panel-note">Total: {{ totalStats() }}</p>
+          <div class="stats">
+            @for (stat of statRows(); track stat.name) {
+              <div class="stat-row">
+                <span class="stat-label">{{ stat.label }}</span>
+                <div class="stat-bar">
+                  <span class="stat-fill" [style.width.%]="stat.percent"></span>
+                </div>
+                <span class="stat-value">{{ stat.value }}</span>
+              </div>
+            }
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Habilidades</h3>
+          <div class="ability-list">
+            @for (ability of detailState().pokemon?.abilities ?? []; track ability.name) {
+              <div class="ability-chip" appTextureLayer>
+                <span>{{ ability.name }}</span>
+                @if (ability.isHidden) {
+                  <span class="ability-tag">Hidden</span>
+                }
+              </div>
+            }
+          </div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <h3>Sprites</h3>
+        <div class="sprite-grid">
+          @for (sprite of spriteGallery(); track sprite.url) {
+            <div class="sprite-card">
+              <img [src]="sprite.url" [alt]="sprite.label" />
+              <span>{{ sprite.label }}</span>
+            </div>
+          }
+        </div>
+      </section>
+    </section>
+  }
+</section>

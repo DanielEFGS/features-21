@@ -1,0 +1,36 @@
+.page {
+  display: grid;
+  gap: 1.75rem;
+  padding: 2rem 0 3rem;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-hard);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--ink-500);
+  margin: 0 0 0.25rem;
+}
+
+.hint {
+  color: var(--ink-700);
+}
+
+.placeholder {
+  border: 2px dashed var(--ink-900);
+  padding: 2rem;
+  background: var(--paper-2);
+  box-shadow: 4px 4px 0 var(--ink-900);
+}
