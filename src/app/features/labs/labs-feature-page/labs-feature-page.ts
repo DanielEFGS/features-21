@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { LabExerciseComponent } from '../lab-exercise/lab-exercise';
 import { LabHero } from '../lab-hero/lab-hero';
@@ -16,7 +16,6 @@ import { TextureLayerDirective } from '../../../shared/texture-layer/texture-lay
 @Component({
   selector: 'app-labs-feature-page',
   imports: [
-    RouterLink,
     TextureLayerDirective,
     LabHero,
     LabToc,

@@ -36,7 +36,7 @@ RQ-LAB-003
 - Criterios de aceptacion:
   - Labs base implementados.
 - Checklist:
-  - [ ] /labs/signals
+  - [x] /labs/signals
   - [ ] /labs/httpresource
   - [ ] /labs/rxjs-interop
   - [ ] /labs/routing

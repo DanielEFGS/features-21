@@ -162,11 +162,11 @@ readonly persistSelection = effect(() => {
 ```
 
 ## Checklist
-- [ ] Selection state uses `signal`.
-- [ ] Derived values use `computed`.
-- [ ] No heavy logic in the template.
-- [ ] No `mutate` usage.
-- [ ] There is one real side effect using `effect`.
+- [x] Selection state uses `signal`.
+- [x] Derived values use `computed`.
+- [x] No heavy logic in the template.
+- [x] No `mutate` usage.
+- [x] There is one real side effect using `effect`.
 
 ## Common pitfalls
 - Filtering inside the template instead of a computed.

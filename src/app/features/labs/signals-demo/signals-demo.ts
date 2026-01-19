@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, signal } from '@angular/core';
 
 type DemoPokemon = {
   name: string;
@@ -33,6 +33,15 @@ export class SignalsDemoComponent {
   });
 
   readonly summaryText = computed(() => `Selected: ${this.selectedCount()}/3`);
+
+  /**
+   * Persists the current selection in session storage.
+   */
+  readonly persistSelection = effect(() => {
+    const value = this.selectedNames();
+    if (typeof sessionStorage === 'undefined') return;
+    sessionStorage.setItem('lab-signals-selection', JSON.stringify(value));
+  });
 
   /**
    * Adds a name to the selection list when under the limit.

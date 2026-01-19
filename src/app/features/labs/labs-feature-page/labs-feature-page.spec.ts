@@ -53,4 +53,40 @@ describe('LabsFeaturePage', () => {
     const component = fixture.componentInstance as unknown as { lab: () => unknown };
     expect(component.lab()).toBeTruthy();
   });
+
+  it('adds the demo section for the signals lab', () => {
+    const fixture = TestBed.createComponent(LabsFeaturePage);
+    fixture.detectChanges();
+
+    const component = fixture.componentInstance as unknown as {
+      tocSections: () => Array<{ id: string }>;
+    };
+    expect(component.tocSections().some((section) => section.id === 'demo')).toBe(true);
+  });
+
+  it('omits the demo section when the lab is missing', async () => {
+    await TestBed.configureTestingModule({
+      imports: [LabsFeaturePage],
+      providers: [
+        provideRouter([]),
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            paramMap: of(convertToParamMap({ feature: 'routing' }))
+          }
+        }
+      ]
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(LabsFeaturePage);
+    fixture.detectChanges();
+
+    const component = fixture.componentInstance as unknown as {
+      lab: () => unknown;
+      tocSections: () => Array<{ id: string }>;
+    };
+
+    expect(component.lab()).toBeNull();
+    expect(component.tocSections().some((section) => section.id === 'demo')).toBe(false);
+  });
 });

@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TextureLayerDirective } from '../../../shared/texture-layer/texture-layer.directive';
 import { LabContent } from '../labs.models';
 
 @Component({
   selector: 'app-lab-hero',
-  imports: [TextureLayerDirective],
+  imports: [RouterLink, TextureLayerDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './lab-hero.html',
   styleUrl: './lab-hero.css'

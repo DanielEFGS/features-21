@@ -52,7 +52,7 @@ export const SIGNALS_DEMO_CODE = {
   }
 </section>
 `,
-  ts: `import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+  ts: `import { ChangeDetectionStrategy, Component, computed, effect, signal } from '@angular/core';
 
 type DemoPokemon = {
   name: string;
@@ -84,6 +84,12 @@ export class SignalsDemoComponent {
   });
 
   readonly summaryText = computed(() => \`Selected: \${this.selectedCount()}/3\`);
+
+  readonly persistSelection = effect(() => {
+    const value = this.selectedNames();
+    if (typeof sessionStorage === 'undefined') return;
+    sessionStorage.setItem('lab-signals-selection', JSON.stringify(value));
+  });
 
   add(name: string): void {
     this.selectedNames.update((current) => {
