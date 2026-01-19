@@ -1,0 +1,29 @@
+<section class="hero" appTextureLayer>
+  <div class="hero-main">
+    <p class="eyebrow">Lab</p>
+    <h1>{{ lab().title }}</h1>
+    <p class="tagline">{{ lab().tagline }}</p>
+  </div>
+
+  <div class="meta">
+    <span
+      class="chip"
+      [class.chip--planned]="lab().status === 'planned'"
+      [class.chip--progress]="lab().status === 'in-progress'"
+      [class.chip--done]="lab().status === 'done'"
+    >
+      {{ statusLabel() }}
+    </span>
+    <span class="chip chip--level">{{ levelLabel() }}</span>
+    <span class="chip chip--duration">{{ lab().duration }}</span>
+  </div>
+
+  <div class="summary">
+    <p>{{ lab().summary }}</p>
+    <ul class="outcomes">
+      @for (outcome of lab().outcomes; track outcome) {
+        <li>{{ outcome }}</li>
+      }
+    </ul>
+  </div>
+</section>

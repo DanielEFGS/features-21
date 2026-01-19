@@ -1,4 +1,4 @@
-<a class="skip-link" href="#main">Saltar al contenido</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div class="app-shell grid-paper">
   <div class="texture texture-diagonal" aria-hidden="true"></div>
@@ -6,15 +6,34 @@
   <header class="app-header" appTextureLayer>
     <div class="brand">
       <span class="brand-mark" aria-hidden="true">P</span>
-      <a class="logo" routerLink="/">Pokedex v21</a>
+      <a class="logo" routerLink="/">Features Angular v21</a>
       <span class="brand-note">SSR + Labs</span>
     </div>
-    <nav class="nav" aria-label="Principal">
+    <nav class="nav nav-desktop" aria-label="Primary">
       <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
       <a routerLink="/pokedex" routerLinkActive="is-active">Pokedex</a>
       <a routerLink="/labs" routerLinkActive="is-active">Labs</a>
       <a routerLink="/docs" routerLinkActive="is-active">Docs</a>
     </nav>
+    <details class="nav-menu" aria-label="Primary">
+      <summary class="menu-toggle">
+        <span class="menu-label">Menu</span>
+        <span class="menu-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+            <path stroke="#151515" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.5 3.5 10 8l-4.5 4.5"></path>
+          </svg>
+        </span>
+      </summary>
+      <div class="nav-menu-panel ui-select-dropdown">
+        <button class="nav-menu-backdrop" type="button" aria-label="Close menu"></button>
+        <div class="nav-menu-links">
+          <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          <a routerLink="/pokedex" routerLinkActive="is-active">Pokedex</a>
+          <a routerLink="/labs" routerLinkActive="is-active">Labs</a>
+          <a routerLink="/docs" routerLinkActive="is-active">Docs</a>
+        </div>
+      </div>
+    </details>
     <div class="app-actions">
       <a class="cta cta-signature" href="#" aria-label="GitHub">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true">
@@ -34,4 +53,3 @@
     <span>PokEAPI v2</span>
   </footer>
 </div>
-

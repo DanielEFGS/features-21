@@ -4,6 +4,33 @@
   padding: 2rem 0 3rem;
 }
 
+.back {
+  justify-self: start;
+  color: var(--ink-900);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.6rem;
+  border: 2px solid var(--ink-900);
+  background: var(--accent);
+  box-shadow: 3px 3px 0 var(--ink-900);
+}
+
+.lab-body {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.lab-content {
+  display: grid;
+  gap: 1.4rem;
+  min-width: 0;
+}
+
 .page-header {
   display: flex;
   flex-wrap: wrap;
@@ -24,22 +51,25 @@
   margin: 0 0 0.25rem;
 }
 
-.back {
-  color: var(--ink-900);
-  text-decoration: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.7rem;
-  padding: 0.35rem 0.6rem;
-  border: 2px solid var(--ink-900);
-  background: var(--accent);
-  box-shadow: 3px 3px 0 var(--ink-900);
-}
-
 .placeholder {
   border: 2px dashed var(--ink-900);
   padding: 2rem;
   background: var(--paper-2);
   box-shadow: 4px 4px 0 var(--ink-900);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.placeholder-title {
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .lab-body {
+    grid-template-columns: 1fr;
+  }
 }

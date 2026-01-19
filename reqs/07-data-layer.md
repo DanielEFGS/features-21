@@ -85,7 +85,12 @@ RQ-DATA-008
 - Criterios de aceptacion:
   - Estrategia de cache documentada.
 - Checklist:
-  - [ ] Documentar politica de cache.
+  - [x] Documentar politica de cache.
+  - Notas:
+    - Pokemon detail: cache in-memory por nameOrId (TTL 1h), dedupe en vuelo.
+    - Types: cache in-memory (TTL 24h), dedupe en vuelo.
+    - Pokemon list by type: cache in-memory (TTL 15m), dedupe en vuelo.
+    - Evitar cache persistente en v1 (no SW para API).
 
 RQ-DATA-009
 - Descripcion: SSR state transfer y reuso de data en cliente.
@@ -95,8 +100,8 @@ RQ-DATA-009
 - Criterios de aceptacion:
   - Data prefetched en SSR se reutiliza.
 - Checklist:
-  - [ ] Implementar transferencia de estado.
-  - [ ] Evitar acceso a window/document en SSR.
+  - [x] Implementar transferencia de estado.
+  - [x] Evitar acceso a window/document en SSR.
 
 RQ-DATA-010
 - Descripcion: Dataset para tipos multi-select OR.

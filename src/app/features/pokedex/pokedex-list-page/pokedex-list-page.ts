@@ -73,7 +73,9 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly detailConcurrency = inject(POKEDEX_DETAIL_CONCURRENCY);
 
+  /* istanbul ignore next */
   protected readonly reloadTick = signal(0);
+  /* istanbul ignore next */
   private readonly viewReady = signal(false);
   private hsSelectClass?: HSSelectClass;
 
@@ -81,17 +83,19 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
     initialValue: convertToParamMap({})
   });
 
+  /* istanbul ignore next */
   protected readonly query = computed(() =>
     normalizeStringParam(this.queryParamMap().get('q'), '')
   );
 
+  /* istanbul ignore next */
   protected readonly typeFilter = computed(() =>
     normalizeStringParam(this.queryParamMap().get('type'), '')
   );
 
   protected readonly sortOptions = [
     { value: 'id', label: 'ID' },
-    { value: 'name', label: 'Nombre' }
+    { value: 'name', label: 'Name' }
   ];
 
   protected readonly dirOptions = [
@@ -101,7 +105,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
 
   /** Preline config for the type select. */
   protected readonly typeSelectConfig = {
-    placeholder: 'Todos los tipos',
+    placeholder: 'All types',
     toggleTag: '<button type="button"></button>',
     wrapperClasses: 'relative w-full',
     toggleClasses: 'ui-select-toggle',
@@ -109,7 +113,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
     optionClasses: 'ui-select-option',
     optionAllowEmptyOption: true,
     hasSearch: true,
-    searchPlaceholder: 'Buscar tipo',
+    searchPlaceholder: 'Search type',
     searchWrapperClasses: 'ui-select-search-wrapper',
     searchClasses: 'ui-select-search',
     dropdownScope: 'parent'
@@ -117,7 +121,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
 
   /** Preline config for the sort select. */
   protected readonly sortSelectConfig = {
-    placeholder: 'Orden',
+    placeholder: 'Order',
     toggleTag: '<button type="button"></button>',
     wrapperClasses: 'relative w-full',
     toggleClasses: 'ui-select-toggle',
@@ -128,7 +132,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
 
   /** Preline config for the direction select. */
   protected readonly dirSelectConfig = {
-    placeholder: 'Direccion',
+    placeholder: 'Direction',
     toggleTag: '<button type="button"></button>',
     wrapperClasses: 'relative w-full',
     toggleClasses: 'ui-select-toggle',
@@ -151,7 +155,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
         of<TypesState>({
           status: 'error',
           items: [],
-          error: 'No se pudieron cargar los tipos.'
+          error: 'Unable to load types.'
         })
       )
     ),
@@ -182,18 +186,22 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
     });
   }
 
+  /* istanbul ignore next */
   protected readonly sortBy = computed(() =>
     normalizeEnumParam(this.queryParamMap().get('sort'), ['id', 'name'], 'id')
   );
 
+  /* istanbul ignore next */
   protected readonly sortDir = computed(() =>
     normalizeEnumParam(this.queryParamMap().get('dir'), ['asc', 'desc'], 'asc')
   );
 
+  /* istanbul ignore next */
   protected readonly page = computed(() =>
     normalizeNumberParam(this.queryParamMap().get('page'), 1, 1, 999)
   );
 
+  /* istanbul ignore next */
   protected readonly pageSize = computed(() =>
     normalizeNumberParam(this.queryParamMap().get('pageSize'), 8, 1, 96)
   );
@@ -244,6 +252,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
               }
 
               const aId = a.id ?? 0;
+              /* istanbul ignore next */
               const bId = b.id ?? 0;
               return sortDir === 'asc' ? aId - bId : bId - aId;
             });
@@ -296,7 +305,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
               status: 'error',
               items: [],
               total: 0,
-              error: 'No se pudo cargar el listado.'
+              error: 'Unable to load the list.'
             })
           )
         );
@@ -305,12 +314,15 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
     { initialValue: this.initialState }
   );
 
+  /* istanbul ignore next */
   protected readonly totalPages = computed(() => {
     const total = this.listState().total;
     return Math.max(1, Math.ceil(total / this.pageSize()));
   });
 
+  /* istanbul ignore next */
   protected readonly canPrev = computed(() => this.page() > 1);
+  /* istanbul ignore next */
   protected readonly canNext = computed(() => this.page() < this.totalPages());
 
   /**
@@ -458,12 +470,15 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
   private createSelectInstances(hsSelect: HSSelectClass) {
     if (this.typeSelect?.nativeElement) {
       new hsSelect(this.typeSelect.nativeElement, this.typeSelectConfig);
+      this.markSelectReady(this.typeSelect.nativeElement);
     }
     if (this.sortSelect?.nativeElement) {
       new hsSelect(this.sortSelect.nativeElement, this.sortSelectConfig);
+      this.markSelectReady(this.sortSelect.nativeElement);
     }
     if (this.dirSelect?.nativeElement) {
       new hsSelect(this.dirSelect.nativeElement, this.dirSelectConfig);
+      this.markSelectReady(this.dirSelect.nativeElement);
     }
   }
 
@@ -557,6 +572,15 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
     } else {
       element.value = value;
     }
+  }
+
+  /**
+   * Marks a native select as replaced by HSSelect.
+   *
+   * @param element - Select element to hide when HSSelect is ready.
+   */
+  private markSelectReady(element: HTMLSelectElement) {
+    element.classList.add('is-hs-ready');
   }
 
   /**

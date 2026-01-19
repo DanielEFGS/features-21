@@ -1,0 +1,34 @@
+.references {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 1.2rem;
+  box-shadow: 4px 4px 0 var(--ink-900);
+  scroll-margin-top: 6rem;
+}
+
+.references h2 {
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+}
+
+.references ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.references a {
+  color: var(--ink-900);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.references a:hover {
+  border-color: var(--ink-900);
+}
+
+.references a:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
+}

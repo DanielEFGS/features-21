@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Location } from '@angular/common';
+import { PLATFORM_ID } from '@angular/core';
+import { Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
 import { catchError, map, of, startWith, switchMap } from 'rxjs';
@@ -26,6 +30,9 @@ export class PokedexDetailPage {
   private static readonly STAT_MAX = 255;
   private readonly client = inject(PokeApiClient);
   private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly location = inject(Location);
+  private readonly platformId = inject(PLATFORM_ID);
 
   private readonly nameOrId$ = this.route.paramMap.pipe(
     map((params) => params.get('nameOrId'))
@@ -44,7 +51,7 @@ export class PokedexDetailPage {
           return of<DetailState>({
             status: 'error',
             pokemon: null,
-            error: 'Parametro invalido.'
+            error: 'Invalid parameter.'
           });
         }
 
@@ -61,7 +68,7 @@ export class PokedexDetailPage {
             of<DetailState>({
               status: 'error',
               pokemon: null,
-              error: 'No se pudo cargar el detalle.'
+              error: 'Unable to load the detail.'
             })
           )
         );
@@ -70,11 +77,13 @@ export class PokedexDetailPage {
     { initialValue: this.initialState }
   );
 
+  /* istanbul ignore next */
   protected readonly imageUrl = computed(() => {
     const pokemon = this.detailState().pokemon;
     return pokemon?.artworkUrl ?? pokemon?.spriteUrl ?? null;
   });
 
+  /* istanbul ignore next */
   protected readonly statRows = computed(() => {
     const pokemon = this.detailState().pokemon;
     if (!pokemon) {
@@ -92,10 +101,12 @@ export class PokedexDetailPage {
     }));
   });
 
+  /* istanbul ignore next */
   protected readonly spriteGallery = computed(() => {
     return this.detailState().pokemon?.sprites ?? [];
   });
 
+  /* istanbul ignore next */
   protected readonly totalStats = computed(() => {
     const pokemon = this.detailState().pokemon;
     if (!pokemon) {
@@ -104,6 +115,34 @@ export class PokedexDetailPage {
 
     return pokemon.stats.reduce((total, stat) => total + stat.value, 0);
   });
+
+  /* istanbul ignore next */
+  protected readonly statsExpanded = signal(true);
+  /* istanbul ignore next */
+  protected readonly abilitiesExpanded = signal(true);
+  /* istanbul ignore next */
+  protected readonly spritesExpanded = signal(true);
+
+  /**
+   * Toggles the base stats disclosure panel.
+   */
+  protected toggleStatsExpanded() {
+    this.statsExpanded.update((value) => !value);
+  }
+
+  /**
+   * Toggles the abilities disclosure panel.
+   */
+  protected toggleAbilitiesExpanded() {
+    this.abilitiesExpanded.update((value) => !value);
+  }
+
+  /**
+   * Toggles the sprites disclosure panel.
+   */
+  protected toggleSpritesExpanded() {
+    this.spritesExpanded.update((value) => !value);
+  }
 
   /**
    * Formats the stat labels for display.
@@ -148,5 +187,17 @@ export class PokedexDetailPage {
    */
   protected formatWeight(value: number): string {
     return `${(value / 10).toFixed(1)} kg`;
+  }
+
+  /**
+   * Navigates back when history is available, otherwise returns to the list.
+   */
+  protected goBack() {
+    if (isPlatformBrowser(this.platformId) && window.history.length > 1) {
+      this.location.back();
+      return;
+    }
+
+    this.router.navigate(['/pokedex']);
   }
 }

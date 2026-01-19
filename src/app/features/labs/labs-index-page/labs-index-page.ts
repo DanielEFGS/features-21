@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TextureLayerDirective } from '../../../shared/texture-layer/texture-layer.directive';
+import { LAB_CATALOG } from '../labs.data';
 
 @Component({
   selector: 'app-labs-index-page',
@@ -9,4 +10,6 @@ import { TextureLayerDirective } from '../../../shared/texture-layer/texture-lay
   templateUrl: './labs-index-page.html',
   styleUrl: './labs-index-page.css'
 })
-export class LabsIndexPage {}
+export class LabsIndexPage {
+  protected readonly labs = LAB_CATALOG;
+}

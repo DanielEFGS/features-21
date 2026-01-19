@@ -2,39 +2,39 @@
   <header class="page-header" appTextureLayer>
     <div>
       <p class="eyebrow">Pokedex</p>
-      <h1>Listado</h1>
+      <h1>List</h1>
     </div>
-    <p class="hint">Base v1: listado, paginacion, orden y filtros simples.</p>
+    <p class="hint">Base v1: list, pagination, sorting, and simple filters.</p>
   </header>
 
   <section class="controls" appTextureLayer>
     <label class="field">
-      <span>Buscar</span>
+      <span>Search</span>
       <div class="field-control">
         <input
           type="search"
           [value]="query()"
-          placeholder="Nombre del pokemon"
+          placeholder="Pokemon name"
           class="ui-input"
           (input)="updateQuery($any($event.target).value)"
         />
       </div>
     </label>
     <label class="field" for="type-select">
-      <span>Tipo</span>
+      <span>Type</span>
       <div class="field-control">
         <select
           #typeSelect
           id="type-select"
-          class="hidden"
+          class="ui-select-native"
           [value]="typeFilter()"
           (change)="updateType($any($event.target).value)"
         >
-          <option value="">Todos los tipos</option>
+          <option value="">All types</option>
           @if (typesState().status === 'loading') {
-            <option disabled>Cargando...</option>
+            <option disabled>Loading...</option>
           } @else if (typesState().status === 'error') {
-            <option disabled>No disponible</option>
+            <option disabled>Unavailable</option>
           } @else {
             @for (type of typesState().items; track type.name) {
               <option [value]="type.name">{{ type.name }}</option>
@@ -44,12 +44,12 @@
       </div>
     </label>
     <label class="field" for="sort-select">
-      <span>Orden</span>
+      <span>Order</span>
       <div class="field-control">
         <select
           #sortSelect
           id="sort-select"
-          class="hidden"
+          class="ui-select-native"
           [value]="sortBy()"
           (change)="updateSort($any($event.target).value)"
         >
@@ -60,12 +60,12 @@
       </div>
     </label>
     <label class="field" for="dir-select">
-      <span>Direccion</span>
+      <span>Direction</span>
       <div class="field-control">
         <select
           #dirSelect
           id="dir-select"
-          class="hidden"
+          class="ui-select-native"
           [value]="sortDir()"
           (change)="updateDir($any($event.target).value)"
         >
@@ -86,16 +86,16 @@
   } @else if (listState().status === 'error') {
     <div class="placeholder" appTextureLayer>
       <p>{{ listState().error }}</p>
-      <button class="button ghost" type="button" (click)="retryLoad()">Reintentar</button>
+      <button class="button ghost" type="button" (click)="retryLoad()">Retry</button>
     </div>
   } @else if (listState().status === 'empty') {
     <div class="placeholder" appTextureLayer>
-      <p>No hay resultados para mostrar.</p>
+      <p>No results to display.</p>
     </div>
   } @else {
     <div class="list-grid">
       @for (item of listState().items; track item.id) {
-        <a class="card" [routerLink]="['/pokedex', item.id]" [attr.aria-label]="'Ver detalle de ' + item.name">
+        <a class="card" [routerLink]="['/pokedex', item.id]" [attr.aria-label]="'View details for ' + item.name">
           <div class="card-body">
             <div class="thumb">
               @if (item.spriteUrl || item.artworkUrl) {
@@ -104,7 +104,7 @@
                   [alt]="item.name"
                 />
               } @else {
-                <span class="thumb-fallback">Sin imagen</span>
+                <span class="thumb-fallback">No image</span>
               }
             </div>
             <div>
@@ -124,11 +124,11 @@
 
   <div class="pager">
     <button class="button ghost" type="button" (click)="goToPreviousPage()" [disabled]="!canPrev()">
-      Anterior
+      Previous
     </button>
-    <span class="pager-status">Pagina {{ page() }} de {{ totalPages() }}</span>
+    <span class="pager-status">Page {{ page() }} of {{ totalPages() }}</span>
     <button class="button ghost" type="button" (click)="goToNextPage()" [disabled]="!canNext()">
-      Siguiente
+      Next
     </button>
   </div>
 </section>

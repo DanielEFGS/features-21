@@ -21,8 +21,9 @@ RQ-PDX-011
 - Criterios de aceptacion:
   - Secciones expanden/colapsan con accesibilidad.
 - Checklist:
-  - [ ] Implementar disclosure accesible.
-  - [ ] Documentar uso de @if/@for.
+  - [x] Implementar disclosure accesible.
+  - [x] Documentar uso de @if/@for.
+  - Notas: el template de detalle usa @if/@for para el contenido colapsable.
 
 RQ-PDX-012
 - Descripcion: Deep-link directo a un pokemon.
@@ -43,5 +44,5 @@ RQ-PDX-013
   - SSR renderiza contenido principal.
   - Hydration sin errores visibles.
 - Checklist:
-  - [ ] Prefetch de detalle en SSR.
-  - [ ] Evitar acceso a window/document en SSR.
+  - [x] Prefetch de detalle en SSR.
+  - [x] Evitar acceso a window/document en SSR.

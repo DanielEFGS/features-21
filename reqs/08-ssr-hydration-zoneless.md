@@ -9,8 +9,8 @@ RQ-SSR-001
   - Proyecto configurado con SSR.
   - Build SSR funciona.
 - Checklist:
-  - [ ] Configurar SSR (ng new --ssr o ng add @angular/ssr).
-  - [ ] Documentar scripts de build/run.
+  - [x] Configurar SSR (ng new --ssr o ng add @angular/ssr).
+  - [x] Documentar scripts de build/run.
 
 RQ-SSR-002
 - Descripcion: RenderMode por ruta (SSG/SSR/CSR).
@@ -32,7 +32,7 @@ RQ-SSR-003
   - Documentacion de pitfalls.
 - Checklist:
   - [x] Activar hydration.
-  - [ ] Documentar SSR con y sin hydration.
+  - [x] Documentar SSR con y sin hydration.
 
 RQ-SSR-004
 - Descripcion: Local dev 100% funcional con SSR.
@@ -43,7 +43,7 @@ RQ-SSR-004
   - Se puede instalar deps y correr dev.
   - Existe comando prod-like SSR (opcional).
 - Checklist:
-  - [ ] Documentar comandos en README.
+  - [x] Documentar comandos en README.
 
 RQ-SSR-005
 - Descripcion: Zoneless como objetivo (al menos en lab).

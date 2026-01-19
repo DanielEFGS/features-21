@@ -46,13 +46,13 @@
 .app-header {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  align-items: center;
+  align-items: start;
   gap: 1.5rem;
   padding: 1.25rem clamp(1rem, 3vw, 2rem);
   border-bottom: 2px solid var(--ink-900);
   background: var(--paper-2);
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .brand {
@@ -113,9 +113,104 @@
   background: var(--accent);
 }
 
+.nav a:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 3px;
+}
+
 .nav a[aria-disabled="true"] {
   color: var(--ink-500);
   cursor: not-allowed;
+}
+
+.nav-menu {
+  display: none;
+  position: relative;
+}
+
+.nav-menu-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  min-width: 180px;
+  display: grid;
+  gap: 0.2rem;
+  z-index: 60;
+}
+
+.nav-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.nav-menu-links {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.nav-menu-panel a {
+  display: block;
+  padding: 0.45rem 0.6rem;
+  text-decoration: none;
+  color: var(--ink-900);
+  border: 1px dashed transparent;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav-menu-panel a.is-active {
+  background: var(--accent);
+  border-color: var(--ink-900);
+}
+
+.nav-menu-panel a:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
+}
+
+.menu-toggle {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: stretch;
+  width: auto;
+  border: 2px dashed var(--ink-900);
+  background: #fff;
+  /* box-shadow: 3px 3px 0 var(--ink-900); */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+}
+
+.menu-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 3px;
+}
+
+.menu-label {
+  padding: 0.45rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.menu-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.65rem;
+  border-left: 2px dashed var(--ink-900);
 }
 
 .app-actions {
@@ -139,12 +234,17 @@
 .cta-signature {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   padding: 0;
   background: #fff;
   border: 2px dashed var(--ink-900);
   box-shadow: none;
+}
+
+.cta-signature:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
 }
 
 .app-main {
@@ -188,8 +288,24 @@
 
 @media (max-width: 720px) {
   .app-header {
-    grid-template-columns: 1fr;
-    justify-items: start;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.75rem;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-menu {
+    display: inline-block;
+  }
+
+  .app-actions {
+    order: 2;
+  }
+
+  .nav-menu {
+    order: 3;
   }
 
   .app-footer {
@@ -197,7 +313,6 @@
   }
 
   .nav {
-    width: 100%;
-    flex-wrap: wrap;
+    width: auto;
   }
 }

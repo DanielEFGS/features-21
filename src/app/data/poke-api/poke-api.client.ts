@@ -1,5 +1,7 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, TransferState, inject, makeStateKey } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Observable, finalize, map, of, shareReplay, tap } from 'rxjs';
 
 import {
@@ -20,6 +22,8 @@ const FIFTEEN_MIN_MS = 15 * 60 * 1000;
 @Injectable({ providedIn: 'root' })
 export class PokeApiClient {
   private readonly http = inject(HttpClient);
+  private readonly transferState = inject(TransferState);
+  private readonly platformId = inject(PLATFORM_ID);
   private readonly pokemonCache = new InMemoryCache<Pokemon>(ONE_HOUR_MS);
   private readonly typesCache = new InMemoryCache<TypeListItem[]>(ONE_DAY_MS);
   private readonly typeListCache = new InMemoryCache<PokemonList>(FIFTEEN_MIN_MS);
@@ -57,6 +61,16 @@ export class PokeApiClient {
       return of(cached);
     }
 
+    const stateKey = this.getPokemonStateKey(key);
+    if (this.isBrowser() && this.transferState.hasKey(stateKey)) {
+      const transferValue = this.transferState.get(stateKey, null as Pokemon | null);
+      if (transferValue) {
+        this.transferState.remove(stateKey);
+        this.pokemonCache.set(key, transferValue);
+        return of(transferValue);
+      }
+    }
+
     const inFlight = this.pokemonInFlight.get(key);
     if (inFlight) {
       return inFlight;
@@ -66,7 +80,12 @@ export class PokeApiClient {
       .get<PokemonDto>(`${BASE_URL}/pokemon/${nameOrId}`)
       .pipe(
         map((response) => mapPokemon(response)),
-        tap((pokemon) => this.pokemonCache.set(key, pokemon)),
+        tap((pokemon) => {
+          this.pokemonCache.set(key, pokemon);
+          if (this.isServer()) {
+            this.transferState.set(stateKey, pokemon);
+          }
+        }),
         shareReplay({ bufferSize: 1, refCount: false }),
         finalize(() => this.pokemonInFlight.delete(key))
       );
@@ -133,5 +152,33 @@ export class PokeApiClient {
 
     this.typeInFlight.set(key, request$);
     return request$;
+  }
+
+  /**
+   * Builds the transfer state key for a Pokemon detail payload.
+   *
+   * @param key - Normalized Pokemon name or id.
+   * @returns TransferState key for Pokemon detail.
+   */
+  private getPokemonStateKey(key: string) {
+    return makeStateKey<Pokemon>(`pokedex.pokemon.${key}`);
+  }
+
+  /**
+   * Returns true when running in the browser.
+   *
+   * @returns True on the browser platform.
+   */
+  private isBrowser() {
+    return isPlatformBrowser(this.platformId);
+  }
+
+  /**
+   * Returns true when running on the server.
+   *
+   * @returns True on the server platform.
+   */
+  private isServer() {
+    return isPlatformServer(this.platformId);
   }
 }

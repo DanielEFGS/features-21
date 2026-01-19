@@ -1,0 +1,30 @@
+<details
+  class="toc-collapsible"
+  [class.is-open]="isOpen() || isDesktop()"
+  [attr.open]="isOpen() || isDesktop() ? '' : null"
+  (toggle)="onToggle($event)"
+>
+  <summary class="toc-summary">
+    @if (isOpen()) {
+      <span>On this page</span>
+    } @else {
+      <span>{{ activeLabel() }}</span>
+    }
+  </summary>
+
+  <nav class="toc" aria-label="Lab sections">
+    <ol>
+      @for (section of sections(); track section.id) {
+        <li>
+          <a
+            [routerLink]="[]"
+            [fragment]="section.id"
+            [class.is-active]="activeId() === section.id"
+          >
+            {{ section.title }}
+          </a>
+        </li>
+      }
+    </ol>
+  </nav>
+</details>

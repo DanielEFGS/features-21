@@ -1,0 +1,78 @@
+.exercise {
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 1.6rem;
+  box-shadow: 5px 5px 0 var(--ink-900);
+  display: grid;
+  gap: 1.2rem;
+  scroll-margin-top: 6rem;
+}
+
+.exercise-header h2 {
+  margin: 0.2rem 0 0;
+  font-weight: 700;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--ink-600);
+  margin: 0;
+}
+
+.goal {
+  margin: 0.5rem 0 0;
+  color: var(--ink-700);
+}
+
+.exercise-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.exercise h3 {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+}
+
+.exercise ol,
+.exercise ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.exercise ol {
+  list-style: decimal;
+}
+
+.exercise ol li::marker {
+  color: var(--ink-700);
+  font-weight: 700;
+}
+
+.exercise ul {
+  list-style: square;
+}
+
+.exercise ul li::marker {
+  color: var(--ink-600);
+}
+
+.stretch ul {
+  list-style: '✓  ';
+}
+
+.stretch ul li::marker {
+  color: var(--ink-900);
+  font-weight: 700;
+}
+
+.stretch {
+  border: 2px dashed var(--ink-900);
+  padding: 0.9rem;
+  background: #fff;
+}

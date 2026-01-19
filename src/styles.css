@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "preline/variants.css";
+@import "prismjs/themes/prism-okaidia.css";
 
 @source "../node_modules/preline/dist/*.js";
 
@@ -32,6 +33,10 @@ body {
   font-family: var(--font-sans);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .ui-input {
   width: 100%;
   border: 2px solid var(--ink-900);
@@ -48,6 +53,31 @@ body {
   box-shadow: 0 0 0 2px var(--accent-strong), 3px 3px 0 var(--ink-900);
 }
 
+.ui-select-native {
+  width: 100%;
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  color: var(--ink-900);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  box-shadow: 3px 3px 0 var(--ink-900);
+  appearance: none;
+  display: block;
+}
+
+.ui-select-native:focus {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 2px var(--accent-strong), 3px 3px 0 var(--ink-900);
+}
+
+.ui-select-native.is-hs-ready {
+  display: none;
+}
+
+.field-control:has(.hs-select) .ui-select-native {
+  display: none;
+}
+
 .ui-select-toggle {
   width: 100%;
   border: 2px solid var(--ink-900);
@@ -59,6 +89,15 @@ body {
   box-shadow: 3px 3px 0 var(--ink-900);
 }
 
+.ui-select-toggle:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
+}
+
+.hs-select {
+  display: block;
+}
+
 .ui-select-dropdown {
   margin-top: 0.5rem;
   max-height: 16rem;
@@ -68,6 +107,7 @@ body {
   padding: 0.3rem;
   box-shadow: 4px 4px 0 var(--ink-900);
   overflow-y: auto;
+  z-index: 2000;
 }
 
 .ui-select-option {
@@ -105,7 +145,19 @@ body {
 
 .paper-texture-host {
   position: relative;
-  overflow: hidden;
+}
+
+.hs-select {
+  position: relative;
+  z-index: 2;
+}
+
+.hs-select.active {
+  z-index: 500;
+}
+
+.hs-select.active [data-hs-select-dropdown] {
+  z-index: 500;
 }
 
 .paper-texture-host > :not(.panel-texture) {

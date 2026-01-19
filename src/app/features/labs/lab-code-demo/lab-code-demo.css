@@ -1,0 +1,123 @@
+.demo {
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 1.6rem;
+  box-shadow: 5px 5px 0 var(--ink-900);
+  display: grid;
+  gap: 1.2rem;
+}
+
+.eyebrow {
+  margin: 0.1rem 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--ink-600);
+}
+
+.header-text h2 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.description {
+  margin: 0.4rem 0 0;
+  color: var(--ink-700);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(260px, 1fr);
+  gap: 1.2rem;
+}
+
+.preview,
+.code {
+  min-width: 0;
+}
+
+.preview-frame {
+  border: 2px dashed var(--ink-900);
+  background: #fff;
+  padding: 1rem;
+  min-height: 240px;
+}
+
+.code {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tab {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--ink-900);
+}
+
+.tab.is-active {
+  background: var(--accent);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
+}
+
+.tab-panel {
+  border: 2px solid var(--ink-900);
+  background: #121215;
+  color: #f5f5f7;
+  padding: 0.85rem;
+  box-shadow: 3px 3px 0 var(--ink-900);
+  min-height: 220px;
+  max-height: 546px;
+  overflow: auto;
+  max-width: 100%;
+}
+
+.tab-panel pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.tab-panel pre[class*="language-"],
+.tab-panel code[class*="language-"] {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.tab-panel code[class*="language-"] {
+  display: block;
+}
+
+.empty {
+  margin: 0;
+  color: var(--ink-600);
+}
+
+@media (max-width: 900px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.demo-header {
+  display: grid;
+  gap: 0.35rem;
+}

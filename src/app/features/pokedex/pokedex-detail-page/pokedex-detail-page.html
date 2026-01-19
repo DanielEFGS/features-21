@@ -1,10 +1,20 @@
 <section class="page">
   <header class="page-header" appTextureLayer>
-    <div>
+    <div class="header-stack">
       <p class="eyebrow">Pokedex</p>
-      <h1>Detalle</h1>
+      <h1>Detail</h1>
     </div>
-    <p class="hint">Base v1: nombre, id, imagenes, tipos y stats.</p>
+    <div class="header-actions">
+      <button class="back-link" type="button" aria-label="Go back" (click)="goBack()">
+        <span class="back-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+            <path stroke="#151515" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 3.5 6 8l4.5 4.5"></path>
+          </svg>
+        </span>
+        <span>Back</span>
+      </button>
+    </div>
+    <p class="hint">Base v1: name, id, images, types, and stats.</p>
   </header>
 
   @if (detailState().status === 'loading') {
@@ -20,7 +30,7 @@
           @if (imageUrl()) {
             <img [src]="imageUrl()" [alt]="detailState().pokemon?.name ?? 'pokemon'" />
           } @else {
-            <div class="image-fallback">Sin imagen</div>
+            <div class="image-fallback">No image</div>
           }
         </div>
         <div class="detail-meta">
@@ -33,19 +43,19 @@
           </div>
           <div class="quick-facts">
             <div class="fact" appTextureLayer>
-              <span>Altura</span>
+              <span>Height</span>
               <strong>{{ formatHeight(detailState().pokemon?.height ?? 0) }}</strong>
             </div>
             <div class="fact" appTextureLayer>
-              <span>Peso</span>
+              <span>Weight</span>
               <strong>{{ formatWeight(detailState().pokemon?.weight ?? 0) }}</strong>
             </div>
             <div class="fact" appTextureLayer>
-              <span>Exp base</span>
+              <span>Base exp</span>
               <strong>{{ detailState().pokemon?.baseExperience }}</strong>
             </div>
             <div class="fact" appTextureLayer>
-              <span>Orden</span>
+              <span>Order</span>
               <strong>{{ detailState().pokemon?.order }}</strong>
             </div>
           </div>
@@ -53,47 +63,107 @@
       </div>
 
       <div class="detail-columns">
-        <section class="panel">
-          <h3>Stats base</h3>
-          <p class="panel-note">Total: {{ totalStats() }}</p>
-          <div class="stats">
-            @for (stat of statRows(); track stat.name) {
-              <div class="stat-row">
-                <span class="stat-label">{{ stat.label }}</span>
-                <div class="stat-bar">
-                  <span class="stat-fill" [style.width.%]="stat.percent"></span>
-                </div>
-                <span class="stat-value">{{ stat.value }}</span>
-              </div>
-            }
+        <section class="panel" [class.is-open]="statsExpanded()">
+          <div class="panel-header">
+            <h3 class="panel-title">
+              <button
+                type="button"
+                id="stats-toggle"
+                class="panel-toggle"
+                [class.is-open]="statsExpanded()"
+                [attr.aria-expanded]="statsExpanded()"
+                aria-controls="stats-panel"
+                (click)="toggleStatsExpanded()"
+              >
+                <span>Base stats</span>
+              </button>
+            </h3>
           </div>
-        </section>
+          @if (statsExpanded()) {
+            <p class="panel-note">Total: {{ totalStats() }}</p>
 
-        <section class="panel">
-          <h3>Habilidades</h3>
-          <div class="ability-list">
-            @for (ability of detailState().pokemon?.abilities ?? []; track ability.name) {
-              <div class="ability-chip" appTextureLayer>
-                <span>{{ ability.name }}</span>
-                @if (ability.isHidden) {
-                  <span class="ability-tag">Hidden</span>
+            <div id="stats-panel" class="panel-body" role="region" aria-labelledby="stats-toggle">
+              <div class="stats">
+                @for (stat of statRows(); track stat.name) {
+                  <div class="stat-row">
+                    <span class="stat-label">{{ stat.label }}</span>
+                    <div class="stat-bar">
+                      <span class="stat-fill" [style.width.%]="stat.percent"></span>
+                    </div>
+                    <span class="stat-value">{{ stat.value }}</span>
+                  </div>
                 }
               </div>
-            }
+            </div>
+          }
+        </section>
+
+        <section class="panel" [class.is-open]="abilitiesExpanded()">
+          <div class="panel-header">
+            <h3 class="panel-title">
+              <button
+                type="button"
+                id="abilities-toggle"
+                class="panel-toggle"
+                [class.is-open]="abilitiesExpanded()"
+                [attr.aria-expanded]="abilitiesExpanded()"
+                aria-controls="abilities-panel"
+                (click)="toggleAbilitiesExpanded()"
+              >
+                <span>Abilities</span>
+              </button>
+            </h3>
           </div>
+          @if (abilitiesExpanded()) {
+            <div
+              id="abilities-panel"
+              class="panel-body"
+              role="region"
+              aria-labelledby="abilities-toggle"
+            >
+              <div class="ability-list">
+                @for (ability of detailState().pokemon?.abilities ?? []; track ability.name) {
+                  <div class="ability-chip" appTextureLayer>
+                    <span>{{ ability.name }}</span>
+                    @if (ability.isHidden) {
+                      <span class="ability-tag">Hidden</span>
+                    }
+                  </div>
+                }
+              </div>
+            </div>
+          }
         </section>
       </div>
 
-      <section class="panel">
-        <h3>Sprites</h3>
-        <div class="sprite-grid">
-          @for (sprite of spriteGallery(); track sprite.url) {
-            <div class="sprite-card">
-              <img [src]="sprite.url" [alt]="sprite.label" />
-              <span>{{ sprite.label }}</span>
-            </div>
-          }
+      <section class="panel" [class.is-open]="spritesExpanded()">
+        <div class="panel-header">
+          <h3 class="panel-title">
+            <button
+              type="button"
+              id="sprites-toggle"
+              class="panel-toggle"
+              [class.is-open]="spritesExpanded()"
+              [attr.aria-expanded]="spritesExpanded()"
+              aria-controls="sprites-panel"
+              (click)="toggleSpritesExpanded()"
+            >
+              <span>Sprites</span>
+            </button>
+          </h3>
         </div>
+        @if (spritesExpanded()) {
+          <div id="sprites-panel" class="panel-body" role="region" aria-labelledby="sprites-toggle">
+            <div class="sprite-grid">
+              @for (sprite of spriteGallery(); track sprite.url) {
+                <div class="sprite-card">
+                  <img [src]="sprite.url" [alt]="sprite.label" />
+                  <span>{{ sprite.label }}</span>
+                </div>
+              }
+            </div>
+          </div>
+        }
       </section>
     </section>
   }

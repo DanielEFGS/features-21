@@ -1,0 +1,132 @@
+:host {
+  position: sticky;
+  top: 1.75rem;
+  align-self: start;
+  display: block;
+}
+
+.toc-collapsible {
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  box-shadow: 4px 4px 0 var(--ink-900);
+}
+
+.toc-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink-900);
+}
+
+.toc-summary::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--ink-900);
+  border-bottom: 2px solid var(--ink-900);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-left: 0.75rem;
+}
+
+.toc-collapsible.is-open .toc-summary::after {
+  transform: rotate(-135deg) translateY(-2px) translateX(-2px);
+}
+
+.toc-summary::marker,
+.toc-summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc-summary:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
+}
+
+.toc {
+  border: 2px solid var(--ink-900);
+  padding: 1rem;
+}
+
+.toc-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  margin: 0 0 0.75rem;
+  color: var(--ink-600);
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.toc a {
+  text-decoration: none;
+  color: var(--ink-900);
+  font-size: 0.85rem;
+  display: inline-block;
+  padding: 0.2rem 0.35rem;
+  border-left: 3px solid transparent;
+}
+
+.toc a.is-active {
+  border-color: var(--ink-900);
+  background: var(--accent);
+}
+
+.toc a:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
+}
+
+@media (min-width: 901px) {
+  :host {
+    top: 1.75rem;
+  }
+
+  .toc-collapsible {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .toc-summary {
+    display: none;
+  }
+
+  .toc {
+    display: block !important;
+    border: 2px solid var(--ink-900);
+    background: var(--paper-2);
+    box-shadow: 4px 4px 0 var(--ink-900);
+  }
+}
+
+@media (max-width: 900px) {
+  :host {
+    top: 0;
+    z-index: 20;
+    width: 100%;
+  }
+
+  .toc {
+    border: none;
+    box-shadow: none;
+  }
+
+  .toc-collapsible:not(.is-open) .toc {
+    display: none;
+  }
+}

@@ -25,6 +25,9 @@
   background: #fff;
   padding: 1.25rem;
   box-shadow: 4px 4px 0 var(--ink-900);
+  overflow: visible;
+  position: relative;
+  z-index: 1;
 }
 
 .field {
@@ -35,12 +38,22 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   min-height: 76px;
+  overflow: visible;
+  position: relative;
+  z-index: 0;
 }
 
 .field-control {
   display: grid;
   align-items: center;
   min-height: 42px;
+  overflow: visible;
+  position: relative;
+  z-index: 0;
+}
+
+.field:has(.hs-select.active) {
+  z-index: 10;
 }
 
 @media (max-width: 900px) {
@@ -83,38 +96,33 @@
 .card {
   position: relative;
   display: block;
-  border: 2px dashed var(--ink-900);
+  border: 2px solid var(--ink-900);
   background: #fff;
   padding: 1rem;
   box-shadow: 4px 4px 0 var(--ink-900);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.15s ease;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  background-image: url("/textures/card-shadow-hover.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.15s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translate(-4px, -4px);
-}
-
-.card:hover::after {
-  opacity: 1;
+  box-shadow: 0 0 0 transparent;
+  transform: translate(4px, 4px);
 }
 
 .card:focus-visible {
   outline: 2px solid var(--ink-900);
   outline-offset: 3px;
+}
+
+@keyframes dash-spin {
+  to {
+    background-position:
+      12px 0,
+      -12px 100%,
+      0 -12px,
+      100% 12px;
+  }
 }
 
 .card-body {
@@ -199,6 +207,11 @@
 
 .button.ghost {
   background: var(--accent);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
 }
 
 .button:disabled {

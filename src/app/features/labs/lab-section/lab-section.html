@@ -1,0 +1,61 @@
+<section class="section" [attr.id]="section().id">
+  <header class="section-header">
+    <h2>{{ section().title }}</h2>
+    @if (section().summary) {
+      <p class="summary">{{ section().summary }}</p>
+    }
+  </header>
+
+  @if (section().paragraphs?.length) {
+    <div class="paragraphs">
+      @for (paragraph of section().paragraphs ?? []; track paragraph) {
+        <p>{{ paragraph }}</p>
+      }
+    </div>
+  }
+
+  @if (section().bullets?.length) {
+    <ul class="bullets">
+      @for (bullet of section().bullets ?? []; track bullet) {
+        <li>{{ bullet }}</li>
+      }
+    </ul>
+  }
+
+  @if (section().steps?.length) {
+    <ol class="steps">
+      @for (step of section().steps ?? []; track step) {
+        <li>{{ step }}</li>
+      }
+    </ol>
+  }
+
+  @if (section().callouts?.length) {
+    <div class="callouts">
+      @for (callout of section().callouts ?? []; track callout.title) {
+        <div
+          class="callout"
+          [class.callout--note]="callout.tone === 'note'"
+          [class.callout--tip]="callout.tone === 'tip'"
+          [class.callout--warn]="callout.tone === 'warn'"
+        >
+          <h3>{{ callout.title }}</h3>
+          <p>{{ callout.text }}</p>
+        </div>
+      }
+    </div>
+  }
+
+  @if (section().code?.length) {
+    <div class="code-blocks">
+      @for (block of section().code ?? []; track block.snippet) {
+        <div class="code-block">
+          @if (block.title) {
+            <p class="code-title">{{ block.title }}</p>
+          }
+          <pre [attr.data-language]="block.language ?? ''" [class]="'language-' + (block.language === 'html' ? 'markup' : (block.language === 'ts' ? 'typescript' : (block.language ?? 'markup')))"><code [class]="'language-' + (block.language === 'html' ? 'markup' : (block.language === 'ts' ? 'typescript' : (block.language ?? 'markup')))">{{ block.snippet.trim() }}</code></pre>
+        </div>
+      }
+    </div>
+  }
+</section>

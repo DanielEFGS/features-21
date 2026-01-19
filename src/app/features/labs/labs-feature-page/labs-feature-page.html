@@ -1,13 +1,48 @@
 <section class="page">
-  <header class="page-header" appTextureLayer>
-    <div>
-      <p class="eyebrow">Lab</p>
-      <h1>{{ feature() }}</h1>
-    </div>
-    <a class="back" routerLink="/labs">Volver al indice</a>
-  </header>
+  <a class="back" routerLink="/labs">Back to index</a>
 
-  <div class="placeholder" appTextureLayer>
-    <p>Contenido pendiente para este lab.</p>
-  </div>
+  @if (lab(); as selectedLab) {
+    <app-lab-hero [lab]="selectedLab"></app-lab-hero>
+
+    <div class="lab-body">
+      <app-lab-toc [sections]="tocSections()"></app-lab-toc>
+
+      <div class="lab-content">
+        @for (section of sections(); track section.id) {
+          <app-lab-section [section]="section"></app-lab-section>
+        }
+
+        @if (selectedLab.id === 'signals') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="signals-quick-compare"
+            title="Signals quick compare demo"
+            description="Pick up to three Pokemon and see derived state update instantly."
+            [tabs]="signalsDemoTabs"
+          >
+            <app-signals-demo labDemoPreview></app-signals-demo>
+          </app-lab-code-demo>
+        }
+
+        <app-lab-exercise sectionId="exercise" [exercise]="selectedLab.exercise"></app-lab-exercise>
+        <app-lab-references sectionId="references" [references]="selectedLab.references"></app-lab-references>
+      </div>
+    </div>
+  } @else {
+    <header class="page-header" appTextureLayer>
+      <div>
+        <p class="eyebrow">Lab</p>
+        <h1>Content pending</h1>
+      </div>
+    </header>
+
+    <div class="placeholder" appTextureLayer>
+      @if (catalogItem(); as item) {
+        <p class="placeholder-title">{{ item.title }}</p>
+        <p>{{ item.summary }}</p>
+      } @else {
+        <p>This lab is not available yet.</p>
+      }
+    </div>
+  }
 </section>

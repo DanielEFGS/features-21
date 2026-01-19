@@ -1,0 +1,10 @@
+<section class="references" [attr.id]="sectionId() || null">
+  <h2>References</h2>
+  <ul>
+    @for (ref of references(); track ref.url) {
+      <li>
+        <a [href]="ref.url" target="_blank" rel="noreferrer">{{ ref.label }}</a>
+      </li>
+    }
+  </ul>
+</section>

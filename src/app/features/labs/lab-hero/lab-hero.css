@@ -1,0 +1,80 @@
+.hero {
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-hard);
+  display: grid;
+  gap: 1.25rem;
+}
+
+.hero-main h1 {
+  margin: 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--ink-500);
+  margin: 0 0 0.35rem;
+}
+
+.tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: var(--ink-700);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  border: 2px solid var(--ink-900);
+  padding: 0.25rem 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: #fff;
+  box-shadow: 3px 3px 0 var(--ink-900);
+}
+
+.chip--progress {
+  background: var(--accent);
+}
+
+.chip--done {
+  background: #a8f0b0;
+}
+
+.chip--planned {
+  background: #ffd995;
+}
+
+.chip--level {
+  background: #d6f0ff;
+}
+
+.chip--duration {
+  background: #f6e6c2;
+}
+
+.summary {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.outcomes {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  list-style: square;
+}
+
+.outcomes li::marker {
+  color: var(--ink-700);
+}

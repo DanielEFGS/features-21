@@ -22,7 +22,7 @@ export const routes: Routes = [
   {
     path: 'pokedex/:nameOrId',
     component: PokedexDetailPage,
-    title: 'Pokedex detalle'
+    title: 'Pokedex detail'
   },
   {
     path: 'labs',

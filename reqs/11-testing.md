@@ -9,8 +9,8 @@ RQ-TEST-001
   - Vitest configurado.
   - Tests unitarios corren local.
 - Checklist:
-  - [ ] Configurar Vitest.
-  - [ ] Documentar comando de tests.
+  - [x] Configurar Vitest.
+  - [x] Documentar comando de tests.
 
 RQ-TEST-002
 - Descripcion: Cobertura de data layer (cliente + mappers) con mocks.
@@ -21,7 +21,7 @@ RQ-TEST-002
   - Tests de mappers y cliente.
 - Checklist:
   - [x] Mock de HTTP.
-  - [ ] Tests de mappers.
+  - [x] Tests de mappers.
 
 RQ-TEST-003
 - Descripcion: Cobertura de store (signals).
@@ -43,6 +43,7 @@ RQ-TEST-004
 - Checklist:
   - [x] Tests de listado.
   - [x] Tests de detalle.
+  - [x] Cobertura >=90% en ramas.
 
 RQ-TEST-010
 - Descripcion: E2E con Playwright (v2).

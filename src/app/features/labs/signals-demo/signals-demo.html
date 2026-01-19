@@ -1,0 +1,49 @@
+<section class="demo">
+  <header class="demo-header">
+    <div>
+      <p class="eyebrow">Signals</p>
+      <h3>Quick compare panel</h3>
+    </div>
+    <button type="button" class="clear" (click)="clear()" [disabled]="selectedCount() === 0">
+      Clear
+    </button>
+  </header>
+
+  <p class="summary">{{ summaryText() }}</p>
+
+  <ul class="pokemon-list">
+    @for (item of availablePokemon(); track item.name) {
+      <li class="pokemon-item">
+        <div>
+          <p class="name">{{ item.name }}</p>
+          <p class="type">{{ item.type }}</p>
+        </div>
+        <div class="actions">
+          <button
+            type="button"
+            (click)="add(item.name)"
+            [disabled]="isLimitReached() || selectedNames().includes(item.name)"
+          >
+            Add
+          </button>
+          <button type="button" (click)="remove(item.name)" [disabled]="!selectedNames().includes(item.name)">
+            Remove
+          </button>
+        </div>
+      </li>
+    }
+  </ul>
+
+  @if (selectedDetails().length === 0) {
+    <p class="empty">Select up to three Pokemon to compare.</p>
+  } @else {
+    <div class="selected-grid">
+      @for (item of selectedDetails(); track item.name) {
+        <article class="selected-card">
+          <h4>{{ item.name }}</h4>
+          <p>{{ item.type }}</p>
+        </article>
+      }
+    </div>
+  }
+</section>
