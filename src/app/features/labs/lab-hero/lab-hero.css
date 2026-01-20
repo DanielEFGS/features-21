@@ -86,6 +86,7 @@
   border: 2px solid var(--ink-900);
   background: var(--accent);
   box-shadow: 3px 3px 0 var(--ink-900);
+  z-index: 2;
 }
 
 .back:focus-visible {

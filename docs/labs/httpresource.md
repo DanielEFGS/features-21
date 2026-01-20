@@ -3,17 +3,27 @@
 This lab adapts the official Angular docs into a focused, practical exercise. The goal is to learn the essentials without copying the docs verbatim.
 
 ## Index
-- [Overview](#overview)
-- [Goals](#goals)
-- [Prerequisites](#prerequisites)
-- [Key concepts](#key-concepts)
-- [Guided exercise](#guided-exercise)
-- [Minimum implementation](#minimum-implementation)
-- [Checklist](#checklist)
-- [Common pitfalls](#common-pitfalls)
-- [A11y and UX](#a11y-and-ux)
-- [Suggested tests](#suggested-tests)
-- [References](#references)
+- [Lab: httpResource](#lab-httpresource)
+  - [Index](#index)
+  - [Overview](#overview)
+  - [Goals](#goals)
+  - [Prerequisites](#prerequisites)
+  - [Key concepts](#key-concepts)
+  - [Guided exercise](#guided-exercise)
+  - [Optimization strategies](#optimization-strategies)
+    - [Debounce with a pending signal](#debounce-with-a-pending-signal)
+    - [Debounce typing with RxJS + toSignal](#debounce-typing-with-rxjs--tosignal)
+    - [Prevent queued requests while loading](#prevent-queued-requests-while-loading)
+  - [Minimum implementation](#minimum-implementation)
+    - [1) Define state and request inputs](#1-define-state-and-request-inputs)
+    - [2) Create the resource with parsing](#2-create-the-resource-with-parsing)
+    - [3) Derive UI state](#3-derive-ui-state)
+    - [4) Template wiring](#4-template-wiring)
+  - [Checklist](#checklist)
+  - [Common pitfalls](#common-pitfalls)
+  - [A11y and UX](#a11y-and-ux)
+  - [Suggested tests](#suggested-tests)
+  - [References](#references)
 
 ## Overview
 `httpResource` gives you reactive data fetching built on top of `HttpClient`. It returns a `Resource` signal that keeps track of the request state (value, loading, error) and re-fetches when its inputs change.
@@ -179,10 +189,10 @@ readonly errorMessage = computed(() => {
 ```
 
 ## Checklist
-- [ ] Request config uses `computed`.
-- [ ] `httpResource` parses data into a UI shape.
-- [ ] Loading, error, and empty states are rendered.
-- [ ] Reload uses `pokemonResource.reload()`.
+- [x] Request config uses `computed`.
+- [x] `httpResource` parses data into a UI shape.
+- [x] Loading, error, and empty states are rendered.
+- [x] Reload uses `pokemonResource.reload()`.
 
 ## Common pitfalls
 - Building URLs directly in the template.

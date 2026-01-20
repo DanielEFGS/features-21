@@ -1,0 +1,9 @@
+[build]
+command = "npm run build --configuration production"
+publish = "dist/features-21/browser"
+
+[build.environment]
+NODE_VERSION = "20.19.0"
+
+[[plugins]]
+package = "@netlify/angular-runtime"
