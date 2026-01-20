@@ -104,3 +104,11 @@
 .outcomes li::marker {
   color: var(--ink-700);
 }
+
+@media screen and (max-width: 900px) {
+  .back {
+    top: 20px;
+    right: 20px;
+    left: inherit;
+  }
+}
