@@ -11,14 +11,15 @@ import {
   signal
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { LabSection } from '../labs.models';
 
+const ON_PUSH = ChangeDetectionStrategy.OnPush;
+
 @Component({
   selector: 'app-lab-toc',
-  imports: [RouterLink],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ON_PUSH,
   templateUrl: './lab-toc.html',
   styleUrl: './lab-toc.css'
 })
@@ -69,17 +70,17 @@ export class LabToc {
       updateViewport();
       mediaQuery.addEventListener('change', updateViewport);
 
-      const elements = this.sections()
-        .map((section) => this.document.getElementById(section.id))
-        .filter((element): element is HTMLElement => Boolean(element));
-
       const updateActive = () => {
-        const offset = 120;
+        const offset = this.isDesktop() ? 120 : 140;
+        const elements = this.sections()
+          .map((section) => this.document.getElementById(section.id))
+          .filter((element): element is HTMLElement => Boolean(element));
+        const scrollY = win.scrollY + offset*2;
         let currentId = elements[0]?.id ?? '';
 
         for (const element of elements) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top - offset <= 0) {
+          const top = element.getBoundingClientRect().top + win.scrollY;
+          if (top <= scrollY) {
             currentId = element.id;
           } else {
             break;
@@ -118,5 +119,80 @@ export class LabToc {
     const target = event.target as HTMLDetailsElement | null;
     if (!target) return;
     this.isOpen.set(target.open);
+  }
+
+  /**
+   * Closes the TOC on mobile.
+   */
+  closeToc(): void {
+    if (this.isDesktop()) {
+      return;
+    }
+    this.isOpen.set(false);
+  }
+
+  /**
+   * Closes the TOC when a section link is clicked on mobile.
+   * @param event Link click event.
+   */
+  onLinkClick(event: Event, sectionId: string): void {
+    event.preventDefault();
+    if (!this.isDesktop()) {
+      const target = event.currentTarget as HTMLElement | null;
+      const details = target?.closest('details');
+      if (details && 'open' in details) {
+        (details as HTMLDetailsElement).open = false;
+      }
+      this.isOpen.set(false);
+    }
+    this.activeId.set(sectionId);
+    this.scrollToSection(sectionId);
+    this.updateHash(sectionId);
+  }
+
+  /**
+   * Offsets anchor scrolling to account for sticky UI on mobile.
+   */
+  private scrollToSection(sectionId: string): void {
+    const win = this.document.defaultView;
+    if (!win) {
+      return;
+    }
+    const offset = this.isDesktop() ? 95 : 120;
+    const getTarget = () => this.document.getElementById(sectionId);
+    let attempts = 0;
+    const scroller = this.document.scrollingElement ?? this.document.documentElement;
+
+    const scroll = () => {
+      const target = getTarget();
+      if (!target) {
+        attempts += 1;
+        if (attempts < 4) {
+          win.setTimeout(scroll, 50);
+        }
+        return;
+      }
+      const top = target.getBoundingClientRect().top + (scroller?.scrollTop ?? win.scrollY) - offset;
+      if (scroller) {
+        scroller.scrollTo({ top, behavior: 'smooth' });
+      } else {
+        win.scrollTo({ top, behavior: 'smooth' });
+      }
+    };
+
+    scroll();
+  }
+
+  /**
+   * Updates the URL hash without triggering navigation.
+   * @param sectionId Section anchor id.
+   */
+  private updateHash(sectionId: string): void {
+    const win = this.document.defaultView;
+    if (!win) {
+      return;
+    }
+    const base = win.location.href.split('#')[0];
+    win.history.replaceState({}, '', `${base}#${sectionId}`);
   }
 }

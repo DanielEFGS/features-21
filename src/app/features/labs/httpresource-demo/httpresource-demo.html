@@ -1,0 +1,46 @@
+<section class="demo">
+  <header class="demo-header">
+    <div>
+      <p class="eyebrow">httpResource</p>
+      <h3>Pokemon lookup</h3>
+      <p class="subtitle">Fetch a Pokemon by name and watch the resource state update.</p>
+    </div>
+  </header>
+
+  <div class="search-row">
+    <label class="field-label" for="pokemon-name">Pokemon name</label>
+    <div class="input-row">
+      <input
+        #nameInput
+        id="pokemon-name"
+        type="text"
+        [value]="pendingQuery()"
+        (input)="updatePending(nameInput.value)"
+        autocomplete="off"
+      />
+      <button type="button" (click)="applyQuery()" [disabled]="isLoading() || isEmptyQuery()">
+        Load
+      </button>
+    </div>
+  </div>
+
+  @if (status() === 'loading') {
+    <p class="status">Loading...</p>
+  } @else if (status() === 'error') {
+    <p class="status status--error">{{ errorMessage() }}</p>
+  } @else if (pokemon()) {
+    <article class="pokemon-card">
+      <div class="pokemon-header">
+        <h4>{{ pokemon()!.name }}</h4>
+        <span class="pokemon-id">#{{ pokemon()!.id }}</span>
+      </div>
+      <ul class="type-list">
+        @for (type of pokemon()!.types; track type) {
+          <li>{{ type }}</li>
+        }
+      </ul>
+    </article>
+  } @else {
+    <p class="status">Search for a Pokemon to begin.</p>
+  }
+</section>

@@ -22,6 +22,18 @@
           </app-lab-code-demo>
         }
 
+        @if (selectedLab.id === 'httpresource') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="httpresource-lookup"
+            title="httpResource lookup demo"
+            description="Fetch a Pokemon by name and track loading and error states."
+            [tabs]="httpResourceDemoTabs"
+          >
+            <app-httpresource-demo labDemoPreview></app-httpresource-demo>
+          </app-lab-code-demo>
+        }
+
         <app-lab-exercise sectionId="exercise" [exercise]="selectedLab.exercise"></app-lab-exercise>
         <app-lab-references sectionId="references" [references]="selectedLab.references"></app-lab-references>
       </div>

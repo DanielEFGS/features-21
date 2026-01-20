@@ -5,7 +5,7 @@
   box-shadow: 4px 4px 0 var(--ink-900);
   display: grid;
   gap: 1rem;
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 8.75rem;
 }
 
 .section-header h2 {
@@ -111,4 +111,10 @@ code[class*="language-"] {
 
 code[class*="language-"] {
   display: block;
+}
+
+@media (max-width: 900px) {
+  .section {
+    scroll-margin-top: 7.5rem;
+  }
 }

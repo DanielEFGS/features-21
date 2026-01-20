@@ -1,3 +1,7 @@
+@if (isOpen() && !isDesktop()) {
+  <button class="toc-backdrop" type="button" (click)="closeToc()" aria-label="Close table of contents"></button>
+}
+
 <details
   class="toc-collapsible"
   [class.is-open]="isOpen() || isDesktop()"
@@ -17,9 +21,9 @@
       @for (section of sections(); track section.id) {
         <li>
           <a
-            [routerLink]="[]"
-            [fragment]="section.id"
+            [attr.href]="'#' + section.id"
             [class.is-active]="activeId() === section.id"
+            (click)="onLinkClick($event, section.id)"
           >
             {{ section.title }}
           </a>

@@ -5,7 +5,7 @@
   box-shadow: 5px 5px 0 var(--ink-900);
   display: grid;
   gap: 1.2rem;
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 8.75rem;
 }
 
 .exercise-header h2 {
@@ -75,4 +75,10 @@
   border: 2px dashed var(--ink-900);
   padding: 0.9rem;
   background: #fff;
+}
+
+@media (max-width: 900px) {
+  .exercise {
+    scroll-margin-top: 7.5rem;
+  }
 }

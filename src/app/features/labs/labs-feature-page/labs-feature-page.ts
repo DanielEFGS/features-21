@@ -9,8 +9,10 @@ import { LabSectionComponent } from '../lab-section/lab-section';
 import { LabToc } from '../lab-toc/lab-toc';
 import { LAB_CATALOG, LAB_CONTENT } from '../labs.data';
 import { LabCodeDemoComponent, LabCodeTab } from '../lab-code-demo/lab-code-demo';
+import { HttpResourceDemoComponent } from '../httpresource-demo/httpresource-demo';
 import { SignalsDemoComponent } from '../signals-demo/signals-demo';
 import { SIGNALS_DEMO_CODE } from '../signals-demo/signals-demo.code';
+import { HTTPRESOURCE_DEMO_CODE } from '../httpresource-demo/httpresource-demo.code';
 import { TextureLayerDirective } from '../../../shared/texture-layer/texture-layer.directive';
 
 @Component({
@@ -23,6 +25,7 @@ import { TextureLayerDirective } from '../../../shared/texture-layer/texture-lay
     LabExerciseComponent,
     LabReferencesComponent,
     LabCodeDemoComponent,
+    HttpResourceDemoComponent,
     SignalsDemoComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -43,7 +46,10 @@ export class LabsFeaturePage {
   protected readonly sections = computed(() => this.lab()?.sections ?? []);
   protected readonly tocSections = computed(() => {
     const mainSections = this.lab()?.sections ?? [];
-    const demoSection = this.lab()?.id === 'signals' ? [{ id: 'demo', title: 'Demo' }] : [];
+    const demoSection =
+      this.lab()?.id === 'signals' || this.lab()?.id === 'httpresource'
+        ? [{ id: 'demo', title: 'Demo' }]
+        : [];
     return [
       ...mainSections,
       ...demoSection,
@@ -56,5 +62,11 @@ export class LabsFeaturePage {
     { id: 'html', label: 'HTML', language: 'markup', code: SIGNALS_DEMO_CODE.html },
     { id: 'ts', label: 'TypeScript', language: 'ts', code: SIGNALS_DEMO_CODE.ts },
     { id: 'css', label: 'CSS', language: 'css', code: SIGNALS_DEMO_CODE.css }
+  ];
+
+  protected readonly httpResourceDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: HTTPRESOURCE_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: HTTPRESOURCE_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: HTTPRESOURCE_DEMO_CODE.css }
   ];
 }

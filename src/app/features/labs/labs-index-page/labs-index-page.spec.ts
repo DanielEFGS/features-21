@@ -35,4 +35,12 @@ describe('LabsIndexPage', () => {
     expect(statusClasses.some((value: string) => value.includes('lab-status--planned'))).toBe(true);
     expect(statusClasses.some((value: string) => value.includes('lab-status--progress'))).toBe(true);
   });
+
+  it('hides status labels for completed labs', () => {
+    const fixture = TestBed.createComponent(LabsIndexPage);
+    fixture.detectChanges();
+
+    const doneStatus = fixture.nativeElement.querySelector('.lab-status--done');
+    expect(doneStatus).toBeNull();
+  });
 });

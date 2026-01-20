@@ -5,7 +5,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
   {
     id: 'signals',
     title: 'Signals',
-    status: 'in-progress',
+    status: 'done',
     level: 'Beginner',
     duration: '30-40 min',
     summary: 'Model local state with signals, derive values with computed, and use effects for side effects.'
@@ -13,7 +13,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
   {
     id: 'httpresource',
     title: 'httpResource',
-    status: 'planned',
+    status: 'done',
     level: 'Intermediate',
     duration: '35-45 min',
     summary: 'Reactive data fetching with resources, loading states, and abortable requests.'
@@ -82,7 +82,7 @@ export const LAB_CONTENT: Record<string, LabContent> = {
     id: 'signals',
     title: 'Signals',
     tagline: 'Build a quick compare panel powered by signals.',
-    status: 'in-progress',
+    status: 'done',
     level: 'Beginner',
     duration: '30-40 min',
     summary:
@@ -204,6 +204,128 @@ export const LAB_CONTENT: Record<string, LabContent> = {
       { label: 'Computed', url: 'https://angular.dev/guide/signals#computed-signals' },
       { label: 'Effects', url: 'https://angular.dev/guide/signals/effect' },
       { label: 'linkedSignal', url: 'https://angular.dev/guide/signals/linked-signal' }
+    ]
+  },
+  httpresource: {
+    id: 'httpresource',
+    title: 'httpResource',
+    tagline: 'Build a reactive Pokemon lookup with resource state.',
+    status: 'done',
+    level: 'Intermediate',
+    duration: '35-45 min',
+    summary:
+      'Use httpResource to fetch data reactively, model loading and error states, and parse responses into UI-friendly shapes.',
+    outcomes: [
+      'Create a request config with computed.',
+      'Fetch data with httpResource and parse it.',
+      'Render loading, error, empty, and success states.',
+      'Trigger reloads in a controlled way.'
+    ],
+    prerequisites: [
+      'HttpClient basics and providers.',
+      'Signals and computed.',
+      'Modern control flow (@if, @for).'
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        summary: 'httpResource wraps HttpClient with reactive state and status tracking.',
+        paragraphs: [
+          'A resource exposes value, status, and error signals that are easy to bind in templates.',
+          'When input signals change, the request re-runs automatically.'
+        ]
+      },
+      {
+        id: 'core-apis',
+        title: 'Core APIs',
+        summary: 'Use resource.value, resource.status, and resource.error to drive UI state.',
+        bullets: [
+          'httpResource(() => config): creates a reactive request.',
+          'resource.value(): current payload (undefined while loading).',
+          'resource.status(): idle, loading, error, or success.',
+          'resource.reload(): force a refetch.'
+        ]
+      },
+      {
+        id: 'optimization',
+        title: 'Optimization strategies',
+        summary: 'Control how often inputs change to avoid unnecessary requests.',
+        bullets: [
+          'Use a pending input signal and apply it on button click or Enter.',
+          'Debounce input with RxJS and toSignal when typing should auto-search.',
+          'Disable the Load button while loading to avoid queueing.'
+        ],
+        code: [
+          {
+            title: 'Apply pending input',
+            language: 'ts',
+            snippet:
+              "readonly pendingQuery = signal('pikachu');\nreadonly query = signal('pikachu');\n\napplyQuery(): void {\n  const next = this.pendingQuery().trim().toLowerCase();\n  if (!next) return;\n  this.query.set(next);\n  this.pokemonResource.reload();\n}"
+          },
+          {
+            title: 'Debounce typing with RxJS',
+            language: 'ts',
+            snippet:
+              "const input$ = new Subject<string>();\nreadonly query = toSignal(input$.pipe(debounceTime(400)), { initialValue: 'pikachu' });"
+          },
+          {
+            title: 'Disable while loading',
+            language: 'html',
+            snippet:
+              "<button type=\"button\" (click)=\"applyQuery()\" [disabled]=\"status() === 'loading'\">\n  Load\n</button>"
+          }
+        ]
+      },
+      {
+        id: 'parsing',
+        title: 'Parsing and view models',
+        summary: 'Parse payloads into the shape your UI needs.',
+        paragraphs: [
+          'Use parse to map DTOs into view models.',
+          'Keep parsing next to the resource to reduce template logic.'
+        ],
+        code: [
+          {
+            title: 'Parse a Pokemon payload',
+            language: 'ts',
+            snippet:
+              "readonly pokemonResource = httpResource<PokemonView>(() => this.requestConfig(), {\n  parse: (payload) => ({\n    id: (payload as PokemonDto).id,\n    name: (payload as PokemonDto).name,\n    types: (payload as PokemonDto).types.map((entry) => entry.type.name)\n  })\n});"
+          }
+        ]
+      },
+      {
+        id: 'ui-states',
+        title: 'UI states',
+        summary: 'Keep user feedback clear for loading, error, and empty states.',
+        paragraphs: [
+          'Derive status with computed and render it directly in the template.',
+          'Use a neutral empty state before the first request.'
+        ]
+      }
+    ],
+    exercise: {
+      title: 'Exercise: Pokemon lookup',
+      goal: 'Fetch a Pokemon by name and render its types.',
+      tasks: [
+        'Create a query signal and computed request config.',
+        'Use httpResource with parse to build a view model.',
+        'Add loading, error, empty, and success states.',
+        'Add a Load button that triggers reload.'
+      ],
+      success: [
+        'Changing the query fetches a new Pokemon.',
+        'Errors show a clear message.',
+        'The UI stays stable during loading.'
+      ],
+      stretch: [
+        'Add a clear action that resets the view.',
+        'Display the last successful result on error.'
+      ]
+    },
+    references: [
+      { label: 'httpResource guide', url: 'https://angular.dev/guide/http/http-resource' },
+      { label: 'HttpClient', url: 'https://angular.dev/guide/http' }
     ]
   }
 };

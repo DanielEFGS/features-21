@@ -9,6 +9,8 @@
   border: 2px solid var(--ink-900);
   background: var(--paper-2);
   box-shadow: 4px 4px 0 var(--ink-900);
+  position: relative;
+  z-index: 11;
 }
 
 .toc-summary {
@@ -93,13 +95,14 @@
 
 @media (min-width: 901px) {
   :host {
-    top: 1.75rem;
+    top: 6.75rem;
   }
 
   .toc-collapsible {
     border: none;
     background: transparent;
     box-shadow: none;
+    z-index: 21;
   }
 
   .toc-summary {
@@ -116,9 +119,21 @@
 
 @media (max-width: 900px) {
   :host {
-    top: 0;
+    top: 3.75rem;
     z-index: 20;
-    width: 100%;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    position: fixed;
+  }
+
+  .toc-backdrop {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
   }
 
   .toc {

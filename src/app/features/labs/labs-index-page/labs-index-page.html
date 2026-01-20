@@ -12,14 +12,15 @@
       <a class="lab-card" [routerLink]="'/labs/' + lab.id">
         <div class="lab-card-header">
           <p class="lab-title">{{ lab.title }}</p>
-          <span
-            class="lab-status"
-            [class.lab-status--planned]="lab.status === 'planned'"
-            [class.lab-status--progress]="lab.status === 'in-progress'"
-            [class.lab-status--done]="lab.status === 'done'"
-          >
-            {{ lab.status }}
-          </span>
+          @if (lab.status !== 'done') {
+            <span
+              class="lab-status"
+              [class.lab-status--planned]="lab.status === 'planned'"
+              [class.lab-status--progress]="lab.status === 'in-progress'"
+            >
+              {{ lab.status }}
+            </span>
+          }
         </div>
         <p class="lab-summary">{{ lab.summary }}</p>
         <div class="lab-meta">

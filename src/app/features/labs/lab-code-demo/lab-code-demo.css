@@ -5,6 +5,7 @@
   box-shadow: 5px 5px 0 var(--ink-900);
   display: grid;
   gap: 1.2rem;
+  scroll-margin-top: 8.75rem;
 }
 
 .eyebrow {
@@ -115,6 +116,10 @@
 @media (max-width: 900px) {
   .demo-grid {
     grid-template-columns: 1fr;
+  }
+
+  .demo {
+    scroll-margin-top: 7.5rem;
   }
 }
 .demo-header {

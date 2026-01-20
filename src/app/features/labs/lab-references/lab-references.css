@@ -3,7 +3,7 @@
   background: #fff;
   padding: 1.2rem;
   box-shadow: 4px 4px 0 var(--ink-900);
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 8.75rem;
 }
 
 .references h2 {
@@ -31,4 +31,10 @@
 .references a:focus-visible {
   outline: 2px solid var(--ink-900);
   outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .references {
+    scroll-margin-top: 7.5rem;
+  }
 }
