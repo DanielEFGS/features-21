@@ -1,0 +1,52 @@
+<section class="demo">
+  <header class="demo-header">
+    <div>
+      <p class="eyebrow">Signal Forms</p>
+      <h3>Trainer contact form</h3>
+      <p class="subtitle">Model-driven fields with schema validation and field state feedback.</p>
+    </div>
+    <div class="header-actions">
+      <button type="button" class="ghost" (click)="prefill()">Prefill</button>
+      <button type="button" class="ghost" (click)="reset()">Reset</button>
+    </div>
+  </header>
+
+  <form class="form" (submit)="onSubmit($event)">
+    <label class="field">
+      <span class="field__label">Trainer name</span>
+      <input type="text" [formField]="trainerForm.name" autocomplete="name" />
+    </label>
+    @if (showNameErrors()) {
+      <ul class="field-errors" role="alert" aria-live="polite">
+        @for (error of trainerForm.name().errors(); track error) {
+          <li>{{ error.message }}</li>
+        }
+      </ul>
+    }
+
+    <label class="field">
+      <span class="field__label">Email</span>
+      <input type="email" [formField]="trainerForm.email" autocomplete="email" />
+    </label>
+    @if (showEmailErrors()) {
+      <ul class="field-errors" role="alert" aria-live="polite">
+        @for (error of trainerForm.email().errors(); track error) {
+          <li>{{ error.message }}</li>
+        }
+      </ul>
+    }
+
+    <label class="field field--checkbox">
+      <input type="checkbox" [formField]="trainerForm.acceptTerms" />
+      <span>I accept the terms</span>
+    </label>
+    @if (showTermsErrors()) {
+      <p class="field-error" role="alert">Accept the terms to continue.</p>
+    }
+
+    <div class="form-footer">
+      <p class="status" [class.status--error]="showSummary()">{{ statusText() }}</p>
+      <button type="submit" [disabled]="!canSubmit()">Save</button>
+    </div>
+  </form>
+</section>

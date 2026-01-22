@@ -1,0 +1,48 @@
+<section class="demo">
+  <header class="demo-header">
+    <div>
+      <p class="eyebrow">Routing</p>
+      <h3>Query-param navigation</h3>
+      <p class="subtitle">Use the router to swap panels without leaving the lab.</p>
+    </div>
+    <div class="url-pill">
+      <p class="url-label">Current URL</p>
+      <p class="url-value">{{ currentUrl() }}</p>
+    </div>
+  </header>
+
+  <div class="nav">
+    <p class="nav-label">Active view</p>
+    <div class="nav-buttons" role="group" aria-label="Demo views">
+      @for (option of options(); track option.id) {
+        <button
+          type="button"
+          class="nav-button"
+          [class.is-active]="activeView() === option.id"
+          (click)="setView(option.id)"
+        >
+          {{ option.label }}
+        </button>
+      }
+    </div>
+  </div>
+
+  <article class="panel">
+    <h4>{{ heading() }}</h4>
+    <p class="panel-hint">{{ helper() }}</p>
+    @if (activeView() === 'overview') {
+      <p class="panel-body">
+        The router reads the `view` query param and keeps the panel in sync with the URL.
+      </p>
+    } @else if (activeView() === 'guards') {
+      <p class="panel-body">
+        A real guard would block navigation. Here we just show how a guard can change the
+        allowed view.
+      </p>
+    } @else {
+      <p class="panel-body">
+        A resolver would prefetch data for the detail panel before rendering it.
+      </p>
+    }
+  </article>
+</section>

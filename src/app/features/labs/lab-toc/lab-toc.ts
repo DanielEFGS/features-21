@@ -34,6 +34,8 @@ export class LabToc {
 
   private readonly fragment = toSignal(this.route.fragment ?? of(''), { initialValue: '' });
   readonly activeId = signal('');
+  readonly pendingTargetId = signal<string | null>(null);
+  readonly pendingUntil = signal(0);
   readonly isOpen = signal(false);
   readonly isDesktop = signal(false);
 
@@ -75,8 +77,25 @@ export class LabToc {
         const elements = this.sections()
           .map((section) => this.document.getElementById(section.id))
           .filter((element): element is HTMLElement => Boolean(element));
-        const scrollY = win.scrollY + offset*2;
+        const scrollY = win.scrollY + offset;
         let currentId = elements[0]?.id ?? '';
+        const pendingId = this.pendingTargetId();
+        if (pendingId) {
+          if (Date.now() > this.pendingUntil()) {
+            this.pendingTargetId.set(null);
+          } else {
+            const target = elements.find((element) => element.id === pendingId);
+            if (target) {
+              const targetTop = target.getBoundingClientRect().top + win.scrollY;
+              if (scrollY >= targetTop) {
+                this.activeId.set(pendingId);
+                this.pendingTargetId.set(null);
+              }
+              return;
+            }
+            this.pendingTargetId.set(null);
+          }
+        }
 
         for (const element of elements) {
           const top = element.getBoundingClientRect().top + win.scrollY;
@@ -145,7 +164,8 @@ export class LabToc {
       }
       this.isOpen.set(false);
     }
-    this.activeId.set(sectionId);
+    this.pendingTargetId.set(sectionId);
+    this.pendingUntil.set(Date.now() + 900);
     this.scrollToSection(sectionId);
     this.updateHash(sectionId);
   }

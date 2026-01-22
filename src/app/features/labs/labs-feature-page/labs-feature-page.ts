@@ -9,10 +9,18 @@ import { LabSectionComponent } from '../lab-section/lab-section';
 import { LabToc } from '../lab-toc/lab-toc';
 import { LAB_CATALOG, LAB_CONTENT } from '../labs.data';
 import { LabCodeDemoComponent, LabCodeTab } from '../lab-code-demo/lab-code-demo';
-import { HttpResourceDemoComponent } from '../httpresource-demo/httpresource-demo';
-import { SignalsDemoComponent } from '../signals-demo/signals-demo';
-import { SIGNALS_DEMO_CODE } from '../signals-demo/signals-demo.code';
-import { HTTPRESOURCE_DEMO_CODE } from '../httpresource-demo/httpresource-demo.code';
+import { HttpResourceDemoComponent } from '../demos/httpresource-demo/httpresource-demo';
+import { DiDemoComponent } from '../demos/di-demo/di-demo';
+import { RxjsInteropDemoComponent } from '../demos/rxjs-interop-demo/rxjs-interop-demo';
+import { RoutingDemoComponent } from '../demos/routing-demo/routing-demo';
+import { SignalsDemoComponent } from '../demos/signals-demo/signals-demo';
+import { FormsDemoComponent } from '../demos/forms-demo/forms-demo';
+import { DI_DEMO_CODE } from '../demos/di-demo/di-demo.code';
+import { SIGNALS_DEMO_CODE } from '../demos/signals-demo/signals-demo.code';
+import { HTTPRESOURCE_DEMO_CODE } from '../demos/httpresource-demo/httpresource-demo.code';
+import { RXJS_INTEROP_DEMO_CODE } from '../demos/rxjs-interop-demo/rxjs-interop-demo.code';
+import { ROUTING_DEMO_CODE } from '../demos/routing-demo/routing-demo.code';
+import { FORMS_DEMO_CODE } from '../demos/forms-demo/forms-demo.code';
 import { TextureLayerDirective } from '../../../shared/texture-layer/texture-layer.directive';
 
 @Component({
@@ -26,7 +34,11 @@ import { TextureLayerDirective } from '../../../shared/texture-layer/texture-lay
     LabReferencesComponent,
     LabCodeDemoComponent,
     HttpResourceDemoComponent,
-    SignalsDemoComponent
+    DiDemoComponent,
+    RxjsInteropDemoComponent,
+    RoutingDemoComponent,
+    SignalsDemoComponent,
+    FormsDemoComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './labs-feature-page.html',
@@ -47,7 +59,12 @@ export class LabsFeaturePage {
   protected readonly tocSections = computed(() => {
     const mainSections = this.lab()?.sections ?? [];
     const demoSection =
-      this.lab()?.id === 'signals' || this.lab()?.id === 'httpresource'
+      this.lab()?.id === 'signals' ||
+      this.lab()?.id === 'httpresource' ||
+      this.lab()?.id === 'rxjs-interop' ||
+      this.lab()?.id === 'routing' ||
+      this.lab()?.id === 'di' ||
+      this.lab()?.id === 'forms'
         ? [{ id: 'demo', title: 'Demo' }]
         : [];
     return [
@@ -68,5 +85,29 @@ export class LabsFeaturePage {
     { id: 'html', label: 'HTML', language: 'html', code: HTTPRESOURCE_DEMO_CODE.html },
     { id: 'ts', label: 'TypeScript', language: 'ts', code: HTTPRESOURCE_DEMO_CODE.ts },
     { id: 'css', label: 'CSS', language: 'css', code: HTTPRESOURCE_DEMO_CODE.css }
+  ];
+
+  protected readonly rxjsInteropDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: RXJS_INTEROP_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: RXJS_INTEROP_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: RXJS_INTEROP_DEMO_CODE.css }
+  ];
+
+  protected readonly routingDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: ROUTING_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: ROUTING_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: ROUTING_DEMO_CODE.css }
+  ];
+
+  protected readonly diDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: DI_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: DI_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: DI_DEMO_CODE.css }
+  ];
+
+  protected readonly formsDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: FORMS_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: FORMS_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: FORMS_DEMO_CODE.css }
   ];
 }

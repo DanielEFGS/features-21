@@ -34,6 +34,54 @@
           </app-lab-code-demo>
         }
 
+        @if (selectedLab.id === 'rxjs-interop') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="rxjs-interop-helper"
+            title="RxJS interop demo"
+            description="Debounce input into a signal, emit an output, and observe it as a stream."
+            [tabs]="rxjsInteropDemoTabs"
+          >
+            <app-rxjs-interop-demo labDemoPreview></app-rxjs-interop-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'routing') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="routing-query-params"
+            title="Routing demo"
+            description="Swap panels by updating query params without leaving the lab."
+            [tabs]="routingDemoTabs"
+          >
+            <app-routing-demo labDemoPreview></app-routing-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'di') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="di-notes"
+            title="DI demo"
+            description="Share notes through a service and compare provider scope."
+            [tabs]="diDemoTabs"
+          >
+            <app-di-demo labDemoPreview></app-di-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'forms') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="forms-trainer-contact"
+            title="Signal Forms demo"
+            description="Build a trainer contact form with schema validation and field state feedback."
+            [tabs]="formsDemoTabs"
+          >
+            <app-forms-demo labDemoPreview></app-forms-demo>
+          </app-lab-code-demo>
+        }
+
         <app-lab-exercise sectionId="exercise" [exercise]="selectedLab.exercise"></app-lab-exercise>
         <app-lab-references sectionId="references" [references]="selectedLab.references"></app-lab-references>
       </div>

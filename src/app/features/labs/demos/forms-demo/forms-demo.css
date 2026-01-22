@@ -1,0 +1,140 @@
+.demo {
+  display: grid;
+  gap: 1rem;
+}
+
+.demo-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.demo-header h3 {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  color: var(--ink-600);
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-600);
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ghost {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink-900);
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 0.9rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field__label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.field input[type='text'],
+.field input[type='email'] {
+  border: 2px solid var(--ink-900);
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.field--checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.field--checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+.field-errors {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  color: #b42318;
+}
+
+.field-error {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #b42318;
+}
+
+.form-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-600);
+}
+
+.status--error {
+  color: #b42318;
+}
+
+.form-footer button {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink-900);
+}
+
+.form-footer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

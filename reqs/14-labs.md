@@ -37,11 +37,11 @@ RQ-LAB-003
   - Labs base implementados.
 - Checklist:
   - [x] /labs/signals
-  - [ ] /labs/httpresource
-  - [ ] /labs/rxjs-interop
-  - [ ] /labs/routing
-  - [ ] /labs/di
-  - [ ] /labs/forms
+  - [x] /labs/httpresource
+  - [x] /labs/rxjs-interop
+  - [x] /labs/routing
+  - [x] /labs/di
+  - [x] /labs/forms
   - [ ] /labs/animations
   - [ ] /labs/style-guide
   - [ ] /labs/tailwind

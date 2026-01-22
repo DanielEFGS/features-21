@@ -1,0 +1,111 @@
+.demo {
+  display: grid;
+  gap: 1rem;
+}
+
+.demo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  color: var(--ink-600);
+}
+
+h3 {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0.4rem 0 0;
+  color: var(--ink-600);
+  font-size: 0.85rem;
+}
+
+.url-pill {
+  border: 2px dashed var(--ink-900);
+  background: var(--paper-2);
+  padding: 0.4rem 0.7rem;
+  min-width: 200px;
+  max-width: 320px;
+  word-break: break-word;
+}
+
+.url-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+  color: var(--ink-600);
+}
+
+.url-value {
+  margin: 0.3rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.nav-label {
+  margin: 0;
+  font-weight: 700;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink-900);
+}
+
+.nav-button.is-active {
+  background: var(--accent);
+}
+
+.panel {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.85rem;
+  box-shadow: 3px 3px 0 var(--ink-900);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.panel h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.panel-hint {
+  margin: 0;
+  color: var(--ink-600);
+}
+
+.panel-body {
+  margin: 0;
+}

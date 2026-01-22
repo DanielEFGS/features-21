@@ -72,7 +72,7 @@ describe('LabsFeaturePage', () => {
         {
           provide: ActivatedRoute,
           useValue: {
-            paramMap: of(convertToParamMap({ feature: 'routing' }))
+            paramMap: of(convertToParamMap({ feature: 'missing-lab' }))
           }
         }
       ]

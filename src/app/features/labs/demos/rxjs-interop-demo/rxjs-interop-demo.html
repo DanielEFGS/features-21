@@ -1,0 +1,52 @@
+<section class="demo">
+  <header class="demo-header">
+    <div>
+      <p class="eyebrow">RxJS interop</p>
+      <h3>Debounced search helper</h3>
+      <p class="subtitle">Bridge input streams into signals and expose outputs as Observables.</p>
+    </div>
+    <div class="meta">
+      <p class="meta-label">Applied</p>
+      <p class="meta-value">{{ appliedCount() }}</p>
+    </div>
+  </header>
+
+  <div class="input-row">
+    <label class="field-label" for="rxjs-query">Search term</label>
+    <div class="input-actions">
+      <input
+        #queryInput
+        id="rxjs-query"
+        type="text"
+        [value]="liveInput()"
+        (input)="updateInput(queryInput.value)"
+        autocomplete="off"
+      />
+      <button type="button" (click)="apply()" [disabled]="isApplyDisabled()">Apply</button>
+    </div>
+  </div>
+
+  <div class="chip-row">
+    <div class="chip">
+      <p class="chip-label">Debounced signal</p>
+      <p class="chip-value">{{ query() || '—' }}</p>
+    </div>
+    <div class="chip">
+      <p class="chip-label">Normalized via toObservable</p>
+      <p class="chip-value">{{ normalizedQuery() || '—' }}</p>
+    </div>
+  </div>
+
+  <div class="log">
+    <p class="log-title">Output stream</p>
+    @if (appliedLog().length === 0) {
+      <p class="empty">No output yet. Click Apply to emit an event.</p>
+    } @else {
+      <ul class="log-list">
+        @for (entry of appliedLog(); track entry) {
+          <li>{{ entry }}</li>
+        }
+      </ul>
+    }
+  </div>
+</section>

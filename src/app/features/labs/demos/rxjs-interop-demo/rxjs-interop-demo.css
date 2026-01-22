@@ -1,0 +1,149 @@
+.demo {
+  display: grid;
+  gap: 1rem;
+}
+
+.demo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  color: var(--ink-600);
+}
+
+h3 {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0.4rem 0 0;
+  color: var(--ink-600);
+  font-size: 0.85rem;
+}
+
+.meta {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.4rem 0.7rem;
+  box-shadow: 3px 3px 0 var(--ink-900);
+  text-align: center;
+  min-width: 90px;
+}
+
+.meta-label {
+  margin: 0;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-600);
+}
+
+.meta-value {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.input-row {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.input-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 200px;
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+button {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink-900);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chip-row {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.chip {
+  border: 2px dashed var(--ink-900);
+  background: var(--paper-2);
+  padding: 0.6rem 0.75rem;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.chip-label {
+  margin: 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-600);
+}
+
+.chip-value {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.log {
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.75rem;
+  box-shadow: 3px 3px 0 var(--ink-900);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.log-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.log-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.3rem;
+  list-style: disc;
+}
+
+.empty {
+  margin: 0;
+  color: var(--ink-600);
+  font-size: 0.85rem;
+}
