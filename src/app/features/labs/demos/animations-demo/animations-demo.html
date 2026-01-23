@@ -1,0 +1,37 @@
+<section class="demo">
+  <header class="demo-header">
+    <div>
+      <p class="eyebrow">Animations</p>
+      <h3>Toast queue</h3>
+      <p class="subtitle">Enter/leave motion with a staggered list.</p>
+    </div>
+    <div class="header-actions">
+      <button type="button" (click)="addToast()">Add toast</button>
+      <button type="button" class="ghost" (click)="clearAll()" [disabled]="toastCount() === 0">
+        Clear all
+      </button>
+    </div>
+  </header>
+
+  <p class="status">{{ statusText() }}</p>
+
+  <ul class="toast-list">
+    @for (toast of toasts(); track toast.id; let index = $index) {
+      <li
+        class="toast-item"
+        [style.--index]="index"
+        animate.enter="toast-enter"
+        animate.leave="toast-leave"
+      >
+        <div class="toast">
+          <span>{{ toast.message }}</span>
+          <button type="button" class="close" (click)="removeToast(toast.id)">Close</button>
+        </div>
+      </li>
+    }
+  </ul>
+
+  @if (toastCount() === 0) {
+    <p class="empty">Add a toast to see the entry animation.</p>
+  }
+</section>

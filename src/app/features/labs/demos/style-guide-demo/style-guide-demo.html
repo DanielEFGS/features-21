@@ -1,0 +1,87 @@
+<section class="demo">
+  <header class="demo-header">
+    <div>
+      <p class="eyebrow">Style Guide</p>
+      <h3>Naming validator</h3>
+      <p class="subtitle">Check selectors, class names, and file bases.</p>
+    </div>
+  </header>
+
+  <div class="grid">
+    <label class="field">
+      <span class="field__label">Project prefix</span>
+      <input
+        type="text"
+        [value]="prefixInput()"
+        (input)="updatePrefix(prefixField.value)"
+        #prefixField
+      />
+      <span class="field__meta" [class.is-valid]="prefixResult().isValid">
+        @if (prefixResult().isValid) {
+          Prefix is unique and kebab-case.
+        } @else {
+          Suggestion: {{ prefixResult().suggestion }}
+        }
+      </span>
+    </label>
+
+    <label class="field">
+      <span class="field__label">Selector</span>
+      <input
+        type="text"
+        [value]="selectorInput()"
+        (input)="updateSelector(selectorField.value)"
+        #selectorField
+      />
+      <span class="field__meta" [class.is-valid]="selectorResult().isValid">
+        @if (selectorResult().isValid) {
+          Valid selector.
+        } @else {
+          Suggestion: {{ selectorResult().suggestion }}
+        }
+      </span>
+    </label>
+
+    <label class="field">
+      <span class="field__label">Class name</span>
+      <input
+        type="text"
+        [value]="classInput()"
+        (input)="updateClassName(classField.value)"
+        #classField
+      />
+      <span class="field__meta" [class.is-valid]="classResult().isValid">
+        @if (classResult().isValid) {
+          Valid class name.
+        } @else {
+          Suggestion: {{ classResult().suggestion }}
+        }
+      </span>
+    </label>
+
+    <label class="field">
+      <span class="field__label">File base</span>
+      <input
+        type="text"
+        [value]="fileInput()"
+        (input)="updateFileBase(fileField.value)"
+        #fileField
+      />
+      <span class="field__meta" [class.is-valid]="fileResult().isValid">
+        @if (fileResult().isValid) {
+          Valid file base.
+        } @else {
+          Suggestion: {{ fileResult().suggestion }}
+        }
+      </span>
+    </label>
+  </div>
+
+  <div class="summary" [class.summary--error]="hasErrors()">
+    @if (hasErrors()) {
+      Fix naming to match the project conventions.
+    } @else {
+      All naming rules pass for this feature.
+    }
+  </div>
+</section>

@@ -7,6 +7,9 @@
   </div>
 
   <div class="meta">
+    @if (lab().extra) {
+      <span class="chip chip--extra">extra</span>
+    }
     @if (lab().status !== 'done') {
       <span
         class="chip"

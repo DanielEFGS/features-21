@@ -53,6 +53,7 @@ export type LabContent = {
   id: string;
   title: string;
   tagline: string;
+  extra?: boolean;
   status: LabStatus;
   level: LabLevel;
   duration: string;
@@ -68,6 +69,7 @@ export type LabContent = {
 export type LabCatalogItem = {
   id: string;
   title: string;
+  extra?: boolean;
   status: LabStatus;
   level: LabLevel;
   duration: string;

@@ -1,0 +1,100 @@
+.demo {
+  display: grid;
+  gap: 1rem;
+}
+
+.demo-header h3 {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  color: var(--ink-600);
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-600);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.toggles {
+  border: 2px solid var(--ink-900);
+  padding: 0.75rem;
+  background: var(--paper-2);
+}
+
+.toggles legend {
+  font-weight: 700;
+  padding: 0 0.25rem;
+}
+
+.toggle-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.toggle {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.toggle__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.toggle__hint {
+  margin: 0.1rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ink-600);
+}
+
+.preview {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.preview__label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.card {
+  border: 2px dashed var(--ink-500);
+}
+
+.card__title {
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+}
+
+.card__body {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-700);
+}
+
+.class-string {
+  display: block;
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 0.5rem 0.6rem;
+  font-size: 0.8rem;
+  word-break: break-word;
+}

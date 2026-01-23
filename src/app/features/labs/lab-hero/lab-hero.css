@@ -59,6 +59,10 @@
   background: #ffd995;
 }
 
+.chip--extra {
+  background: #d6f0ff;
+}
+
 .chip--level {
   background: #d6f0ff;
 }

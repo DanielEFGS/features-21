@@ -25,15 +25,19 @@ describe('LabsIndexPage', () => {
     expect(cards.length).toBe(LAB_CATALOG.length);
   });
 
-  it('shows status styles for planned and in-progress labs', () => {
+  it('shows status styles only for labs that are not done', () => {
     const fixture = TestBed.createComponent(LabsIndexPage);
     fixture.detectChanges();
 
     const statusNodes = Array.from(fixture.nativeElement.querySelectorAll('.lab-status')) as Element[];
-    const statusClasses = statusNodes.map((node) => node.className);
+    const extraNodes = statusNodes.filter((node) => node.classList.contains('lab-status--extra'));
+    const nonDoneStatusNodes = statusNodes.filter((node) => !node.classList.contains('lab-status--extra'));
 
-    expect(statusClasses.some((value: string) => value.includes('lab-status--planned'))).toBe(true);
-    expect(statusClasses.some((value: string) => value.includes('lab-status--progress'))).toBe(true);
+    const nonDoneCount = LAB_CATALOG.filter((item) => item.status !== 'done').length;
+    const extraCount = LAB_CATALOG.filter((item) => item.extra).length;
+
+    expect(nonDoneStatusNodes.length).toBe(nonDoneCount);
+    expect(extraNodes.length).toBe(extraCount);
   });
 
   it('hides status labels for completed labs', () => {

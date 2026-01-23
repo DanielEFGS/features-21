@@ -4,10 +4,136 @@
       <p class="eyebrow">Docs</p>
       <h1>Documentation</h1>
     </div>
-    <p class="hint">Under construction: architecture, SSR, hydration, and labs.</p>
+    <p class="hint">Quick index for architecture, SSR/hydration, labs, and ADRs.</p>
   </header>
 
-  <div class="placeholder" appTextureLayer>
-    <p>Content pending: document index and ADRs.</p>
-  </div>
+  <section class="docs-section" appTextureLayer>
+    <header class="section-header">
+      <div>
+        <p class="eyebrow">Core</p>
+        <h2>Project docs</h2>
+      </div>
+      <p class="hint">Architecture, rendering, performance, and labs index.</p>
+    </header>
+    <div class="cards">
+      @for (doc of coreDocs; track doc.title) {
+        <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)" (click)="onCardClick($event, doc)">
+          <div class="doc-card__header">
+            <h3>{{ doc.title }}</h3>
+            <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
+          </div>
+          <p class="doc-card__summary">{{ doc.summary }}</p>
+          <p class="doc-card__path">{{ doc.path }}</p>
+        </button>
+      }
+    </div>
+  </section>
+
+  <section class="docs-section" appTextureLayer>
+    <header class="section-header">
+      <div>
+        <p class="eyebrow">Labs</p>
+        <h2>Lab writeups</h2>
+      </div>
+      <p class="hint">Per-feature guides, exercises, and references.</p>
+    </header>
+    <div class="cards">
+      @for (doc of labDocs; track doc.title) {
+        <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)" (click)="onCardClick($event, doc)">
+          <div class="doc-card__header">
+            <h3>{{ doc.title }}</h3>
+            <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
+          </div>
+          <p class="doc-card__summary">{{ doc.summary }}</p>
+          <p class="doc-card__path">{{ doc.path }}</p>
+        </button>
+      }
+    </div>
+  </section>
+
+  <section class="docs-section" appTextureLayer>
+    <header class="section-header">
+      <div>
+        <p class="eyebrow">Decisions</p>
+        <h2>ADRs</h2>
+      </div>
+      <p class="hint">Snapshot of key trade-offs and outcomes.</p>
+    </header>
+    <div class="cards cards--tight">
+      @for (doc of adrDocs; track doc.title) {
+        <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)" (click)="onCardClick($event, doc)">
+          <div class="doc-card__header">
+            <h3>{{ doc.title }}</h3>
+            <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
+          </div>
+          <p class="doc-card__summary">{{ doc.summary }}</p>
+          <p class="doc-card__path">{{ doc.path }}</p>
+        </button>
+      }
+    </div>
+  </section>
+
+  @if (modalOpen()) {
+    <div class="modal-backdrop" (click)="closeModal()"></div>
+    <div class="modal" role="dialog" aria-modal="true" [attr.aria-label]="selectedDoc()?.title ?? 'Document preview'">
+      <header class="modal__header">
+        <div>
+          <p class="eyebrow">Preview</p>
+          <h2>{{ selectedDoc()?.title ?? 'Select a document' }}</h2>
+          <p class="hint">{{ selectedDoc()?.path ?? 'Choose a doc to load its content here.' }}</p>
+        </div>
+        <div class="modal__actions">
+          <div class="modal__filters">
+            <label class="field">
+              <span>Category</span>
+              <div class="field-control">
+                <select
+                  #categorySelect
+                  class="ui-select-native"
+                  [value]="selectedCategory()"
+                  (change)="onCategorySelect($event)"
+                >
+                  <option value="all">All</option>
+                  <option value="core">Core</option>
+                  <option value="labs">Labs</option>
+                  <option value="adrs">ADRs</option>
+                </select>
+              </div>
+            </label>
+            <label class="field">
+              <span>Document</span>
+              <div class="field-control">
+                <select
+                  #docSelect
+                  class="ui-select-native"
+                  [value]="selectedDoc()?.path ?? filteredDocs()[0]?.path ?? ''"
+                  (change)="onDocSelect($event)"
+                >
+                  @for (doc of filteredDocs(); track doc.path) {
+                    <option [value]="doc.path" [selected]="isSelected(doc)">
+                      {{ doc.title }}
+                    </option>
+                  }
+                </select>
+              </div>
+            </label>
+          </div>
+          <div class="modal__nav">
+            <button type="button" class="button ghost" (click)="goPrev()">Prev</button>
+            <button type="button" class="button ghost" (click)="goNext()">Next</button>
+            <button type="button" class="button ghost" (click)="closeModal()">Close</button>
+          </div>
+        </div>
+      </header>
+      <div class="modal__body" (click)="$event.stopPropagation()">
+        @if (previewLoading()) {
+          <p class="hint">Loading...</p>
+        } @else if (previewError()) {
+          <p class="error">{{ previewError() }}</p>
+        } @else {
+          <pre class="doc-preview" [textContent]="previewText()"></pre>
+        }
+      </div>
+    </div>
+  }
 </section>

@@ -1,0 +1,103 @@
+.demo {
+  display: grid;
+  gap: 1rem;
+}
+
+.demo-header h3 {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  color: var(--ink-600);
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-600);
+}
+
+.panel {
+  display: grid;
+  gap: 0.75rem;
+  border: 2px solid var(--ink-900);
+  padding: 0.75rem;
+  background: var(--paper-2);
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.field__meta {
+  font-size: 0.75rem;
+  color: var(--ink-700);
+}
+
+.field input:not([type="radio"]) {
+  border: 2px solid var(--ink-900);
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.choices {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--ink-500);
+  border-radius: 0.35rem;
+  background: #fff;
+}
+
+.choice__label {
+  text-transform: capitalize;
+}
+
+.apply {
+  justify-self: start;
+  border: 2px solid var(--ink-900);
+  background: var(--ink-900);
+  color: #fff;
+  padding: 0.45rem 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.results {
+  border: 2px solid var(--ink-900);
+  padding: 0.6rem 0.75rem;
+  background: var(--paper-2);
+  font-weight: 700;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

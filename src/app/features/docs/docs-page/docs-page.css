@@ -34,3 +34,266 @@
   background: var(--paper-2);
   box-shadow: 4px 4px 0 var(--ink-900);
 }
+
+.docs-section {
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-hard);
+  display: grid;
+  gap: 1rem;
+}
+
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.cards {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.cards--tight {
+  gap: 0.5rem;
+}
+
+.doc-card {
+  border: 2px solid var(--ink-900);
+  background: var(--paper-3);
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.doc-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.doc-card__header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.doc-card__summary {
+  margin: 0;
+  color: var(--ink-700);
+  font-size: 0.9rem;
+}
+
+.doc-card__path {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  font-size: 0.8rem;
+  color: var(--ink-800);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 2px solid var(--ink-900);
+  padding: 0.15rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pill[data-status='planned'] {
+  background: #fff0c2;
+}
+
+.pill[data-status='in-progress'] {
+  background: #dbeafe;
+}
+
+.pill[data-status='done'] {
+  background: #dcfce7;
+}
+
+.doc-card:focus-visible {
+  outline: 3px solid var(--ink-900);
+  outline-offset: 3px;
+}
+
+.doc-card--active {
+  box-shadow: 0 0 0 3px var(--ink-900);
+}
+
+.doc-card__path {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 50;
+}
+
+.modal {
+  position: fixed;
+  inset: 8% 8%;
+  background: var(--paper-3);
+  border: 3px solid var(--ink-900);
+  box-shadow: var(--shadow-hard);
+  padding: 1rem;
+  z-index: 60;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0.75rem;
+  max-height: 88vh;
+}
+
+.modal__header {
+  display: grid;
+  gap: 0.75rem;
+  border: 2px solid var(--ink-900);
+  background: var(--paper-2);
+  padding: 0.75rem;
+  box-shadow: 3px 3px 0 var(--ink-900);
+  max-height: 210px;
+}
+
+.modal__actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+  align-items: flex-end;
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.6rem;
+  box-shadow: 3px 3px 0 var(--ink-900);
+  width: 100%;
+}
+
+.modal__filters {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 0.6rem;
+  align-items: end;
+}
+
+.field {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.78rem;
+  color: var(--ink-600);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  min-height: 78px;
+  position: relative;
+}
+
+.field-control {
+  display: grid;
+  align-items: center;
+  min-height: 44px;
+  position: relative;
+}
+
+.field:has(.hs-select.active) {
+  z-index: 10;
+}
+
+.modal__nav {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 3px;
+}
+
+.modal__nav button {
+  min-width: 92px;
+}
+
+.modal__nav button:not(:last-child) {
+  margin-right: 0.1rem;
+}
+
+.modal__nav button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid var(--ink-900);
+  background: var(--accent);
+  color: var(--ink-900);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  box-shadow: 4px 4px 0 var(--ink-900);
+  cursor: pointer;
+}
+
+.modal__body {
+  border: 2px dashed var(--ink-900);
+  background: var(--paper-2);
+  padding: 0.75rem;
+  overflow: auto;
+}
+
+.doc-preview {
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  margin: 0;
+}
+
+.select-label {
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-600);
+}
+
+.select-label select {
+  width: 100%;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .modal {
+    inset: 6% 5%;
+  }
+  .modal__header {
+    max-height: initial !important;
+  }
+  .modal__actions {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .modal__filters {
+    grid-template-columns: 1fr;
+  }
+
+  .modal__nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

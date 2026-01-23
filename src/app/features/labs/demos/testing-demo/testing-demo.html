@@ -1,0 +1,32 @@
+<section class="demo">
+  <header class="demo-header">
+    <p class="eyebrow">Testing</p>
+    <h3>SSR-safe testing checklist</h3>
+    <p class="subtitle">Mock HTTP, drive routing, and guard client-only APIs.</p>
+  </header>
+
+  <ul class="checklist" aria-label="Testing checklist">
+    @for (item of items; track item.key) {
+      <li class="check">
+        <label>
+          <input
+            type="checkbox"
+            [checked]="state()[item.key]"
+            (change)="toggle(item.key)"
+          />
+          <span class="check__label">{{ item.label }}</span>
+        </label>
+        <p class="check__desc">{{ item.description }}</p>
+      </li>
+    }
+  </ul>
+
+  <div class="summary" [class.summary--ok]="readiness().missing.length === 0">
+    <p class="score">Readiness: {{ readiness().score }}%</p>
+    @if (readiness().missing.length === 0) {
+      <p>Tests are SSR-safe with mocked HTTP and guarded client APIs.</p>
+    } @else {
+      <p>Missing: {{ readiness().missing.join(', ') }}</p>
+    }
+  </div>
+</section>

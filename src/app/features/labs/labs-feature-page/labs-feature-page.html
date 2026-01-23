@@ -82,6 +82,114 @@
           </app-lab-code-demo>
         }
 
+        @if (selectedLab.id === 'animations') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="animations-toast-queue"
+            title="Animations demo"
+            description="Enter/leave motion with a staggered toast list."
+            [tabs]="animationsDemoTabs"
+          >
+            <app-animations-demo labDemoPreview></app-animations-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'style-guide') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="style-guide-naming"
+            title="Style guide demo"
+            description="Validate selectors, class names, and file bases."
+            [tabs]="styleGuideDemoTabs"
+          >
+            <app-style-guide-demo labDemoPreview></app-style-guide-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'tailwind') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="tailwind-utilities"
+            title="Tailwind demo"
+            description="Toggle common utilities and see the resulting class string."
+            [tabs]="tailwindDemoTabs"
+          >
+            <app-tailwind-demo labDemoPreview></app-tailwind-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'a11y-aria') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="a11y-aria-panel"
+            title="A11y & Aria demo"
+            description="Labeled fields, helper text, and a live region for results."
+            [tabs]="a11yAriaDemoTabs"
+          >
+            <app-a11y-aria-demo labDemoPreview></app-a11y-aria-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'pwa') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="pwa-readiness"
+            title="PWA checklist demo"
+            description="App-shell readiness with no API caching and a clear update prompt."
+            [tabs]="pwaDemoTabs"
+          >
+            <app-pwa-demo labDemoPreview></app-pwa-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'testing') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="testing-ssr-safe"
+            title="Testing checklist demo"
+            description="SSR-safe specs with HTTP mocks and router harness."
+            [tabs]="testingDemoTabs"
+          >
+            <app-testing-demo labDemoPreview></app-testing-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'performance') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="performance-guardrails"
+            title="Performance checklist demo"
+            description="Budgets, defer plan, and asset/network guardrails."
+            [tabs]="performanceDemoTabs"
+          >
+            <app-performance-demo labDemoPreview></app-performance-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'custom-build') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="custom-build-pipeline"
+            title="Custom build checklist demo"
+            description="Goals, pipeline steps, caching, SSR checks, rollback."
+            [tabs]="customBuildDemoTabs"
+          >
+            <app-custom-build-demo labDemoPreview></app-custom-build-demo>
+          </app-lab-code-demo>
+        }
+
+        @if (selectedLab.id === 'cdk') {
+          <app-lab-code-demo
+            sectionId="demo"
+            demoId="cdk-checklist"
+            title="CDK checklist demo"
+            description="Overlay, focus, portal, and focus-restore steps."
+            [tabs]="cdkDemoTabs"
+          >
+            <app-cdk-demo labDemoPreview></app-cdk-demo>
+          </app-lab-code-demo>
+        }
+
         <app-lab-exercise sectionId="exercise" [exercise]="selectedLab.exercise"></app-lab-exercise>
         <app-lab-references sectionId="references" [references]="selectedLab.references"></app-lab-references>
       </div>

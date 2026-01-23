@@ -15,30 +15,58 @@ import { RxjsInteropDemoComponent } from '../demos/rxjs-interop-demo/rxjs-intero
 import { RoutingDemoComponent } from '../demos/routing-demo/routing-demo';
 import { SignalsDemoComponent } from '../demos/signals-demo/signals-demo';
 import { FormsDemoComponent } from '../demos/forms-demo/forms-demo';
+import { AnimationsDemoComponent } from '../demos/animations-demo/animations-demo';
+import { StyleGuideDemoComponent } from '../demos/style-guide-demo/style-guide-demo';
+import { TailwindDemoComponent } from '../demos/tailwind-demo/tailwind-demo';
+import { A11yAriaDemoComponent } from '../demos/a11y-aria-demo/a11y-aria-demo';
+import { PwaDemoComponent } from '../demos/pwa-demo/pwa-demo';
+import { TestingDemoComponent } from '../demos/testing-demo/testing-demo';
+import { PerformanceDemoComponent } from '../demos/performance-demo/performance-demo';
+import { CustomBuildDemoComponent } from '../demos/custom-build-demo/custom-build-demo';
+import { CdkDemoComponent } from '../demos/cdk-demo/cdk-demo';
 import { DI_DEMO_CODE } from '../demos/di-demo/di-demo.code';
 import { SIGNALS_DEMO_CODE } from '../demos/signals-demo/signals-demo.code';
 import { HTTPRESOURCE_DEMO_CODE } from '../demos/httpresource-demo/httpresource-demo.code';
 import { RXJS_INTEROP_DEMO_CODE } from '../demos/rxjs-interop-demo/rxjs-interop-demo.code';
 import { ROUTING_DEMO_CODE } from '../demos/routing-demo/routing-demo.code';
 import { FORMS_DEMO_CODE } from '../demos/forms-demo/forms-demo.code';
+import { ANIMATIONS_DEMO_CODE } from '../demos/animations-demo/animations-demo.code';
+import { STYLE_GUIDE_DEMO_CODE } from '../demos/style-guide-demo/style-guide-demo.code';
+import { TAILWIND_DEMO_CODE } from '../demos/tailwind-demo/tailwind-demo.code';
+import { A11Y_ARIA_DEMO_CODE } from '../demos/a11y-aria-demo/a11y-aria-demo.code';
+import { PWA_DEMO_CODE } from '../demos/pwa-demo/pwa-demo.code';
+import { TESTING_DEMO_CODE } from '../demos/testing-demo/testing-demo.code';
+import { PERFORMANCE_DEMO_CODE } from '../demos/performance-demo/performance-demo.code';
+import { CUSTOM_BUILD_DEMO_CODE } from '../demos/custom-build-demo/custom-build-demo.code';
+import { CDK_DEMO_CODE } from '../demos/cdk-demo/cdk-demo.code';
+
 import { TextureLayerDirective } from '../../../shared/texture-layer/texture-layer.directive';
 
 @Component({
   selector: 'app-labs-feature-page',
   imports: [
     TextureLayerDirective,
-    LabHero,
     LabToc,
+    LabHero,
     LabSectionComponent,
     LabExerciseComponent,
-    LabReferencesComponent,
     LabCodeDemoComponent,
-    HttpResourceDemoComponent,
+    LabReferencesComponent,
     DiDemoComponent,
-    RxjsInteropDemoComponent,
+    FormsDemoComponent,
     RoutingDemoComponent,
     SignalsDemoComponent,
-    FormsDemoComponent
+    AnimationsDemoComponent,
+    RxjsInteropDemoComponent,
+    HttpResourceDemoComponent,
+    StyleGuideDemoComponent,
+    TailwindDemoComponent,
+    A11yAriaDemoComponent,
+    PwaDemoComponent,
+    TestingDemoComponent,
+    PerformanceDemoComponent,
+    CustomBuildDemoComponent,
+    CdkDemoComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './labs-feature-page.html',
@@ -64,7 +92,16 @@ export class LabsFeaturePage {
       this.lab()?.id === 'rxjs-interop' ||
       this.lab()?.id === 'routing' ||
       this.lab()?.id === 'di' ||
-      this.lab()?.id === 'forms'
+      this.lab()?.id === 'forms' ||
+      this.lab()?.id === 'animations' ||
+      this.lab()?.id === 'style-guide' ||
+      this.lab()?.id === 'tailwind' ||
+      this.lab()?.id === 'a11y-aria' ||
+      this.lab()?.id === 'pwa' ||
+      this.lab()?.id === 'testing' ||
+      this.lab()?.id === 'performance' ||
+      this.lab()?.id === 'custom-build' ||
+      this.lab()?.id === 'cdk'
         ? [{ id: 'demo', title: 'Demo' }]
         : [];
     return [
@@ -109,5 +146,59 @@ export class LabsFeaturePage {
     { id: 'html', label: 'HTML', language: 'html', code: FORMS_DEMO_CODE.html },
     { id: 'ts', label: 'TypeScript', language: 'ts', code: FORMS_DEMO_CODE.ts },
     { id: 'css', label: 'CSS', language: 'css', code: FORMS_DEMO_CODE.css }
+  ];
+
+  protected readonly animationsDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: ANIMATIONS_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: ANIMATIONS_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: ANIMATIONS_DEMO_CODE.css }
+  ];
+
+  protected readonly styleGuideDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: STYLE_GUIDE_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: STYLE_GUIDE_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: STYLE_GUIDE_DEMO_CODE.css }
+  ];
+
+  protected readonly tailwindDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: TAILWIND_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: TAILWIND_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: TAILWIND_DEMO_CODE.css }
+  ];
+
+  protected readonly a11yAriaDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: A11Y_ARIA_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: A11Y_ARIA_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: A11Y_ARIA_DEMO_CODE.css }
+  ];
+
+  protected readonly pwaDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: PWA_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: PWA_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: PWA_DEMO_CODE.css }
+  ];
+
+  protected readonly testingDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: TESTING_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: TESTING_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: TESTING_DEMO_CODE.css }
+  ];
+
+  protected readonly performanceDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: PERFORMANCE_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: PERFORMANCE_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: PERFORMANCE_DEMO_CODE.css }
+  ];
+
+  protected readonly customBuildDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: CUSTOM_BUILD_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: CUSTOM_BUILD_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: CUSTOM_BUILD_DEMO_CODE.css }
+  ];
+
+  protected readonly cdkDemoTabs: LabCodeTab[] = [
+    { id: 'html', label: 'HTML', language: 'html', code: CDK_DEMO_CODE.html },
+    { id: 'ts', label: 'TypeScript', language: 'ts', code: CDK_DEMO_CODE.ts },
+    { id: 'css', label: 'CSS', language: 'css', code: CDK_DEMO_CODE.css }
   ];
 }

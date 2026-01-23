@@ -42,9 +42,9 @@ RQ-LAB-003
   - [x] /labs/routing
   - [x] /labs/di
   - [x] /labs/forms
-  - [ ] /labs/animations
-  - [ ] /labs/style-guide
-  - [ ] /labs/tailwind
+  - [x] /labs/animations
+  - [x] /labs/style-guide
+  - [x] /labs/tailwind
 
 RQ-LAB-004
 - Descripcion: Labs SSR/hydration (ssr-hybrid, hydration).
@@ -65,8 +65,8 @@ RQ-LAB-005
 - Criterios de aceptacion:
   - Labs de a11y y CDK disponibles.
 - Checklist:
-  - [ ] /labs/a11y-aria
-  - [ ] /labs/cdk
+  - [x] /labs/a11y-aria
+  - [x] /labs/cdk
 
 RQ-LAB-006
 - Descripcion: Labs adicionales (pwa, testing, performance, custom-build).
@@ -76,10 +76,10 @@ RQ-LAB-006
 - Criterios de aceptacion:
   - Labs adicionales creados.
 - Checklist:
-  - [ ] /labs/pwa
-  - [ ] /labs/testing
-  - [ ] /labs/performance
-  - [ ] /labs/custom-build
+  - [x] /labs/pwa
+  - [x] /labs/testing
+  - [x] /labs/performance
+  - [x] /labs/custom-build
 
 RQ-LAB-007
 - Descripcion: Lab incremental hydration (v2).
@@ -113,6 +113,7 @@ RQ-LAB-009
   - [ ] Mostrar version (v1/v2).
   - [ ] Mostrar dificultad (basico/intermedio/avanzado).
   - [ ] Incluir tiempo estimado.
+ - Nota: no es necesario mantener un lab con estado planned visible; si existe, se mostrará, pero no se forzará un placeholder.
 
 RQ-LAB-010
 - Descripcion: Cada lab tiene demo minima y se ejecuta en CSR.

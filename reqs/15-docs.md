@@ -18,11 +18,11 @@ RQ-DOC-002
 - Criterios de aceptacion:
   - Docs existen y estan enlazadas.
 - Checklist:
-  - [ ] docs/architecture.md
-  - [ ] docs/labs/<feature>.md
-  - [ ] docs/ssr-hydration.md
-  - [ ] docs/zoneless.md
-  - [ ] docs/performance.md
+  - [x] docs/architecture.md
+  - [x] docs/labs/<feature>.md
+  - [x] docs/ssr-hydration.md
+  - [x] docs/zoneless.md
+  - [x] docs/performance.md
 
 RQ-DOC-003
 - Descripcion: ADR-lite para decisiones importantes.
