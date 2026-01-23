@@ -27,6 +27,7 @@ Areas
 - STD: coding standards
 - DELIV: entregables
 - ADR: decisiones
+- I18N: internacionalizacion
 
 Mapa de archivos
 - reqs/01-vision-scope.md
@@ -48,3 +49,4 @@ Mapa de archivos
 - reqs/17-deliverables.md
 - reqs/18-backlog-open-questions.md
 - reqs/19-adr-decisions.md
+- reqs/20-i18n.md
