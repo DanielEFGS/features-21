@@ -10,6 +10,55 @@
         </context-group>
         <target>Ir al contenido</target>
       </trans-unit>
+      <trans-unit id="docsCategoryPlaceholder" datatype="html">
+        <source>All</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.ts</context>
+        </context-group>
+        <target>Todos</target>
+      </trans-unit>
+      <trans-unit id="docsDocPlaceholder" datatype="html">
+        <source>Document</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.ts</context>
+        </context-group>
+        <target>Documento</target>
+      </trans-unit>
+      <trans-unit id="docsDocSearchPlaceholder" datatype="html">
+        <source>Search document</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.ts</context>
+        </context-group>
+        <target>Buscar documento</target>
+      </trans-unit>
+      <trans-unit id="pokedexTypePlaceholder" datatype="html">
+        <source>All types</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.ts</context>
+        </context-group>
+        <target>Todos los tipos</target>
+      </trans-unit>
+      <trans-unit id="pokedexTypeSearchPlaceholder" datatype="html">
+        <source>Search type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.ts</context>
+        </context-group>
+        <target>Buscar tipo</target>
+      </trans-unit>
+      <trans-unit id="pokedexSortPlaceholder" datatype="html">
+        <source>Order</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.ts</context>
+        </context-group>
+        <target>Orden</target>
+      </trans-unit>
+      <trans-unit id="pokedexDirPlaceholder" datatype="html">
+        <source>Direction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.ts</context>
+        </context-group>
+        <target>Dirección</target>
+      </trans-unit>
       <trans-unit id="logoTitle" datatype="html">
         <source>Features Angular v21</source>
         <context-group purpose="location">
@@ -242,7 +291,9 @@
           <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
           <context context-type="linenumber">82,83</context>
         </context-group>
-        <target>Vista previa no disponible</target>
+        <target>
+          <x id="INTERPOLATION" equiv-text="{{ selectedDoc()?.title ?? fallbackTitle }}" />
+        </target>
       </trans-unit>
       <trans-unit id="docsModalFallbackHint" datatype="html">
         <source>
@@ -252,7 +303,9 @@
           <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
           <context context-type="linenumber">84,86</context>
         </context-group>
-        <target>Abre el documento en otra pestaña si no se muestra aquí­.</target>
+        <target>
+          <x id="INTERPOLATION" equiv-text="{{ selectedDoc()?.path ?? fallbackHint }}" />
+        </target>
       </trans-unit>
       <trans-unit id="docsCategoryLabel" datatype="html">
         <source>Category</source>
@@ -444,7 +497,7 @@
           <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
           <context context-type="linenumber">20,22</context>
         </context-group>
-        <target>PokÃƒÆ’Ã‚Â©API v2</target>
+        <target>PokÉAPI v2</target>
       </trans-unit>
       <trans-unit id="homeStackTag" datatype="html">
         <source>Features Angular v21</source>

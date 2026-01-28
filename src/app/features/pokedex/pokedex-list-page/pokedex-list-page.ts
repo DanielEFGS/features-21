@@ -72,6 +72,10 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
   private readonly zone = inject(NgZone);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly detailConcurrency = inject(POKEDEX_DETAIL_CONCURRENCY);
+  private readonly typePlaceholder = $localize`:@@pokedexTypePlaceholder:All types`;
+  private readonly typeSearchPlaceholder = $localize`:@@pokedexTypeSearchPlaceholder:Search type`;
+  private readonly sortPlaceholder = $localize`:@@pokedexSortPlaceholder:Order`;
+  private readonly dirPlaceholder = $localize`:@@pokedexDirPlaceholder:Direction`;
 
   /* istanbul ignore next */
   protected readonly reloadTick = signal(0);
@@ -105,7 +109,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
 
   /** Preline config for the type select. */
   protected readonly typeSelectConfig = {
-    placeholder: 'All types',
+    placeholder: this.typePlaceholder,
     toggleTag: '<button type="button"></button>',
     wrapperClasses: 'relative w-full',
     toggleClasses: 'ui-select-toggle',
@@ -113,7 +117,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
     optionClasses: 'ui-select-option',
     optionAllowEmptyOption: true,
     hasSearch: true,
-    searchPlaceholder: 'Search type',
+    searchPlaceholder: this.typeSearchPlaceholder,
     searchWrapperClasses: 'ui-select-search-wrapper',
     searchClasses: 'ui-select-search',
     dropdownScope: 'parent'
@@ -121,7 +125,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
 
   /** Preline config for the sort select. */
   protected readonly sortSelectConfig = {
-    placeholder: 'Order',
+    placeholder: this.sortPlaceholder,
     toggleTag: '<button type="button"></button>',
     wrapperClasses: 'relative w-full',
     toggleClasses: 'ui-select-toggle',
@@ -132,7 +136,7 @@ export class PokedexListPage implements AfterViewInit, OnDestroy {
 
   /** Preline config for the direction select. */
   protected readonly dirSelectConfig = {
-    placeholder: 'Direction',
+    placeholder: this.dirPlaceholder,
     toggleTag: '<button type="button"></button>',
     wrapperClasses: 'relative w-full',
     toggleClasses: 'ui-select-toggle',

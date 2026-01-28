@@ -64,6 +64,9 @@ export class DocsPage implements AfterViewInit, OnDestroy {
   protected readonly selectedCategory = signal<Category | 'all'>('all');
   protected readonly filtersOpen = signal(false);
   private readonly viewReady = signal(false);
+  private readonly categoryPlaceholder = $localize`:@@docsCategoryPlaceholder:All`;
+  private readonly docPlaceholder = $localize`:@@docsDocPlaceholder:Document`;
+  private readonly docSearchPlaceholder = $localize`:@@docsDocSearchPlaceholder:Search document`;
 
   @ViewChild('categorySelect') protected categorySelect?: ElementRef<HTMLSelectElement>;
   @ViewChild('docSelect') protected docSelect?: ElementRef<HTMLSelectElement>;
@@ -253,7 +256,7 @@ export class DocsPage implements AfterViewInit, OnDestroy {
 
   // HS select support (mirrors pokedex list setup)
   private readonly categorySelectConfig = {
-    placeholder: 'All',
+    placeholder: this.categoryPlaceholder,
     toggleTag: '<button type="button"></button>',
     wrapperClasses: 'relative w-full',
     toggleClasses: 'ui-select-toggle',
@@ -264,7 +267,7 @@ export class DocsPage implements AfterViewInit, OnDestroy {
   };
 
   private readonly docSelectConfig = {
-    placeholder: 'Document',
+    placeholder: this.docPlaceholder,
     toggleTag: '<button type="button"></button>',
     wrapperClasses: 'relative w-full',
     toggleClasses: 'ui-select-toggle',
@@ -272,7 +275,7 @@ export class DocsPage implements AfterViewInit, OnDestroy {
     optionClasses: 'ui-select-option',
     optionAllowEmptyOption: false,
     hasSearch: true,
-    searchPlaceholder: 'Search document',
+    searchPlaceholder: this.docSearchPlaceholder,
     searchWrapperClasses: 'ui-select-search-wrapper',
     searchClasses: 'ui-select-search',
     dropdownScope: 'parent'
