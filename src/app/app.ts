@@ -131,13 +131,19 @@ export class App implements OnInit, OnDestroy {
    *
    * @param target - Optional click target for scoped closing.
    */
-  private closeActiveSelects(target?: HTMLElement) {
-    const hsSelect = (window as Window & { HSSelect?: { closeCurrentlyOpened: (el?: HTMLElement) => void } })
-      .HSSelect;
+  private closeActiveSelects(target?: HTMLElement | EventTarget | null) {
+    const hsSelect = (window as Window & { HSSelect?: { closeCurrentlyOpened: (el?: HTMLElement) => void } }).HSSelect;
     if (!hsSelect) {
       return;
     }
-    hsSelect.closeCurrentlyOpened(target ?? undefined);
+
+    const scopedTarget = target instanceof HTMLElement ? target : undefined;
+
+    try {
+      hsSelect.closeCurrentlyOpened(scopedTarget);
+    } catch {
+      // Some HS implementations throw if target is null/invalid; swallow to avoid breaking navigation.
+    }
   }
 
   toggleLocaleMenu(): void {

@@ -294,6 +294,14 @@
         </context-group>
         <target>ADR</target>
       </trans-unit>
+      <trans-unit id="docsFilterToggleLabel" datatype="html">
+        <source>Toggle filters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">118,135</context>
+        </context-group>
+        <target>Alternar filtros</target>
+      </trans-unit>
       <trans-unit id="docsDocumentLabel" datatype="html">
         <source>Document</source>
         <context-group purpose="location">

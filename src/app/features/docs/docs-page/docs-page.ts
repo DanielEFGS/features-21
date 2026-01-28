@@ -62,6 +62,7 @@ export class DocsPage implements AfterViewInit, OnDestroy {
   protected readonly previewLoading = signal(false);
   protected readonly modalOpen = signal(false);
   protected readonly selectedCategory = signal<Category | 'all'>('all');
+  protected readonly filtersOpen = signal(false);
   private readonly viewReady = signal(false);
 
   @ViewChild('categorySelect') protected categorySelect?: ElementRef<HTMLSelectElement>;
@@ -71,6 +72,9 @@ export class DocsPage implements AfterViewInit, OnDestroy {
   constructor() {
     effect(() => {
       const isOpen = this.modalOpen();
+      if (!isOpen) {
+        this.filtersOpen.set(false);
+      }
       if (isOpen && this.viewReady() && this.isBrowser()) {
         this.scheduleSelectInit();
         this.scheduleSelectSync();
@@ -161,6 +165,7 @@ export class DocsPage implements AfterViewInit, OnDestroy {
     this.modalOpen.set(true);
     this.loadPreview(doc);
     this.scheduleSelectSync();
+    this.closeFilters();
   }
 
   protected openRaw(event: Event): void {
@@ -173,6 +178,7 @@ export class DocsPage implements AfterViewInit, OnDestroy {
     this.previewError.set(null);
     this.previewLoading.set(false);
     this.previewText.set('Select a document to preview its contents here.');
+    this.closeFilters();
   }
 
   protected onDocSelect(event: Event): void {
@@ -186,6 +192,7 @@ export class DocsPage implements AfterViewInit, OnDestroy {
     const doc = this.catalog().find((item) => item.path === path);
     if (doc) {
       this.loadPreview(doc);
+      this.closeFilters();
       this.modalOpen.set(true);
     }
   }
@@ -223,6 +230,14 @@ export class DocsPage implements AfterViewInit, OnDestroy {
       },
       complete: () => this.previewLoading.set(false)
     });
+  }
+
+  protected toggleFilters(): void {
+    this.filtersOpen.update((isOpen) => !isOpen);
+  }
+
+  protected closeFilters(): void {
+    this.filtersOpen.set(false);
   }
 
   ngAfterViewInit(): void {

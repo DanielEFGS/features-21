@@ -17,14 +17,15 @@
     </header>
     <div class="cards">
       @for (doc of coreDocs; track doc.title) {
-        <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)" (click)="onCardClick($event, doc)">
-          <div class="doc-card__header">
-            <h3>{{ doc.title }}</h3>
-            <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
-          </div>
-          <p class="doc-card__summary">{{ doc.summary }}</p>
-          <p class="doc-card__path">{{ doc.path }}</p>
-        </button>
+      <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)"
+        (click)="onCardClick($event, doc)">
+        <div class="doc-card__header">
+          <h3>{{ doc.title }}</h3>
+          <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
+        </div>
+        <p class="doc-card__summary">{{ doc.summary }}</p>
+        <p class="doc-card__path">{{ doc.path }}</p>
+      </button>
       }
     </div>
   </section>
@@ -39,14 +40,15 @@
     </header>
     <div class="cards">
       @for (doc of labDocs; track doc.title) {
-        <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)" (click)="onCardClick($event, doc)">
-          <div class="doc-card__header">
-            <h3>{{ doc.title }}</h3>
-            <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
-          </div>
-          <p class="doc-card__summary">{{ doc.summary }}</p>
-          <p class="doc-card__path">{{ doc.path }}</p>
-        </button>
+      <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)"
+        (click)="onCardClick($event, doc)">
+        <div class="doc-card__header">
+          <h3>{{ doc.title }}</h3>
+          <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
+        </div>
+        <p class="doc-card__summary">{{ doc.summary }}</p>
+        <p class="doc-card__path">{{ doc.path }}</p>
+      </button>
       }
     </div>
   </section>
@@ -61,40 +63,38 @@
     </header>
     <div class="cards cards--tight">
       @for (doc of adrDocs; track doc.title) {
-        <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)" (click)="onCardClick($event, doc)">
-          <div class="doc-card__header">
-            <h3>{{ doc.title }}</h3>
-            <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
-          </div>
-          <p class="doc-card__summary">{{ doc.summary }}</p>
-          <p class="doc-card__path">{{ doc.path }}</p>
-        </button>
+      <button class="doc-card" type="button" [class.doc-card--active]="isSelected(doc)"
+        (click)="onCardClick($event, doc)">
+        <div class="doc-card__header">
+          <h3>{{ doc.title }}</h3>
+          <span class="pill" [attr.data-status]="doc.status">{{ doc.status }}</span>
+        </div>
+        <p class="doc-card__summary">{{ doc.summary }}</p>
+        <p class="doc-card__path">{{ doc.path }}</p>
+      </button>
       }
     </div>
   </section>
 
   @if (modalOpen()) {
-    <div class="modal-backdrop" (click)="closeModal()"></div>
-    <div class="modal" role="dialog" aria-modal="true" [attr.aria-label]="selectedDoc()?.title ?? 'Document preview'">
-      <header class="modal__header">
-        <div>
-          <p class="eyebrow" i18n="@@docsPreviewLabel">Preview</p>
+  <div class="modal-backdrop" (click)="closeModal()"></div>
+  <div class="modal" role="dialog" aria-modal="true" [attr.aria-label]="selectedDoc()?.title ?? 'Document preview'">
+    <header class="modal__header">
+      <div>
+        <p class="eyebrow" i18n="@@docsPreviewLabel">Preview</p>
         <h2 i18n="@@docsModalFallbackTitle">{{ selectedDoc()?.title ?? fallbackTitle }}</h2>
         <p class="hint" i18n="@@docsModalFallbackHint">
           {{ selectedDoc()?.path ?? fallbackHint }}
         </p>
-        </div>
-        <div class="modal__actions">
-          <div class="modal__filters">
+      </div>
+      <div class="modal__actions">
+        <div class="modal__filters-wrapper" [class.is-open]="filtersOpen()">
+          <div class="modal__filters" id="modal-filters">
             <label class="field">
               <span i18n="@@docsCategoryLabel">Category</span>
               <div class="field-control">
-                <select
-                  #categorySelect
-                  class="ui-select-native"
-                  [value]="selectedCategory()"
-                  (change)="onCategorySelect($event)"
-                >
+                <select #categorySelect class="ui-select-native" [value]="selectedCategory()"
+                  (change)="onCategorySelect($event)">
                   <option value="all" i18n="@@docsCategoryAll">All</option>
                   <option value="core" i18n="@@docsCategoryCore">Core</option>
                   <option value="labs" i18n="@@docsCategoryLabs">Labs</option>
@@ -105,37 +105,51 @@
             <label class="field">
               <span i18n="@@docsDocumentLabel">Document</span>
               <div class="field-control">
-                <select
-                  #docSelect
-                  class="ui-select-native"
-                  [value]="selectedDoc()?.path ?? filteredDocs()[0]?.path ?? ''"
-                  (change)="onDocSelect($event)"
-                >
+                <select #docSelect class="ui-select-native"
+                  [value]="selectedDoc()?.path ?? filteredDocs()[0]?.path ?? ''" (change)="onDocSelect($event)">
                   @for (doc of filteredDocs(); track doc.path) {
-                    <option [value]="doc.path" [selected]="isSelected(doc)">
-                      {{ doc.title }}
-                    </option>
+                  <option [value]="doc.path" [selected]="isSelected(doc)">
+                    {{ doc.title }}
+                  </option>
                   }
                 </select>
               </div>
             </label>
           </div>
-          <div class="modal__nav">
+          @if (filtersOpen()) {
+          <div class="modal__filter-overlay" (click)="closeFilters()" aria-hidden="true"></div>
+          }
+        </div>
+        <div class="modal__nav">
+
+          <button type="button" class="filter-toggle" (click)="toggleFilters()" [attr.aria-expanded]="filtersOpen()"
+            aria-controls="modal-filters" aria-label="Toggle filters" i18n-aria-label="@@docsFilterToggleLabel">
+            <svg width="20" height="18" viewBox="0 0 20 18" role="img" aria-hidden="true">
+              <path d="M2 2h16M6 9h12M10 16h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span class="sr-only" i18n="@@docsFilterToggleLabel">Filters</span>
+          </button>
+          <div class="modal__nav-buttons">
             <button type="button" class="button ghost" (click)="goPrev()" i18n="@@docsPrev">Prev</button>
             <button type="button" class="button ghost" (click)="goNext()" i18n="@@docsNext">Next</button>
-            <button type="button" class="button ghost" (click)="closeModal()" i18n="@@docsClose">Close</button>
           </div>
+          <button type="button" class="button ghost modal__close-button" (click)="closeModal()" aria-label="Close"
+            i18n-aria-label="@@docsClose">
+            <span aria-hidden="true">✕</span>
+            <span class="sr-only" i18n="@@docsClose">Close</span>
+          </button>
         </div>
-      </header>
-      <div class="modal__body" (click)="$event.stopPropagation()">
-        @if (previewLoading()) {
-          <p class="hint" i18n="@@docsLoading">Loading...</p>
-        } @else if (previewError()) {
-          <p class="error">{{ previewError() }}</p>
-        } @else {
-          <pre class="doc-preview" [textContent]="previewText()"></pre>
-        }
       </div>
+    </header>
+    <div class="modal__body" (click)="$event.stopPropagation()">
+      @if (previewLoading()) {
+      <p class="hint" i18n="@@docsLoading">Loading...</p>
+      } @else if (previewError()) {
+      <p class="error">{{ previewError() }}</p>
+      } @else {
+      <pre class="doc-preview" [textContent]="previewText()"></pre>
+      }
     </div>
+  </div>
   }
 </section>
