@@ -1,15 +1,17 @@
 <section class="demo">
   <header class="demo-header">
     <div>
-      <p class="eyebrow">Style Guide</p>
-      <h3>Naming validator</h3>
-      <p class="subtitle">Check selectors, class names, and file bases.</p>
+      <p class="eyebrow" i18n="@@styleDemoEyebrow">Style Guide</p>
+      <h3 i18n="@@styleDemoTitle">Naming validator</h3>
+      <p class="subtitle" i18n="@@styleDemoSubtitle">
+        Check selectors, class names, and file bases.
+      </p>
     </div>
   </header>
 
   <div class="grid">
     <label class="field">
-      <span class="field__label">Project prefix</span>
+      <span class="field__label" i18n="@@styleDemoPrefixLabel">Project prefix</span>
       <input
         type="text"
         [value]="prefixInput()"
@@ -18,15 +20,16 @@
       />
       <span class="field__meta" [class.is-valid]="prefixResult().isValid">
         @if (prefixResult().isValid) {
-          Prefix is unique and kebab-case.
+          <ng-container i18n="@@styleDemoPrefixOk">Prefix is unique and kebab-case.</ng-container>
         } @else {
-          Suggestion: {{ prefixResult().suggestion }}
+          <ng-container i18n="@@styleDemoPrefixSuggestion">Suggestion:</ng-container>
+          {{ ' ' + prefixResult().suggestion }}
         }
       </span>
     </label>
 
     <label class="field">
-      <span class="field__label">Selector</span>
+      <span class="field__label" i18n="@@styleDemoSelectorLabel">Selector</span>
       <input
         type="text"
         [value]="selectorInput()"
@@ -35,15 +38,16 @@
       />
       <span class="field__meta" [class.is-valid]="selectorResult().isValid">
         @if (selectorResult().isValid) {
-          Valid selector.
+          <ng-container i18n="@@styleDemoSelectorOk">Valid selector.</ng-container>
         } @else {
-          Suggestion: {{ selectorResult().suggestion }}
+          <ng-container i18n="@@styleDemoSelectorSuggestion">Suggestion:</ng-container>
+          {{ ' ' + selectorResult().suggestion }}
         }
       </span>
     </label>
 
     <label class="field">
-      <span class="field__label">Class name</span>
+      <span class="field__label" i18n="@@styleDemoClassLabel">Class name</span>
       <input
         type="text"
         [value]="classInput()"
@@ -52,15 +56,16 @@
       />
       <span class="field__meta" [class.is-valid]="classResult().isValid">
         @if (classResult().isValid) {
-          Valid class name.
+          <ng-container i18n="@@styleDemoClassOk">Valid class name.</ng-container>
         } @else {
-          Suggestion: {{ classResult().suggestion }}
+          <ng-container i18n="@@styleDemoClassSuggestion">Suggestion:</ng-container>
+          {{ ' ' + classResult().suggestion }}
         }
       </span>
     </label>
 
     <label class="field">
-      <span class="field__label">File base</span>
+      <span class="field__label" i18n="@@styleDemoFileLabel">File base</span>
       <input
         type="text"
         [value]="fileInput()"
@@ -69,9 +74,10 @@
       />
       <span class="field__meta" [class.is-valid]="fileResult().isValid">
         @if (fileResult().isValid) {
-          Valid file base.
+          <ng-container i18n="@@styleDemoFileOk">Valid file base.</ng-container>
         } @else {
-          Suggestion: {{ fileResult().suggestion }}
+          <ng-container i18n="@@styleDemoFileSuggestion">Suggestion:</ng-container>
+          {{ ' ' + fileResult().suggestion }}
         }
       </span>
     </label>
@@ -79,9 +85,9 @@
 
   <div class="summary" [class.summary--error]="hasErrors()">
     @if (hasErrors()) {
-      Fix naming to match the project conventions.
+      <ng-container i18n="@@styleDemoSummaryError">Fix naming to match the project conventions.</ng-container>
     } @else {
-      All naming rules pass for this feature.
+      <ng-container i18n="@@styleDemoSummaryOk">All naming rules pass for this feature.</ng-container>
     }
   </div>
 </section>

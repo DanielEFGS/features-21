@@ -1,15 +1,15 @@
 <section class="demo">
   <header class="demo-header">
     <div>
-      <p class="eyebrow">Tailwind</p>
-      <h3>Utility preview</h3>
-      <p class="subtitle">Toggle common utilities and see the applied class string.</p>
+      <p class="eyebrow" i18n="@@twDemoEyebrow">Tailwind</p>
+      <h3 i18n="@@twDemoTitle">Utility preview</h3>
+      <p class="subtitle" i18n="@@twDemoSubtitle">Toggle common utilities and see the applied class string.</p>
     </div>
   </header>
 
   <div class="grid">
     <fieldset class="toggles">
-      <legend>Options</legend>
+      <legend i18n="@@twDemoOptions">Options</legend>
       <div class="toggle-list">
         @for (option of options; track option.key) {
           <label class="toggle">
@@ -28,12 +28,12 @@
     </fieldset>
 
     <div class="preview">
-      <p class="preview__label">Preview card</p>
+      <p class="preview__label" i18n="@@twDemoPreviewLabel">Preview card</p>
       <div class="card" [class]="classList()">
-        <p class="card__title">Utility stack</p>
-        <p class="card__body">Spacing, radius, shadow, accent, and outline are all toggleable.</p>
+        <p class="card__title" i18n="@@twDemoCardTitle">Utility stack</p>
+        <p class="card__body" i18n="@@twDemoCardBody">Spacing, radius, shadow, accent, and outline are all toggleable.</p>
       </div>
-      <p class="preview__label">Class string</p>
+      <p class="preview__label" i18n="@@twDemoClassLabel">Class string</p>
       <code class="class-string">{{ classList() }}</code>
     </div>
   </div>

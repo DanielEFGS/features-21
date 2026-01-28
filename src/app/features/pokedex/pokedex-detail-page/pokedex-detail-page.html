@@ -1,20 +1,20 @@
 <section class="page">
   <header class="page-header" appTextureLayer>
     <div class="header-stack">
-      <p class="eyebrow">Pokedex</p>
-      <h1>Detail</h1>
+      <p class="eyebrow" i18n="@@pokedexDetailEyebrow">Pokedex</p>
+      <h1 i18n="@@pokedexDetailTitle">Detail</h1>
     </div>
     <div class="header-actions">
-      <button class="back-link" type="button" aria-label="Go back" (click)="goBack()">
+      <button class="back-link" type="button" i18n-aria-label="@@pokedexDetailBackAria" aria-label="Go back" (click)="goBack()">
         <span class="back-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
             <path stroke="#151515" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 3.5 6 8l4.5 4.5"></path>
           </svg>
         </span>
-        <span>Back</span>
+        <span i18n="@@pokedexDetailBack">Back</span>
       </button>
     </div>
-    <p class="hint">Base v1: name, id, images, types, and stats.</p>
+    <p class="hint" i18n="@@pokedexDetailHint">Base v1: name, id, images, types, and stats.</p>
   </header>
 
   @if (detailState().status === 'loading') {
@@ -30,7 +30,7 @@
           @if (imageUrl()) {
             <img [src]="imageUrl()" [alt]="detailState().pokemon?.name ?? 'pokemon'" />
           } @else {
-            <div class="image-fallback">No image</div>
+            <div class="image-fallback" i18n="@@pokedexDetailNoImage">No image</div>
           }
         </div>
         <div class="detail-meta">
@@ -43,19 +43,19 @@
           </div>
           <div class="quick-facts">
             <div class="fact" appTextureLayer>
-              <span>Height</span>
+              <span i18n="@@pokedexDetailHeight">Height</span>
               <strong>{{ formatHeight(detailState().pokemon?.height ?? 0) }}</strong>
             </div>
             <div class="fact" appTextureLayer>
-              <span>Weight</span>
+              <span i18n="@@pokedexDetailWeight">Weight</span>
               <strong>{{ formatWeight(detailState().pokemon?.weight ?? 0) }}</strong>
             </div>
             <div class="fact" appTextureLayer>
-              <span>Base exp</span>
+              <span i18n="@@pokedexDetailBaseExp">Base exp</span>
               <strong>{{ detailState().pokemon?.baseExperience }}</strong>
             </div>
             <div class="fact" appTextureLayer>
-              <span>Order</span>
+              <span i18n="@@pokedexDetailOrder">Order</span>
               <strong>{{ detailState().pokemon?.order }}</strong>
             </div>
           </div>
@@ -75,12 +75,12 @@
                 aria-controls="stats-panel"
                 (click)="toggleStatsExpanded()"
               >
-                <span>Base stats</span>
+                <span i18n="@@pokedexDetailStatsTitle">Base stats</span>
               </button>
             </h3>
           </div>
           @if (statsExpanded()) {
-            <p class="panel-note">Total: {{ totalStats() }}</p>
+            <p class="panel-note" i18n="@@pokedexDetailStatsTotal">Total: {{ totalStats() }}</p>
 
             <div id="stats-panel" class="panel-body" role="region" aria-labelledby="stats-toggle">
               <div class="stats">
@@ -110,7 +110,7 @@
                 aria-controls="abilities-panel"
                 (click)="toggleAbilitiesExpanded()"
               >
-                <span>Abilities</span>
+                <span i18n="@@pokedexDetailAbilitiesTitle">Abilities</span>
               </button>
             </h3>
           </div>
@@ -126,7 +126,7 @@
                   <div class="ability-chip" appTextureLayer>
                     <span>{{ ability.name }}</span>
                     @if (ability.isHidden) {
-                      <span class="ability-tag">Hidden</span>
+                      <span class="ability-tag" i18n="@@pokedexDetailHidden">Hidden</span>
                     }
                   </div>
                 }
@@ -148,7 +148,7 @@
               aria-controls="sprites-panel"
               (click)="toggleSpritesExpanded()"
             >
-              <span>Sprites</span>
+              <span i18n="@@pokedexDetailSpritesTitle">Sprites</span>
             </button>
           </h3>
         </div>

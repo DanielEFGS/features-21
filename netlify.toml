@@ -7,3 +7,28 @@ NODE_VERSION = "20.19.0"
 
 [[plugins]]
 package = "@netlify/angular-runtime"
+
+[[redirects]]
+  from = "/es/*"
+  to = "/es/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/es"
+  to = "/es/"
+  status = 200
+
+[[redirects]]
+  from = "/en"
+  to = "/en/"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 200

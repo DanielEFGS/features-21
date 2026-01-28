@@ -9,11 +9,31 @@ type TestItem = {
 };
 
 const ITEMS: TestItem[] = [
-  { key: 'ssrSafe', label: 'SSR-safe setup', description: 'No window/document; use guards/mocks.' },
-  { key: 'httpMock', label: 'HTTP mocked', description: 'HttpTestingController flushes requests.' },
-  { key: 'routerHarness', label: 'Router harness', description: 'RouterTestingHarness drives navigation.' },
-  { key: 'hydrationGuard', label: 'Hydration guard', description: 'Branches covered for server/client differences.' },
-  { key: 'a11yCheck', label: 'A11y smoke', description: 'Optional axe-core or similar check for markup.' }
+  {
+    key: 'ssrSafe',
+    label: $localize`:@@testingDemoItemSsr:SSR-safe setup`,
+    description: $localize`:@@testingDemoItemSsrDesc:No window/document; use guards/mocks.`
+  },
+  {
+    key: 'httpMock',
+    label: $localize`:@@testingDemoItemHttp:HTTP mocked`,
+    description: $localize`:@@testingDemoItemHttpDesc:HttpTestingController flushes requests.`
+  },
+  {
+    key: 'routerHarness',
+    label: $localize`:@@testingDemoItemRouter:Router harness`,
+    description: $localize`:@@testingDemoItemRouterDesc:RouterTestingHarness drives navigation.`
+  },
+  {
+    key: 'hydrationGuard',
+    label: $localize`:@@testingDemoItemHydration:Hydration guard`,
+    description: $localize`:@@testingDemoItemHydrationDesc:Branches covered for server/client differences.`
+  },
+  {
+    key: 'a11yCheck',
+    label: $localize`:@@testingDemoItemA11y:A11y smoke`,
+    description: $localize`:@@testingDemoItemA11yDesc:Optional axe-core or similar check for markup.`
+  }
 ];
 
 @Component({

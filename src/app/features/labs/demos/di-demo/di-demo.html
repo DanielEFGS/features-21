@@ -1,18 +1,20 @@
 <section class="demo">
   <header class="demo-header">
     <div>
-      <p class="eyebrow">DI</p>
-      <h3>Notes service scope</h3>
-      <p class="subtitle">Inject a shared service and see how provider scope changes state.</p>
+      <p class="eyebrow" i18n="@@diDemoEyebrow">DI</p>
+      <h3 i18n="@@diDemoTitle">Notes service scope</h3>
+      <p class="subtitle" i18n="@@diDemoSubtitle">
+        Inject a shared service and see how provider scope changes state.
+      </p>
     </div>
     <div class="scope-pill">
-      <p class="scope-label">Provider scope</p>
+      <p class="scope-label" i18n="@@diDemoScopeLabel">Provider scope</p>
       <p class="scope-value">{{ scopeLabel() }}</p>
     </div>
   </header>
 
   <div class="input-row">
-    <label class="field-label" for="di-note">New note</label>
+    <label class="field-label" for="di-note" i18n="@@diDemoNewNote">New note</label>
     <div class="input-actions">
       <input
         #noteInput
@@ -22,17 +24,19 @@
         (input)="updateValue(noteInput.value)"
         autocomplete="off"
       />
-      <button type="button" (click)="addNote()" [disabled]="isEmpty()">Add</button>
+      <button type="button" (click)="addNote()" [disabled]="isEmpty()">
+        <span i18n="@@diDemoAdd">Add</span>
+      </button>
       <button type="button" class="ghost" (click)="clearNotes()" [disabled]="notes().length === 0">
-        Clear
+        <span i18n="@@diDemoClear">Clear</span>
       </button>
     </div>
   </div>
 
   <div class="list">
-    <p class="list-title">Shared notes</p>
+    <p class="list-title" i18n="@@diDemoListTitle">Shared notes</p>
     @if (notes().length === 0) {
-      <p class="empty">Add a note to see it shared within this component scope.</p>
+      <p class="empty" i18n="@@diDemoEmpty">Add a note to see it shared within this component scope.</p>
     } @else {
       <ul>
         @for (note of notes(); track note.text) {

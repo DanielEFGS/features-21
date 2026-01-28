@@ -1,5 +1,5 @@
 @if (isOpen() && !isDesktop()) {
-  <button class="toc-backdrop" type="button" (click)="closeToc()" aria-label="Close table of contents"></button>
+  <button class="toc-backdrop" type="button" (click)="closeToc()" i18n-aria-label="@@labTocCloseAria" aria-label="Close table of contents"></button>
 }
 
 <details
@@ -10,13 +10,13 @@
 >
   <summary class="toc-summary">
     @if (isOpen()) {
-      <span>On this page</span>
+      <span i18n="@@labTocOnThisPage">On this page</span>
     } @else {
       <span>{{ activeLabel() }}</span>
     }
   </summary>
 
-  <nav class="toc" aria-label="Lab sections">
+  <nav class="toc" aria-label="Lab sections" i18n-aria-label="@@labTocAria">
     <ol>
       @for (section of sections(); track section.id) {
         <li>

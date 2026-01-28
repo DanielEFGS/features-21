@@ -1,11 +1,11 @@
 <section class="demo">
   <header class="demo-header">
-    <p class="eyebrow">PWA</p>
-    <h3>App-shell readiness</h3>
-    <p class="subtitle">Keep installability clear and avoid caching API data.</p>
+    <p class="eyebrow" i18n="@@pwaDemoEyebrow">PWA</p>
+    <h3 i18n="@@pwaDemoTitle">App-shell readiness</h3>
+    <p class="subtitle" i18n="@@pwaDemoSubtitle">Keep installability clear and avoid caching API data.</p>
   </header>
 
-  <ul class="checklist" aria-label="PWA checklist">
+  <ul class="checklist" aria-label="PWA checklist" i18n-aria-label="@@pwaDemoAriaChecklist">
     @for (item of items; track item.key) {
       <li class="check">
         <label>
@@ -22,11 +22,11 @@
   </ul>
 
   <div class="summary" [class.summary--ok]="readiness().missing.length === 0">
-    <p class="score">Readiness: {{ readiness().score }}%</p>
+    <p class="score" i18n="@@pwaDemoReadiness">Readiness: {{ readiness().score }}%</p>
     @if (readiness().missing.length === 0) {
-      <p>Ready: app shell caches static assets and avoids API caching.</p>
+      <p i18n="@@pwaDemoReady">Ready: app shell caches static assets and avoids API caching.</p>
     } @else {
-      <p>Missing: {{ readiness().missing.join(', ') }}</p>
+      <p i18n="@@pwaDemoMissing">Missing: {{ readiness().missing.join(', ') }}</p>
     }
   </div>
 </section>

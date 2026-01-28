@@ -1,14 +1,16 @@
 <section class="demo">
   <header class="demo-header">
     <div>
-      <p class="eyebrow">httpResource</p>
-      <h3>Pokemon lookup</h3>
-      <p class="subtitle">Fetch a Pokemon by name and watch the resource state update.</p>
+      <p class="eyebrow" i18n="@@httpDemoEyebrow">httpResource</p>
+      <h3 i18n="@@httpDemoTitle">Pokemon lookup</h3>
+      <p class="subtitle" i18n="@@httpDemoSubtitle">
+        Fetch a Pokemon by name and watch the resource state update.
+      </p>
     </div>
   </header>
 
   <div class="search-row">
-    <label class="field-label" for="pokemon-name">Pokemon name</label>
+    <label class="field-label" for="pokemon-name" i18n="@@httpDemoLabel">Pokemon name</label>
     <div class="input-row">
       <input
         #nameInput
@@ -19,13 +21,13 @@
         autocomplete="off"
       />
       <button type="button" (click)="applyQuery()" [disabled]="isLoading() || isEmptyQuery()">
-        Load
+        <span i18n="@@httpDemoLoad">Load</span>
       </button>
     </div>
   </div>
 
   @if (status() === 'loading') {
-    <p class="status">Loading...</p>
+    <p class="status" i18n="@@httpDemoLoading">Loading...</p>
   } @else if (status() === 'error') {
     <p class="status status--error">{{ errorMessage() }}</p>
   } @else if (pokemon()) {
@@ -41,6 +43,6 @@
       </ul>
     </article>
   } @else {
-    <p class="status">Search for a Pokemon to begin.</p>
+    <p class="status" i18n="@@httpDemoEmpty">Search for a Pokemon to begin.</p>
   }
 </section>

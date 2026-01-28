@@ -25,10 +25,10 @@ export class FormsDemoComponent {
   });
 
   readonly trainerForm = form(this.model, (schema) => {
-    required(schema.name, { message: 'Name is required.' });
-    required(schema.email, { message: 'Email is required.' });
-    email(schema.email, { message: 'Enter a valid email address.' });
-    required(schema.acceptTerms, { message: 'Accept the terms to continue.' });
+    required(schema.name, { message: $localize`:@@formsDemoNameReq:Name is required.` });
+    required(schema.email, { message: $localize`:@@formsDemoEmailReq:Email is required.` });
+    email(schema.email, { message: $localize`:@@formsDemoEmailValid:Enter a valid email address.` });
+    required(schema.acceptTerms, { message: $localize`:@@formsDemoTermsReq:Accept the terms to continue.` });
   });
 
   readonly submitAttempted = signal(false);
@@ -49,9 +49,9 @@ export class FormsDemoComponent {
   readonly showTermsErrors = computed(() => this.hasFeedback() && this.trainerForm.acceptTerms().invalid());
 
   readonly statusText = computed(() => {
-    if (this.canSubmit()) return 'Ready to save.';
-    if (this.hasFeedback()) return 'Fix the highlighted fields to continue.';
-    return 'Complete the fields to enable Save.';
+    if (this.canSubmit()) return $localize`:@@formsDemoReady:Ready to save.`;
+    if (this.hasFeedback()) return $localize`:@@formsDemoFix:Fix the highlighted fields to continue.`;
+    return $localize`:@@formsDemoComplete:Complete the fields to enable Save.`;
   });
 
   /**

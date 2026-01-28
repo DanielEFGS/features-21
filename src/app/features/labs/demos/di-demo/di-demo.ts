@@ -44,7 +44,7 @@ export class DiDemoComponent {
   readonly notes = this.notesService.notes;
   readonly inputValue = signal('');
   readonly isEmpty = computed(() => this.inputValue().trim().length === 0);
-  readonly scopeLabel = computed(() => 'Component provider');
+  readonly scopeLabel = computed(() => $localize`:@@diDemoScopeValue:Component provider`);
 
   /**
    * Updates the note input.

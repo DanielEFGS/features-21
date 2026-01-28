@@ -9,11 +9,31 @@ type ChecklistItem = {
 };
 
 const ITEMS: ChecklistItem[] = [
-  { key: 'manifest', label: 'Manifest & icons', description: 'Valid name, start_url, scope, icons 192/512.' },
-  { key: 'appShell', label: 'App shell cache', description: 'Static assets cached, routes fall back to index.' },
-  { key: 'noApiCache', label: 'No API caching', description: 'External data not added to SW config.' },
-  { key: 'updatePrompt', label: 'Update prompt', description: 'SwUpdate available → prompt → activateUpdate().' },
-  { key: 'offlineFallback', label: 'Offline fallback', description: 'Optional page for navigation failures.' }
+  {
+    key: 'manifest',
+    label: $localize`:@@pwaDemoManifest:Manifest & icons`,
+    description: $localize`:@@pwaDemoManifestDesc:Valid name, start_url, scope, icons 192/512.`
+  },
+  {
+    key: 'appShell',
+    label: $localize`:@@pwaDemoAppShell:App shell cache`,
+    description: $localize`:@@pwaDemoAppShellDesc:Static assets cached, routes fall back to index.`
+  },
+  {
+    key: 'noApiCache',
+    label: $localize`:@@pwaDemoNoApi:No API caching`,
+    description: $localize`:@@pwaDemoNoApiDesc:External data not added to SW config.`
+  },
+  {
+    key: 'updatePrompt',
+    label: $localize`:@@pwaDemoUpdatePrompt:Update prompt`,
+    description: $localize`:@@pwaDemoUpdateDesc:SwUpdate available → prompt → activateUpdate().`
+  },
+  {
+    key: 'offlineFallback',
+    label: $localize`:@@pwaDemoOffline:Offline fallback`,
+    description: $localize`:@@pwaDemoOfflineDesc:Optional page for navigation failures.`
+  }
 ];
 
 @Component({

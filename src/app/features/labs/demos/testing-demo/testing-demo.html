@@ -1,11 +1,13 @@
 <section class="demo">
   <header class="demo-header">
-    <p class="eyebrow">Testing</p>
-    <h3>SSR-safe testing checklist</h3>
-    <p class="subtitle">Mock HTTP, drive routing, and guard client-only APIs.</p>
+    <p class="eyebrow" i18n="@@testingDemoEyebrow">Testing</p>
+    <h3 i18n="@@testingDemoTitle">SSR-safe testing checklist</h3>
+    <p class="subtitle" i18n="@@testingDemoSubtitle">
+      Mock HTTP, drive routing, and guard client-only APIs.
+    </p>
   </header>
 
-  <ul class="checklist" aria-label="Testing checklist">
+  <ul class="checklist" aria-label="Testing checklist" i18n-aria-label="@@testingDemoAriaChecklist">
     @for (item of items; track item.key) {
       <li class="check">
         <label>
@@ -22,11 +24,16 @@
   </ul>
 
   <div class="summary" [class.summary--ok]="readiness().missing.length === 0">
-    <p class="score">Readiness: {{ readiness().score }}%</p>
+    <p class="score">
+      <span i18n="@@testingDemoReadinessLabel">Readiness:</span> {{ readiness().score }}%
+    </p>
     @if (readiness().missing.length === 0) {
-      <p>Tests are SSR-safe with mocked HTTP and guarded client APIs.</p>
+      <p i18n="@@testingDemoSummaryOk">Tests are SSR-safe with mocked HTTP and guarded client APIs.</p>
     } @else {
-      <p>Missing: {{ readiness().missing.join(', ') }}</p>
+      <p>
+        <span i18n="@@testingDemoMissingLabel">Missing:</span>
+        {{ ' ' + readiness().missing.join(', ') }}
+      </p>
     }
   </div>
 </section>

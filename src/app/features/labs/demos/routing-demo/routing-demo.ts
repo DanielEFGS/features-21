@@ -11,9 +11,21 @@ type DemoViewOption = {
 };
 
 const VIEW_OPTIONS: DemoViewOption[] = [
-  { id: 'overview', label: 'Overview', hint: 'Default panel from the URL.' },
-  { id: 'guards', label: 'Guards', hint: 'Simulate blocking access with a guard.' },
-  { id: 'resolve', label: 'Resolvers', hint: 'Simulate data preloading.' }
+  {
+    id: 'overview',
+    label: $localize`:@@routingDemoOverview:Overview`,
+    hint: $localize`:@@routingDemoOverviewHint:Default panel from the URL.`
+  },
+  {
+    id: 'guards',
+    label: $localize`:@@routingDemoGuards:Guards`,
+    hint: $localize`:@@routingDemoGuardsHint:Simulate blocking access with a guard.`
+  },
+  {
+    id: 'resolve',
+    label: $localize`:@@routingDemoResolve:Resolvers`,
+    hint: $localize`:@@routingDemoResolveHint:Simulate data preloading.`
+  }
 ];
 
 /**
@@ -37,12 +49,12 @@ export class RoutingDemoComponent {
 
   readonly heading = computed(() => {
     const option = this.options().find((item) => item.id === this.activeView());
-    return option?.label ?? 'Overview';
+    return option?.label ?? $localize`:@@routingDemoOverview:Overview`;
   });
 
   readonly helper = computed(() => {
     const option = this.options().find((item) => item.id === this.activeView());
-    return option?.hint ?? 'Default panel from the URL.';
+    return option?.hint ?? $localize`:@@routingDemoOverviewHint:Default panel from the URL.`;
   });
 
   constructor() {

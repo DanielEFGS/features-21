@@ -68,7 +68,9 @@ export class HttpResourceDemoComponent {
   readonly status = computed(() => this.pokemonResource.status());
   readonly pokemon = computed(() => this.pokemonResource.value() ?? null);
   readonly errorMessage = computed(() =>
-    this.pokemonResource.error() ? 'Unable to load the Pokemon. Try another name.' : ''
+    this.pokemonResource.error()
+      ? $localize`:@@httpDemoError:Unable to load the Pokemon. Try another name.`
+      : ''
   );
   readonly isLoading = computed(() => this.status() === 'loading');
   readonly isEmptyQuery = computed(() => this.pendingQuery().trim().length === 0);

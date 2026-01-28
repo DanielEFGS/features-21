@@ -1,14 +1,14 @@
 <section class="hero" appTextureLayer>
-  <a class="back" routerLink="/labs">Back to index</a>
+  <a class="back" routerLink="/labs" i18n="@@labHeroBack">Back to index</a>
   <div class="hero-main">
-    <p class="eyebrow">Lab</p>
+    <p class="eyebrow" i18n="@@labHeroEyebrow">Lab</p>
     <h1>{{ lab().title }}</h1>
     <p class="tagline">{{ lab().tagline }}</p>
   </div>
 
   <div class="meta">
     @if (lab().extra) {
-      <span class="chip chip--extra">extra</span>
+      <span class="chip chip--extra" i18n="@@labHeroExtra">extra</span>
     }
     @if (lab().status !== 'done') {
       <span

@@ -1,11 +1,13 @@
 <section class="demo">
   <header class="demo-header">
-    <p class="eyebrow">Performance</p>
-    <h3>Guardrails checklist</h3>
-    <p class="subtitle">Budgets, defer plan, assets, and network discipline.</p>
+    <p class="eyebrow" i18n="@@perfDemoEyebrow">Performance</p>
+    <h3 i18n="@@perfDemoTitle">Guardrails checklist</h3>
+    <p class="subtitle" i18n="@@perfDemoSubtitle">
+      Budgets, defer plan, assets, and network discipline.
+    </p>
   </header>
 
-  <ul class="checklist" aria-label="Performance checklist">
+  <ul class="checklist" aria-label="Performance checklist" i18n-aria-label="@@perfDemoAriaChecklist">
     @for (item of items; track item.key) {
       <li class="check">
         <label>
@@ -22,11 +24,16 @@
   </ul>
 
   <div class="summary" [class.summary--ok]="readiness().missing.length === 0">
-    <p class="score">Readiness: {{ readiness().score }}%</p>
+    <p class="score">
+      <span i18n="@@perfDemoReadinessLabel">Readiness:</span> {{ readiness().score }}%
+    </p>
     @if (readiness().missing.length === 0) {
-      <p>Guardrails set: budgets, defer, assets, and network controls.</p>
+      <p i18n="@@perfDemoSummaryOk">Guardrails set: budgets, defer, assets, and network controls.</p>
     } @else {
-      <p>Missing: {{ readiness().missing.join(', ') }}</p>
+      <p>
+        <span i18n="@@perfDemoMissingLabel">Missing:</span>
+        {{ ' ' + readiness().missing.join(', ') }}
+      </p>
     }
   </div>
 </section>

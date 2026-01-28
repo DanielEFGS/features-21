@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
 import { RouterLink } from '@angular/router';
 import { TextureLayerDirective } from '../../../shared/texture-layer/texture-layer.directive';
 import { LabContent } from '../labs.models';
+import { LAB_I18N } from '../labs.i18n';
 
 @Component({
   selector: 'app-lab-hero',
@@ -16,15 +17,6 @@ import { LabContent } from '../labs.models';
 export class LabHero {
   readonly lab = input.required<LabContent>();
 
-  readonly statusLabel = computed(() => this.formatLabel(this.lab().status));
-  readonly levelLabel = computed(() => this.lab().level);
-
-  /**
-   * Formats a status string for display.
-   * @param value Lab status identifier.
-   * @returns Label-safe status text.
-   */
-  private formatLabel(value: string): string {
-    return value.replace('-', ' ');
-  }
+  readonly statusLabel = computed(() => LAB_I18N.status[this.lab().status] ?? this.lab().status);
+  readonly levelLabel = computed(() => LAB_I18N.level[this.lab().level] ?? this.lab().level);
 }

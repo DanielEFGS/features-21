@@ -1,10 +1,16 @@
 <section class="demo">
   <header class="demo-header">
     <div>
-      <p class="eyebrow">Signals</p>
-      <h3>Quick compare panel</h3>
+      <p class="eyebrow" i18n="@@signalsDemoEyebrow">Signals</p>
+      <h3 i18n="@@signalsDemoTitle">Quick compare panel</h3>
     </div>
-    <button type="button" class="clear" (click)="clear()" [disabled]="selectedCount() === 0">
+    <button
+      type="button"
+      class="clear"
+      (click)="clear()"
+      [disabled]="selectedCount() === 0"
+      i18n="@@signalsDemoClear"
+    >
       Clear
     </button>
   </header>
@@ -24,10 +30,10 @@
             (click)="add(item.name)"
             [disabled]="isLimitReached() || selectedNames().includes(item.name)"
           >
-            Add
+            <span i18n="@@signalsDemoAdd">Add</span>
           </button>
           <button type="button" (click)="remove(item.name)" [disabled]="!selectedNames().includes(item.name)">
-            Remove
+            <span i18n="@@signalsDemoRemove">Remove</span>
           </button>
         </div>
       </li>
@@ -35,7 +41,7 @@
   </ul>
 
   @if (selectedDetails().length === 0) {
-    <p class="empty">Select up to three Pokemon to compare.</p>
+    <p class="empty" i18n="@@signalsDemoEmpty">Select up to three Pokemon to compare.</p>
   } @else {
     <div class="selected-grid">
       @for (item of selectedDetails(); track item.name) {

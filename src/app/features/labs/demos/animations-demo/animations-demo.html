@@ -1,13 +1,13 @@
 <section class="demo">
   <header class="demo-header">
     <div>
-      <p class="eyebrow">Animations</p>
-      <h3>Toast queue</h3>
-      <p class="subtitle">Enter/leave motion with a staggered list.</p>
+      <p class="eyebrow" i18n="@@animDemoEyebrow">Animations</p>
+      <h3 i18n="@@animDemoTitle">Toast queue</h3>
+      <p class="subtitle" i18n="@@animDemoSubtitle">Enter/leave motion with a staggered list.</p>
     </div>
     <div class="header-actions">
-      <button type="button" (click)="addToast()">Add toast</button>
-      <button type="button" class="ghost" (click)="clearAll()" [disabled]="toastCount() === 0">
+      <button type="button" (click)="addToast()" i18n="@@animDemoAdd">Add toast</button>
+      <button type="button" class="ghost" (click)="clearAll()" [disabled]="toastCount() === 0" i18n="@@animDemoClear">
         Clear all
       </button>
     </div>
@@ -25,13 +25,13 @@
       >
         <div class="toast">
           <span>{{ toast.message }}</span>
-          <button type="button" class="close" (click)="removeToast(toast.id)">Close</button>
+          <button type="button" class="close" (click)="removeToast(toast.id)" i18n="@@animDemoClose">Close</button>
         </div>
       </li>
     }
   </ul>
 
   @if (toastCount() === 0) {
-    <p class="empty">Add a toast to see the entry animation.</p>
+    <p class="empty" i18n="@@animDemoEmptyHint">Add a toast to see the entry animation.</p>
   }
 </section>

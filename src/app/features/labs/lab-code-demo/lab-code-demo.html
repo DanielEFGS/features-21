@@ -1,7 +1,7 @@
 <section class="demo" [attr.id]="sectionId() || demoId()">
   <header class="demo-header">
     <div class="header-text">
-      <p class="eyebrow">Demo</p>
+      <p class="eyebrow" i18n="@@labCodeDemoEyebrow">Demo</p>
       <h2>{{ title() }}</h2>
       @if (description()) {
         <p class="description">{{ description() }}</p>
@@ -17,7 +17,7 @@
     </div>
 
     <div class="code">
-      <div class="tablist" role="tablist" aria-label="Code samples">
+      <div class="tablist" role="tablist" aria-label="Code samples" i18n-attr.aria-label="@@labCodeDemoAriaTabs">
         @for (tab of tabs(); track tab.id) {
           <button
             type="button"
@@ -35,7 +35,7 @@
       </div>
 
       @if (tabs().length === 0) {
-        <p class="empty">No code available yet.</p>
+        <p class="empty" i18n="@@labCodeDemoEmpty">No code available yet.</p>
       } @else {
         @for (tab of tabs(); track tab.id) {
           <div

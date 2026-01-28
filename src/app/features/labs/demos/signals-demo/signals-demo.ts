@@ -32,7 +32,10 @@ export class SignalsDemoComponent {
     return this.availablePokemon().filter((item) => selected.includes(item.name));
   });
 
-  readonly summaryText = computed(() => `Selected: ${this.selectedCount()}/3`);
+  readonly summaryText = computed(() => {
+    const count = this.selectedCount();
+    return $localize`:@@signalsDemoSummary:Selected: ${count}/3`;
+  });
 
   /**
    * Persists the current selection in session storage.

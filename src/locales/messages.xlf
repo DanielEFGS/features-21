@@ -1,0 +1,2523 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="skipToContent" datatype="html">
+        <source>Skip to content</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="logoTitle" datatype="html">
+        <source>Features Angular v21</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brandNote" datatype="html">
+        <source>SSR + Labs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navHome" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navPokedex" datatype="html">
+        <source>Pokedex</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navLabs" datatype="html">
+        <source>Labs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navDocs" datatype="html">
+        <source>Docs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menuLabel" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navCloseLabel" datatype="html">
+        <source>Close menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="localeTriggerLabel" datatype="html">
+        <source>Change language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="localeDialogLabel" datatype="html">
+        <source>Select language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="localeTitle" datatype="html">
+        <source>Select language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">73,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="localeSpanish" datatype="html">
+        <source>Spanish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">87,89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="localeEnglish" datatype="html">
+        <source>English</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="githubLabel" datatype="html">
+        <source>GitHub</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footerStack" datatype="html">
+        <source>Angular v21 | SSR + Hydration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footerApi" datatype="html">
+        <source>PokEAPI v2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">113,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsEyebrow" datatype="html">
+        <source>Docs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsTitle" datatype="html">
+        <source>Documentation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsHint" datatype="html">
+        <source>Quick index for architecture, SSR/hydration, labs, and ADRs.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsCoreTitle" datatype="html">
+        <source>Project docs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsCoreHint" datatype="html">
+        <source>Architecture, rendering, performance, and labs index.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsLabsTitle" datatype="html">
+        <source>Lab writeups</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsLabsHint" datatype="html">
+        <source>Per-feature guides, exercises, and references.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsAdrTitle" datatype="html">
+        <source>ADRs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">58,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsAdrHint" datatype="html">
+        <source>Snapshot of key trade-offs and outcomes.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsPreviewLabel" datatype="html">
+        <source>Preview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsModalFallbackTitle" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ selectedDoc()?.title ?? fallbackTitle }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsModalFallbackHint" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{ selectedDoc()?.path ?? fallbackHint }}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">84,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsCategoryLabel" datatype="html">
+        <source>Category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsCategoryAll" datatype="html">
+        <source>All</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsCategoryCore" datatype="html">
+        <source>Core</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsCategoryLabs" datatype="html">
+        <source>Labs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsCategoryAdrs" datatype="html">
+        <source>ADRs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">101,102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsDocumentLabel" datatype="html">
+        <source>Document</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsPrev" datatype="html">
+        <source>Prev</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">124,125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsNext" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">125,126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsClose" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">126,127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsLoading" datatype="html">
+        <source>Loading...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.html</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsModalSelect" datatype="html">
+        <source>Select a document</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsModalChoose" datatype="html">
+        <source>Choose a doc to load its content here.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="docsPreviewPlaceholder" datatype="html">
+        <source>Select a document to preview its contents here.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/docs/docs-page/docs-page.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeEyebrow" datatype="html">
+        <source>Features Angular v21</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeHeroTitle" datatype="html">
+        <source>Clear technical baseline, performance first, real learning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeHeroLead" datatype="html">
+        <source> This app separates real routes and labs to explain modern features with measurable and traceable examples. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeCtaPokedex" datatype="html">
+        <source>Go to Pokedex</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeCtaLabs" datatype="html">
+        <source>View Labs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeStackTitle" datatype="html">
+        <source>Baseline stack</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeStackItem1" datatype="html">
+        <source>Angular 21 + SSR</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeStackItem2" datatype="html">
+        <source>Preline + Tailwind</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeStackItem3" datatype="html">
+        <source>RX + Signals</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeStackItem4" datatype="html">
+        <source>PokEAPI v2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeStackTag" datatype="html">
+        <source>Features Angular v21</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeFeaturesEyebrow" datatype="html">
+        <source>Features</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeFeaturesTitle" datatype="html">
+        <source>Project foundation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeFeature1Title" datatype="html">
+        <source>Routes with render modes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeFeature1Desc" datatype="html">
+        <source>SSG on home, SSR on Pokedex, CSR on labs.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeFeature2Title" datatype="html">
+        <source>Controlled data layer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeFeature2Desc" datatype="html">
+        <source>Typed client, cache, dedupe, and limited concurrency.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeFeature3Title" datatype="html">
+        <source>Minimal and accessible UI</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeFeature3Desc" datatype="html">
+        <source>Tailwind, CDK, and Angular Aria with end-to-end keyboard support.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home-page/home-page.html</context>
+          <context context-type="linenumber">43,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoEyebrow" datatype="html">
+        <source>A11y &amp; Aria</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoTitle" datatype="html">
+        <source>Accessible filter panel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoSubtitle" datatype="html">
+        <source> Labels, helper text, and live updates without stealing focus. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoHelp" datatype="html">
+        <source> All fields are required. Results update in the status region below. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">12,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoQueryLabel" datatype="html">
+        <source>Search query</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoQueryHelp" datatype="html">
+        <source>Keep it short and specific.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">25,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoTypeLabel" datatype="html">
+        <source>Pokemon type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoTypeHelp" datatype="html">
+        <source> Use arrow keys or tab to move through options. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoApply" datatype="html">
+        <source>Apply filters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.html</context>
+          <context context-type="linenumber">49,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoTypeElectric" datatype="html">
+        <source>Electric</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoTypeFire" datatype="html">
+        <source>Fire</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoTypeWater" datatype="html">
+        <source>Water</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoAnyQuery" datatype="html">
+        <source>any query</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11yDemoResults" datatype="html">
+        <source><x id="PH" equiv-text="count"/> results for &quot;<x id="PH_1" equiv-text="query"/>&quot; (<x id="PH_2" equiv-text="typeLabel"/>).</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/a11y-aria-demo/a11y-aria-demo.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoEyebrow" datatype="html">
+        <source>Animations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoTitle" datatype="html">
+        <source>Toast queue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoSubtitle" datatype="html">
+        <source>Enter/leave motion with a staggered list.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoAdd" datatype="html">
+        <source>Add toast</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoClear" datatype="html">
+        <source> Clear all </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoClose" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoEmptyHint" datatype="html">
+        <source>Add a toast to see the entry animation.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.html</context>
+          <context context-type="linenumber">35,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoEmpty" datatype="html">
+        <source>No toasts in the queue.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoActive" datatype="html">
+        <source>Active toasts: <x id="PH" equiv-text="this.toastCount()"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="animDemoSaved" datatype="html">
+        <source>Saved update #<x id="PH" equiv-text="messageIndex"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/animations-demo/animations-demo.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoEyebrow" datatype="html">
+        <source>CDK</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoTitle" datatype="html">
+        <source>Overlay &amp; focus checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoSubtitle" datatype="html">
+        <source> Overlay plan, focus trapping, portals, and focus restore. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoAriaChecklist" datatype="html">
+        <source>CDK checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoReadinessLabel" datatype="html">
+        <source>Readiness:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoSummaryOk" datatype="html">
+        <source>Overlay plan covers focus, portals, and accessibility.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.html</context>
+          <context context-type="linenumber">31,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoMissingLabel" datatype="html">
+        <source>Missing:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemOverlay" datatype="html">
+        <source>Overlay plan</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemOverlayDesc" datatype="html">
+        <source>Backdrop + escape to close; positioned pane.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemFocus" datatype="html">
+        <source>Focus helpers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemFocusDesc" datatype="html">
+        <source>cdkFocusInitial and FocusTrap configured.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemPortal" datatype="html">
+        <source>Portal usage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemPortalDesc" datatype="html">
+        <source>Content rendered via portal/outlet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemA11y" datatype="html">
+        <source>A11y</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemA11yDesc" datatype="html">
+        <source>Labels/aria-labelledby applied to surface.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemRestore" datatype="html">
+        <source>Restore focus</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cdkDemoItemRestoreDesc" datatype="html">
+        <source>Return focus to trigger on close.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/cdk-demo/cdk-demo.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoEyebrow" datatype="html">
+        <source>Custom build</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoTitle" datatype="html">
+        <source>Pipeline plan checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoSubtitle" datatype="html">
+        <source> Goals, steps, cache, SSR checks, and rollback. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoAriaChecklist" datatype="html">
+        <source>Custom build checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoReadinessLabel" datatype="html">
+        <source>Readiness:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoSummaryOk" datatype="html">
+        <source>Pipeline is planned with cache, SSR checks, and rollback.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.html</context>
+          <context context-type="linenumber">31,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoMissingLabel" datatype="html">
+        <source>Missing:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemGoals" datatype="html">
+        <source>Goals/constraints</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemGoalsDesc" datatype="html">
+        <source>Metrics + constraints written down.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemPipeline" datatype="html">
+        <source>Pipeline steps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemPipelineDesc" datatype="html">
+        <source>Lint → test → build with tools noted.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemCache" datatype="html">
+        <source>Cache/artifacts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemCacheDesc" datatype="html">
+        <source>Cache keys + invalidation plan set.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemSsr" datatype="html">
+        <source>SSR/CSR checks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemSsrDesc" datatype="html">
+        <source>Smoke render + hydration watch included.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemRollback" datatype="html">
+        <source>Rollback/observability</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customDemoItemRollbackDesc" datatype="html">
+        <source>Fallback and logs/metrics defined.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/custom-build-demo/custom-build-demo.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoEyebrow" datatype="html">
+        <source>DI</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoTitle" datatype="html">
+        <source>Notes service scope</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoSubtitle" datatype="html">
+        <source> Inject a shared service and see how provider scope changes state. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoScopeLabel" datatype="html">
+        <source>Provider scope</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoNewNote" datatype="html">
+        <source>New note</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoAdd" datatype="html">
+        <source>Add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoClear" datatype="html">
+        <source>Clear</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoListTitle" datatype="html">
+        <source>Shared notes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoEmpty" datatype="html">
+        <source>Add a note to see it shared within this component scope.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diDemoScopeValue" datatype="html">
+        <source>Component provider</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/di-demo/di-demo.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoEyebrow" datatype="html">
+        <source>Signal Forms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoTitle" datatype="html">
+        <source>Trainer contact form</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoSubtitle" datatype="html">
+        <source> Model-driven fields with schema validation and field state feedback. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoPrefill" datatype="html">
+        <source>Prefill</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoReset" datatype="html">
+        <source>Reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoName" datatype="html">
+        <source>Trainer name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoAccept" datatype="html">
+        <source>I accept the terms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoTermsError" datatype="html">
+        <source>Accept the terms to continue.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">46,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoSave" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.html</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoNameReq" datatype="html">
+        <source>Name is required.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoEmailReq" datatype="html">
+        <source>Email is required.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoEmailValid" datatype="html">
+        <source>Enter a valid email address.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoTermsReq" datatype="html">
+        <source>Accept the terms to continue.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoReady" datatype="html">
+        <source>Ready to save.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoFix" datatype="html">
+        <source>Fix the highlighted fields to continue.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="formsDemoComplete" datatype="html">
+        <source>Complete the fields to enable Save.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/forms-demo/forms-demo.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="httpDemoEyebrow" datatype="html">
+        <source>httpResource</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/httpresource-demo/httpresource-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="httpDemoTitle" datatype="html">
+        <source>Pokemon lookup</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/httpresource-demo/httpresource-demo.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="httpDemoSubtitle" datatype="html">
+        <source> Fetch a Pokemon by name and watch the resource state update. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/httpresource-demo/httpresource-demo.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="httpDemoLabel" datatype="html">
+        <source>Pokemon name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/httpresource-demo/httpresource-demo.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="httpDemoLoad" datatype="html">
+        <source>Load</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/httpresource-demo/httpresource-demo.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="httpDemoLoading" datatype="html">
+        <source>Loading...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/httpresource-demo/httpresource-demo.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="httpDemoEmpty" datatype="html">
+        <source>Search for a Pokemon to begin.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/httpresource-demo/httpresource-demo.html</context>
+          <context context-type="linenumber">46,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="httpDemoError" datatype="html">
+        <source>Unable to load the Pokemon. Try another name.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/httpresource-demo/httpresource-demo.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoEyebrow" datatype="html">
+        <source>Performance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoTitle" datatype="html">
+        <source>Guardrails checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoSubtitle" datatype="html">
+        <source> Budgets, defer plan, assets, and network discipline. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoAriaChecklist" datatype="html">
+        <source>Performance checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoReadinessLabel" datatype="html">
+        <source>Readiness:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoSummaryOk" datatype="html">
+        <source>Guardrails set: budgets, defer, assets, and network controls.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.html</context>
+          <context context-type="linenumber">31,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoMissingLabel" datatype="html">
+        <source>Missing:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemBudgets" datatype="html">
+        <source>Budgets set</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemBudgetsDesc" datatype="html">
+        <source>JS/CSS limits defined and monitored.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemDefer" datatype="html">
+        <source>Defer plan</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemDeferDesc" datatype="html">
+        <source>Non-critical views/widgets deferred or lazy.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemImages" datatype="html">
+        <source>Images optimized</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemImagesDesc" datatype="html">
+        <source>NgOptimizedImage + sizes; lazy non-critical.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemFonts" datatype="html">
+        <source>Fonts tamed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemFontsDesc" datatype="html">
+        <source>Preconnect + font-display swap.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemNetwork" datatype="html">
+        <source>Network disciplined</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perfDemoItemNetworkDesc" datatype="html">
+        <source>Concurrency capped, dedupe in place.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/performance-demo/performance-demo.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoEyebrow" datatype="html">
+        <source>PWA</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoTitle" datatype="html">
+        <source>App-shell readiness</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoSubtitle" datatype="html">
+        <source>Keep installability clear and avoid caching API data.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoAriaChecklist" datatype="html">
+        <source>PWA checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoReadiness" datatype="html">
+        <source>Readiness: <x id="INTERPOLATION" equiv-text="{{ readiness().score }}"/>%</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoReady" datatype="html">
+        <source>Ready: app shell caches static assets and avoids API caching.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoMissing" datatype="html">
+        <source>Missing: <x id="INTERPOLATION" equiv-text="{{ readiness().missing.join(&apos;, &apos;) }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoManifest" datatype="html">
+        <source>Manifest &amp; icons</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoManifestDesc" datatype="html">
+        <source>Valid name, start_url, scope, icons 192/512.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoAppShell" datatype="html">
+        <source>App shell cache</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoAppShellDesc" datatype="html">
+        <source>Static assets cached, routes fall back to index.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoNoApi" datatype="html">
+        <source>No API caching</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoNoApiDesc" datatype="html">
+        <source>External data not added to SW config.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoUpdatePrompt" datatype="html">
+        <source>Update prompt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoUpdateDesc" datatype="html">
+        <source>SwUpdate available → prompt → activateUpdate().</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoOffline" datatype="html">
+        <source>Offline fallback</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pwaDemoOfflineDesc" datatype="html">
+        <source>Optional page for navigation failures.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/pwa-demo/pwa-demo.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoEyebrow" datatype="html">
+        <source>Routing</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoTitle" datatype="html">
+        <source>Query-param navigation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoSubtitle" datatype="html">
+        <source>Use the router to swap panels without leaving the lab.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoUrlLabel" datatype="html">
+        <source>Current URL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoNavLabel" datatype="html">
+        <source>Active view</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoNavAria" datatype="html">
+        <source>Demo views</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoBodyOverview" datatype="html">
+        <source> The router reads the `view` query param and keeps the panel in sync with the URL. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoBodyGuards" datatype="html">
+        <source> A real guard would block navigation. Here we just show how a guard can change the allowed view. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">39,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoBodyResolve" datatype="html">
+        <source> A resolver would prefetch data for the detail panel before rendering it. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.html</context>
+          <context context-type="linenumber">43,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoOverview" datatype="html">
+        <source>Overview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoOverviewHint" datatype="html">
+        <source>Default panel from the URL.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoGuards" datatype="html">
+        <source>Guards</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoGuardsHint" datatype="html">
+        <source>Simulate blocking access with a guard.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoResolve" datatype="html">
+        <source>Resolvers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="routingDemoResolveHint" datatype="html">
+        <source>Simulate data preloading.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/routing-demo/routing-demo.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoEyebrow" datatype="html">
+        <source>RxJS interop</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoTitle" datatype="html">
+        <source>Debounced search helper</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoSubtitle" datatype="html">
+        <source> Bridge input streams into signals and expose outputs as Observables. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoMetaLabel" datatype="html">
+        <source>Applied</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoSearchLabel" datatype="html">
+        <source>Search term</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoApply" datatype="html">
+        <source>Apply</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoDebounced" datatype="html">
+        <source>Debounced signal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoNormalized" datatype="html">
+        <source>Normalized via toObservable</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoLogTitle" datatype="html">
+        <source>Output stream</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rxjsDemoEmpty" datatype="html">
+        <source>No output yet. Click Apply to emit an event.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/rxjs-interop-demo/rxjs-interop-demo.html</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signalsDemoEyebrow" datatype="html">
+        <source>Signals</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/signals-demo/signals-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signalsDemoTitle" datatype="html">
+        <source>Quick compare panel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/signals-demo/signals-demo.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signalsDemoClear" datatype="html">
+        <source> Clear </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/signals-demo/signals-demo.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signalsDemoAdd" datatype="html">
+        <source>Add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/signals-demo/signals-demo.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signalsDemoRemove" datatype="html">
+        <source>Remove</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/signals-demo/signals-demo.html</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signalsDemoEmpty" datatype="html">
+        <source>Select up to three Pokemon to compare.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/signals-demo/signals-demo.html</context>
+          <context context-type="linenumber">44,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signalsDemoSummary" datatype="html">
+        <source>Selected: <x id="PH" equiv-text="count"/>/3</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/signals-demo/signals-demo.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoEyebrow" datatype="html">
+        <source>Style Guide</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoTitle" datatype="html">
+        <source>Naming validator</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoSubtitle" datatype="html">
+        <source> Check selectors, class names, and file bases. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoPrefixLabel" datatype="html">
+        <source>Project prefix</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoPrefixOk" datatype="html">
+        <source>Prefix is unique and kebab-case.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoPrefixSuggestion" datatype="html">
+        <source>Suggestion:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoSelectorLabel" datatype="html">
+        <source>Selector</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoSelectorOk" datatype="html">
+        <source>Valid selector.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">41,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoSelectorSuggestion" datatype="html">
+        <source>Suggestion:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoClassLabel" datatype="html">
+        <source>Class name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">50,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoClassOk" datatype="html">
+        <source>Valid class name.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoClassSuggestion" datatype="html">
+        <source>Suggestion:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoFileLabel" datatype="html">
+        <source>File base</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoFileOk" datatype="html">
+        <source>Valid file base.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoFileSuggestion" datatype="html">
+        <source>Suggestion:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoSummaryError" datatype="html">
+        <source>Fix naming to match the project conventions.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">88,90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="styleDemoSummaryOk" datatype="html">
+        <source>All naming rules pass for this feature.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/style-guide-demo/style-guide-demo.html</context>
+          <context context-type="linenumber">90,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoEyebrow" datatype="html">
+        <source>Tailwind</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoTitle" datatype="html">
+        <source>Utility preview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoSubtitle" datatype="html">
+        <source>Toggle common utilities and see the applied class string.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoOptions" datatype="html">
+        <source>Options</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoPreviewLabel" datatype="html">
+        <source>Preview card</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoCardTitle" datatype="html">
+        <source>Utility stack</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoCardBody" datatype="html">
+        <source>Spacing, radius, shadow, accent, and outline are all toggleable.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoClassLabel" datatype="html">
+        <source>Class string</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoPadding" datatype="html">
+        <source>Padding</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoPaddingDesc" datatype="html">
+        <source>Apply generous spacing.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoRadius" datatype="html">
+        <source>Rounded corners</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoRadiusDesc" datatype="html">
+        <source>Soften edges.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoShadow" datatype="html">
+        <source>Shadow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoShadowDesc" datatype="html">
+        <source>Lift the card slightly.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoAccent" datatype="html">
+        <source>Accent background</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoAccentDesc" datatype="html">
+        <source>Subtle neutral fill.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoOutline" datatype="html">
+        <source>Outline</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="twDemoOutlineDesc" datatype="html">
+        <source>Add a focus ring style.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/tailwind-demo/tailwind-demo.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoEyebrow" datatype="html">
+        <source>Testing</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoTitle" datatype="html">
+        <source>SSR-safe testing checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoSubtitle" datatype="html">
+        <source> Mock HTTP, drive routing, and guard client-only APIs. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoAriaChecklist" datatype="html">
+        <source>Testing checklist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoReadinessLabel" datatype="html">
+        <source>Readiness:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoSummaryOk" datatype="html">
+        <source>Tests are SSR-safe with mocked HTTP and guarded client APIs.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.html</context>
+          <context context-type="linenumber">31,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoMissingLabel" datatype="html">
+        <source>Missing:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemSsr" datatype="html">
+        <source>SSR-safe setup</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemSsrDesc" datatype="html">
+        <source>No window/document; use guards/mocks.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemHttp" datatype="html">
+        <source>HTTP mocked</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemHttpDesc" datatype="html">
+        <source>HttpTestingController flushes requests.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemRouter" datatype="html">
+        <source>Router harness</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemRouterDesc" datatype="html">
+        <source>RouterTestingHarness drives navigation.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemHydration" datatype="html">
+        <source>Hydration guard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemHydrationDesc" datatype="html">
+        <source>Branches covered for server/client differences.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemA11y" datatype="html">
+        <source>A11y smoke</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testingDemoItemA11yDesc" datatype="html">
+        <source>Optional axe-core or similar check for markup.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/demos/testing-demo/testing-demo.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labCodeDemoEyebrow" datatype="html">
+        <source>Demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-code-demo/lab-code-demo.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labCodeDemoEmpty" datatype="html">
+        <source>No code available yet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-code-demo/lab-code-demo.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labExerciseEyebrow" datatype="html">
+        <source>Exercise</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-exercise/lab-exercise.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labExerciseTasksTitle" datatype="html">
+        <source>Tasks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-exercise/lab-exercise.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labExerciseSuccessTitle" datatype="html">
+        <source>Success criteria</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-exercise/lab-exercise.html</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labExerciseStretchTitle" datatype="html">
+        <source>Stretch goals</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-exercise/lab-exercise.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labHeroBack" datatype="html">
+        <source>Back to index</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-hero/lab-hero.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labHeroEyebrow" datatype="html">
+        <source>Lab</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-hero/lab-hero.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labHeroExtra" datatype="html">
+        <source>extra</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-hero/lab-hero.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labReferencesTitle" datatype="html">
+        <source>References</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-references/lab-references.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTocCloseAria" datatype="html">
+        <source>Close table of contents</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-toc/lab-toc.html</context>
+          <context context-type="linenumber">2,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTocOnThisPage" datatype="html">
+        <source>On this page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-toc/lab-toc.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTocAria" datatype="html">
+        <source>Lab sections</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/lab-toc/lab-toc.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTocDemo" datatype="html">
+        <source>Demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTocExercise" datatype="html">
+        <source>Exercise</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTocReferences" datatype="html">
+        <source>References</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTabHtml" datatype="html">
+        <source>HTML</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">198</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">204</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTabTs" datatype="html">
+        <source>TypeScript</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">187</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labTabCss" datatype="html">
+        <source>CSS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">146</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">158</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">200</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.ts</context>
+          <context context-type="linenumber">206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labsIndexEyebrow" datatype="html">
+        <source>Labs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-index-page/labs-index-page.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labsIndexTitle" datatype="html">
+        <source>Index</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-index-page/labs-index-page.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labsIndexHint" datatype="html">
+        <source>Isolated labs per feature to learn and measure.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-index-page/labs-index-page.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labsIndexExtra" datatype="html">
+        <source>extra</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-index-page/labs-index-page.html</context>
+          <context context-type="linenumber">17,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labStatusPlanned" datatype="html">
+        <source>planned</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.i18n.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labStatusInProgress" datatype="html">
+        <source>in-progress</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.i18n.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labStatusDone" datatype="html">
+        <source>done</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.i18n.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labLevelBeginner" datatype="html">
+        <source>Beginner</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.i18n.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labLevelIntermediate" datatype="html">
+        <source>Intermediate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.i18n.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labLevelAdvanced" datatype="html">
+        <source>Advanced</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.i18n.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailEyebrow" datatype="html">
+        <source>Pokedex</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailTitle" datatype="html">
+        <source>Detail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailBackAria" datatype="html">
+        <source>Go back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailBack" datatype="html">
+        <source>Back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailHint" datatype="html">
+        <source>Base v1: name, id, images, types, and stats.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">17,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailNoImage" datatype="html">
+        <source>No image</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">33,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailHeight" datatype="html">
+        <source>Height</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailWeight" datatype="html">
+        <source>Weight</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailBaseExp" datatype="html">
+        <source>Base exp</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailOrder" datatype="html">
+        <source>Order</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailStatsTitle" datatype="html">
+        <source>Base stats</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailStatsTotal" datatype="html">
+        <source>Total: <x id="INTERPOLATION" equiv-text="{{ totalStats() }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">83,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailAbilitiesTitle" datatype="html">
+        <source>Abilities</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">113,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailHidden" datatype="html">
+        <source>Hidden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">129,131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexDetailSpritesTitle" datatype="html">
+        <source>Sprites</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-detail-page/pokedex-detail-page.html</context>
+          <context context-type="linenumber">151,153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListEyebrow" datatype="html">
+        <source>Pokedex</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListTitle" datatype="html">
+        <source>List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListHint" datatype="html">
+        <source>Base v1: list, pagination, sorting, and simple filters.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListSearchLabel" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListSearchPlaceholder" datatype="html">
+        <source>Pokemon name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListTypeLabel" datatype="html">
+        <source>Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListTypeAll" datatype="html">
+        <source>All types</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListTypeLoading" datatype="html">
+        <source>Loading...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListTypeError" datatype="html">
+        <source>Unavailable</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListOrderLabel" datatype="html">
+        <source>Order</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListDirLabel" datatype="html">
+        <source>Direction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListRetry" datatype="html">
+        <source>Retry</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListEmpty" datatype="html">
+        <source>No results to display.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">94,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListNoImage" datatype="html">
+        <source>No image</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">113,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListPrev" datatype="html">
+        <source> Previous </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">133,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListPager" datatype="html">
+        <source>Page <x id="INTERPOLATION" equiv-text="{{ page() }}"/> of <x id="INTERPOLATION_1" equiv-text="{{ totalPages() }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">135,136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pokedexListNext" datatype="html">
+        <source> Next </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/pokedex/pokedex-list-page/pokedex-list-page.html</context>
+          <context context-type="linenumber">137,140</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

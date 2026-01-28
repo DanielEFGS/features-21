@@ -10,11 +10,11 @@ type ToggleOption = {
 };
 
 const TOGGLE_OPTIONS: ToggleOption[] = [
-  { key: 'padding', label: 'Padding', className: 'p-5', description: 'Apply generous spacing.' },
-  { key: 'radius', label: 'Rounded corners', className: 'rounded-xl', description: 'Soften edges.' },
-  { key: 'shadow', label: 'Shadow', className: 'shadow-md', description: 'Lift the card slightly.' },
-  { key: 'accent', label: 'Accent background', className: 'bg-slate-100', description: 'Subtle neutral fill.' },
-  { key: 'outline', label: 'Outline', className: 'ring-2 ring-slate-400', description: 'Add a focus ring style.' }
+  { key: 'padding', label: $localize`:@@twDemoPadding:Padding`, className: 'p-5', description: $localize`:@@twDemoPaddingDesc:Apply generous spacing.` },
+  { key: 'radius', label: $localize`:@@twDemoRadius:Rounded corners`, className: 'rounded-xl', description: $localize`:@@twDemoRadiusDesc:Soften edges.` },
+  { key: 'shadow', label: $localize`:@@twDemoShadow:Shadow`, className: 'shadow-md', description: $localize`:@@twDemoShadowDesc:Lift the card slightly.` },
+  { key: 'accent', label: $localize`:@@twDemoAccent:Accent background`, className: 'bg-slate-100', description: $localize`:@@twDemoAccentDesc:Subtle neutral fill.` },
+  { key: 'outline', label: $localize`:@@twDemoOutline:Outline`, className: 'ring-2 ring-slate-400', description: $localize`:@@twDemoOutlineDesc:Add a focus ring style.` }
 ];
 
 @Component({

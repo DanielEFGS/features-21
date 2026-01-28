@@ -9,11 +9,31 @@ type CdkItem = {
 };
 
 const ITEMS: CdkItem[] = [
-  { key: 'overlay', label: 'Overlay plan', description: 'Backdrop + escape to close; positioned pane.' },
-  { key: 'focus', label: 'Focus helpers', description: 'cdkFocusInitial and FocusTrap configured.' },
-  { key: 'portal', label: 'Portal usage', description: 'Content rendered via portal/outlet.' },
-  { key: 'accessibility', label: 'A11y', description: 'Labels/aria-labelledby applied to surface.' },
-  { key: 'restoreFocus', label: 'Restore focus', description: 'Return focus to trigger on close.' }
+  {
+    key: 'overlay',
+    label: $localize`:@@cdkDemoItemOverlay:Overlay plan`,
+    description: $localize`:@@cdkDemoItemOverlayDesc:Backdrop + escape to close; positioned pane.`
+  },
+  {
+    key: 'focus',
+    label: $localize`:@@cdkDemoItemFocus:Focus helpers`,
+    description: $localize`:@@cdkDemoItemFocusDesc:cdkFocusInitial and FocusTrap configured.`
+  },
+  {
+    key: 'portal',
+    label: $localize`:@@cdkDemoItemPortal:Portal usage`,
+    description: $localize`:@@cdkDemoItemPortalDesc:Content rendered via portal/outlet.`
+  },
+  {
+    key: 'accessibility',
+    label: $localize`:@@cdkDemoItemA11y:A11y`,
+    description: $localize`:@@cdkDemoItemA11yDesc:Labels/aria-labelledby applied to surface.`
+  },
+  {
+    key: 'restoreFocus',
+    label: $localize`:@@cdkDemoItemRestore:Restore focus`,
+    description: $localize`:@@cdkDemoItemRestoreDesc:Return focus to trigger on close.`
+  }
 ];
 
 @Component({

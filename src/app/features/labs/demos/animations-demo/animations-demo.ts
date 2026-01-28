@@ -20,7 +20,9 @@ export class AnimationsDemoComponent {
 
   readonly toastCount = computed(() => this.toasts().length);
   readonly statusText = computed(() =>
-    this.toastCount() === 0 ? 'No toasts in the queue.' : `Active toasts: ${this.toastCount()}`
+    this.toastCount() === 0
+      ? $localize`:@@animDemoEmpty:No toasts in the queue.`
+      : $localize`:@@animDemoActive:Active toasts: ${this.toastCount()}`
   );
 
   /**
@@ -29,7 +31,7 @@ export class AnimationsDemoComponent {
   addToast(): void {
     const id = this.nextId().toString(10);
     const messageIndex = (this.nextId() % 5) + 1;
-    const message = `Saved update #${messageIndex}`;
+    const message = $localize`:@@animDemoSaved:Saved update #${messageIndex}`;
     this.nextId.update((value) => value + 1);
     this.toasts.update((current) => [...current, { id, message }]);
   }

@@ -1,4 +1,4 @@
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" i18n="@@skipToContent">Skip to content</a>
 
 <div class="app-shell grid-paper">
   <div class="texture texture-diagonal" aria-hidden="true"></div>
@@ -8,18 +8,18 @@
       <span class="brand-mark" aria-hidden="true">
         <img src="/logo.svg" alt="" class="brand-logo" />
       </span>
-      <a class="logo" routerLink="/">Features Angular v21</a>
-      <span class="brand-note">SSR + Labs</span>
+      <a class="logo" routerLink="/" i18n="@@logoTitle">Features Angular v21</a>
+      <span class="brand-note" i18n="@@brandNote">SSR + Labs</span>
     </div>
     <nav class="nav nav-desktop" aria-label="Primary">
-      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      <a routerLink="/pokedex" routerLinkActive="is-active">Pokedex</a>
-      <a routerLink="/labs" routerLinkActive="is-active">Labs</a>
-      <a routerLink="/docs" routerLinkActive="is-active">Docs</a>
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" i18n="@@navHome">Home</a>
+      <a routerLink="/pokedex" routerLinkActive="is-active" i18n="@@navPokedex">Pokedex</a>
+      <a routerLink="/labs" routerLinkActive="is-active" i18n="@@navLabs">Labs</a>
+      <a routerLink="/docs" routerLinkActive="is-active" i18n="@@navDocs">Docs</a>
     </nav>
-    <details class="nav-menu" aria-label="Primary">
+    <details class="nav-menu" aria-label="Primary" (toggle)="onNavMenuToggle($event)">
       <summary class="menu-toggle">
-        <span class="menu-label">Menu</span>
+        <span class="menu-label" i18n="@@menuLabel">Menu</span>
         <span class="menu-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
             <path stroke="#151515" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.5 3.5 10 8l-4.5 4.5"></path>
@@ -27,17 +27,75 @@
         </span>
       </summary>
       <div class="nav-menu-panel ui-select-dropdown">
-        <button class="nav-menu-backdrop" type="button" aria-label="Close menu"></button>
+        <button class="nav-menu-backdrop" type="button" i18n-aria-label="@@navCloseLabel" aria-label="Close menu"></button>
         <div class="nav-menu-links">
-          <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-          <a routerLink="/pokedex" routerLinkActive="is-active">Pokedex</a>
-          <a routerLink="/labs" routerLinkActive="is-active">Labs</a>
-          <a routerLink="/docs" routerLinkActive="is-active">Docs</a>
+          <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" i18n="@@navHome">Home</a>
+          <a routerLink="/pokedex" routerLinkActive="is-active" i18n="@@navPokedex">Pokedex</a>
+          <a routerLink="/labs" routerLinkActive="is-active" i18n="@@navLabs">Labs</a>
+          <a routerLink="/docs" routerLinkActive="is-active" i18n="@@navDocs">Docs</a>
         </div>
       </div>
     </details>
     <div class="app-actions">
-      <a class="cta cta-signature" href="#" aria-label="GitHub">
+      <div class="locale-shell">
+        <button
+          type="button"
+          class="menu-toggle locale-toggle"
+          (click)="toggleLocaleMenu()"
+          [attr.aria-expanded]="localeMenuOpen()"
+          aria-haspopup="dialog"
+          i18n-aria-label="@@localeTriggerLabel"
+          aria-label="Change language"
+        >
+          <span class="menu-label locale-code">{{ currentLocaleLabel() }}</span>
+          <span class="menu-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+              <path stroke="#151515" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4 6 4 4 4-4"></path>
+            </svg>
+          </span>
+        </button>
+        @if (localeMenuOpen()) {
+          <button
+            type="button"
+            class="locale-backdrop"
+            (click)="closeLocaleMenu()"
+            aria-hidden="true"
+            tabindex="-1"
+          ></button>
+          <div
+            class="nav-menu-panel locale-menu-panel ui-select-dropdown"
+            role="dialog"
+            aria-modal="true"
+            i18n-aria-label="@@localeDialogLabel"
+            aria-label="Select language"
+          >
+            <div class="locale-menu-header">
+              <p class="locale-menu-title" i18n="@@localeTitle">Select language</p>
+            </div>
+            <div class="locale-options" role="list">
+              @for (option of localeOptions; track option.code) {
+                <button
+                  type="button"
+                  class="locale-option"
+                  role="listitem"
+                  (click)="chooseLocale(option.code)"
+                  [class.is-active]="option.code === currentLocale()"
+                  [attr.aria-pressed]="option.code === currentLocale()"
+                >
+                  <span class="locale-code">{{ option.code.toUpperCase() }}</span>
+                  @if (option.code === 'es') {
+                    <span class="locale-name" i18n="@@localeSpanish">Spanish</span>
+                  }
+                  @if (option.code === 'en') {
+                    <span class="locale-name" i18n="@@localeEnglish">English</span>
+                  }
+                </button>
+              }
+            </div>
+          </div>
+        }
+      </div>
+      <a class="cta cta-signature" href="#" i18n-aria-label="@@githubLabel" aria-label="GitHub">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true">
           <path fill="#100D0D" d="M0 0h24v24H0z"></path>
           <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.798 19.5c.003-.473.006-2.116.006-2.766 0-.94-.32-1.555-.68-1.866 2.234-.25 4.58-1.1 4.58-4.973 0-1.1-.387-2-1.031-2.704.103-.255.447-1.28-.1-2.668 0 0-.84-.27-2.757 1.034a9.575 9.575 0 0 0-2.512-.34 9.58 9.58 0 0 0-2.512.34C7.876 4.252 7.035 4.523 7.035 4.523c-.547 1.388-.203 2.413-.1 2.668-.643.704-1.031 1.604-1.031 2.704 0 3.872 2.346 4.723 4.581 4.973-.36.312-.68.926-.68 1.866 0 .65.002 2.293.005 2.766m-4.514-4.054c1.007.071 1.588.987 1.588.987.895 1.54 2.35 1.095 2.92.837"></path>
@@ -51,7 +109,7 @@
   </main>
 
   <footer class="app-footer" appTextureLayer>
-    <span>Angular v21 | SSR + Hydration</span>
-    <span>PokEAPI v2</span>
+    <span i18n="@@footerStack">Angular v21 | SSR + Hydration</span>
+    <span i18n="@@footerApi">PokEAPI v2</span>
   </footer>
 </div>

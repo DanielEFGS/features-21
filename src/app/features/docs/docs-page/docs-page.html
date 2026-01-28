@@ -1,19 +1,19 @@
 <section class="page">
   <header class="page-header" appTextureLayer>
     <div>
-      <p class="eyebrow">Docs</p>
-      <h1>Documentation</h1>
+      <p class="eyebrow" i18n="@@docsEyebrow">Docs</p>
+      <h1 i18n="@@docsTitle">Documentation</h1>
     </div>
-    <p class="hint">Quick index for architecture, SSR/hydration, labs, and ADRs.</p>
+    <p class="hint" i18n="@@docsHint">Quick index for architecture, SSR/hydration, labs, and ADRs.</p>
   </header>
 
   <section class="docs-section" appTextureLayer>
     <header class="section-header">
       <div>
         <p class="eyebrow">Core</p>
-        <h2>Project docs</h2>
+        <h2 i18n="@@docsCoreTitle">Project docs</h2>
       </div>
-      <p class="hint">Architecture, rendering, performance, and labs index.</p>
+      <p class="hint" i18n="@@docsCoreHint">Architecture, rendering, performance, and labs index.</p>
     </header>
     <div class="cards">
       @for (doc of coreDocs; track doc.title) {
@@ -33,9 +33,9 @@
     <header class="section-header">
       <div>
         <p class="eyebrow">Labs</p>
-        <h2>Lab writeups</h2>
+        <h2 i18n="@@docsLabsTitle">Lab writeups</h2>
       </div>
-      <p class="hint">Per-feature guides, exercises, and references.</p>
+      <p class="hint" i18n="@@docsLabsHint">Per-feature guides, exercises, and references.</p>
     </header>
     <div class="cards">
       @for (doc of labDocs; track doc.title) {
@@ -55,9 +55,9 @@
     <header class="section-header">
       <div>
         <p class="eyebrow">Decisions</p>
-        <h2>ADRs</h2>
+        <h2 i18n="@@docsAdrTitle">ADRs</h2>
       </div>
-      <p class="hint">Snapshot of key trade-offs and outcomes.</p>
+      <p class="hint" i18n="@@docsAdrHint">Snapshot of key trade-offs and outcomes.</p>
     </header>
     <div class="cards cards--tight">
       @for (doc of adrDocs; track doc.title) {
@@ -78,14 +78,16 @@
     <div class="modal" role="dialog" aria-modal="true" [attr.aria-label]="selectedDoc()?.title ?? 'Document preview'">
       <header class="modal__header">
         <div>
-          <p class="eyebrow">Preview</p>
-          <h2>{{ selectedDoc()?.title ?? 'Select a document' }}</h2>
-          <p class="hint">{{ selectedDoc()?.path ?? 'Choose a doc to load its content here.' }}</p>
+          <p class="eyebrow" i18n="@@docsPreviewLabel">Preview</p>
+        <h2 i18n="@@docsModalFallbackTitle">{{ selectedDoc()?.title ?? fallbackTitle }}</h2>
+        <p class="hint" i18n="@@docsModalFallbackHint">
+          {{ selectedDoc()?.path ?? fallbackHint }}
+        </p>
         </div>
         <div class="modal__actions">
           <div class="modal__filters">
             <label class="field">
-              <span>Category</span>
+              <span i18n="@@docsCategoryLabel">Category</span>
               <div class="field-control">
                 <select
                   #categorySelect
@@ -93,15 +95,15 @@
                   [value]="selectedCategory()"
                   (change)="onCategorySelect($event)"
                 >
-                  <option value="all">All</option>
-                  <option value="core">Core</option>
-                  <option value="labs">Labs</option>
-                  <option value="adrs">ADRs</option>
+                  <option value="all" i18n="@@docsCategoryAll">All</option>
+                  <option value="core" i18n="@@docsCategoryCore">Core</option>
+                  <option value="labs" i18n="@@docsCategoryLabs">Labs</option>
+                  <option value="adrs" i18n="@@docsCategoryAdrs">ADRs</option>
                 </select>
               </div>
             </label>
             <label class="field">
-              <span>Document</span>
+              <span i18n="@@docsDocumentLabel">Document</span>
               <div class="field-control">
                 <select
                   #docSelect
@@ -119,15 +121,15 @@
             </label>
           </div>
           <div class="modal__nav">
-            <button type="button" class="button ghost" (click)="goPrev()">Prev</button>
-            <button type="button" class="button ghost" (click)="goNext()">Next</button>
-            <button type="button" class="button ghost" (click)="closeModal()">Close</button>
+            <button type="button" class="button ghost" (click)="goPrev()" i18n="@@docsPrev">Prev</button>
+            <button type="button" class="button ghost" (click)="goNext()" i18n="@@docsNext">Next</button>
+            <button type="button" class="button ghost" (click)="closeModal()" i18n="@@docsClose">Close</button>
           </div>
         </div>
       </header>
       <div class="modal__body" (click)="$event.stopPropagation()">
         @if (previewLoading()) {
-          <p class="hint">Loading...</p>
+          <p class="hint" i18n="@@docsLoading">Loading...</p>
         } @else if (previewError()) {
           <p class="error">{{ previewError() }}</p>
         } @else {

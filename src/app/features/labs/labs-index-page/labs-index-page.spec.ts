@@ -17,16 +17,20 @@ describe('LabsIndexPage', () => {
     expect(fixture.componentInstance).toBeTruthy();
   });
 
-  it('renders a card for each lab entry', () => {
+  it('renders a card for each lab entry', async () => {
     const fixture = TestBed.createComponent(LabsIndexPage);
+    fixture.detectChanges();
+    await fixture.whenStable();
     fixture.detectChanges();
 
     const cards = fixture.nativeElement.querySelectorAll('.lab-card');
     expect(cards.length).toBe(LAB_CATALOG.length);
   });
 
-  it('shows status styles only for labs that are not done', () => {
+  it('shows status styles only for labs that are not done', async () => {
     const fixture = TestBed.createComponent(LabsIndexPage);
+    fixture.detectChanges();
+    await fixture.whenStable();
     fixture.detectChanges();
 
     const statusNodes = Array.from(fixture.nativeElement.querySelectorAll('.lab-status')) as Element[];

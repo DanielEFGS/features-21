@@ -1,10 +1,10 @@
 <section class="page">
   <header class="page-header" appTextureLayer>
     <div>
-      <p class="eyebrow">Labs</p>
-      <h1>Index</h1>
+      <p class="eyebrow" i18n="@@labsIndexEyebrow">Labs</p>
+      <h1 i18n="@@labsIndexTitle">Index</h1>
     </div>
-    <p class="hint">Isolated labs per feature to learn and measure.</p>
+    <p class="hint" i18n="@@labsIndexHint">Isolated labs per feature to learn and measure.</p>
   </header>
 
   <div class="labs-grid">
@@ -14,7 +14,7 @@
           <p class="lab-title">{{ lab.title }}</p>
           <div class="lab-badges">
             @if (lab.extra) {
-              <span class="lab-status lab-status--extra">extra</span>
+              <span class="lab-status lab-status--extra" i18n="@@labsIndexExtra">extra</span>
             }
             @if (lab.status !== 'done') {
               <span
@@ -22,14 +22,14 @@
                 [class.lab-status--planned]="lab.status === 'planned'"
                 [class.lab-status--progress]="lab.status === 'in-progress'"
               >
-                {{ lab.status }}
+                {{ statusLabel(lab.status) }}
               </span>
             }
           </div>
         </div>
         <p class="lab-summary">{{ lab.summary }}</p>
         <div class="lab-meta">
-          <span>{{ lab.level }}</span>
+          <span>{{ levelLabel(lab.level) }}</span>
           <span>{{ lab.duration }}</span>
         </div>
       </a>

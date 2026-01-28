@@ -1,19 +1,19 @@
 <section class="demo">
   <header class="demo-header">
     <div>
-      <p class="eyebrow">Routing</p>
-      <h3>Query-param navigation</h3>
-      <p class="subtitle">Use the router to swap panels without leaving the lab.</p>
+      <p class="eyebrow" i18n="@@routingDemoEyebrow">Routing</p>
+      <h3 i18n="@@routingDemoTitle">Query-param navigation</h3>
+      <p class="subtitle" i18n="@@routingDemoSubtitle">Use the router to swap panels without leaving the lab.</p>
     </div>
     <div class="url-pill">
-      <p class="url-label">Current URL</p>
+      <p class="url-label" i18n="@@routingDemoUrlLabel">Current URL</p>
       <p class="url-value">{{ currentUrl() }}</p>
     </div>
   </header>
 
   <div class="nav">
-    <p class="nav-label">Active view</p>
-    <div class="nav-buttons" role="group" aria-label="Demo views">
+    <p class="nav-label" i18n="@@routingDemoNavLabel">Active view</p>
+    <div class="nav-buttons" role="group" aria-label="Demo views" i18n-aria-label="@@routingDemoNavAria">
       @for (option of options(); track option.id) {
         <button
           type="button"
@@ -31,16 +31,15 @@
     <h4>{{ heading() }}</h4>
     <p class="panel-hint">{{ helper() }}</p>
     @if (activeView() === 'overview') {
-      <p class="panel-body">
+      <p class="panel-body" i18n="@@routingDemoBodyOverview">
         The router reads the `view` query param and keeps the panel in sync with the URL.
       </p>
     } @else if (activeView() === 'guards') {
-      <p class="panel-body">
-        A real guard would block navigation. Here we just show how a guard can change the
-        allowed view.
+      <p class="panel-body" i18n="@@routingDemoBodyGuards">
+        A real guard would block navigation. Here we just show how a guard can change the allowed view.
       </p>
     } @else {
-      <p class="panel-body">
+      <p class="panel-body" i18n="@@routingDemoBodyResolve">
         A resolver would prefetch data for the detail panel before rendering it.
       </p>
     }

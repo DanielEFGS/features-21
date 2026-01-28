@@ -54,8 +54,10 @@ export class DocsPage implements AfterViewInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly zone = inject(NgZone);
 
+  protected readonly fallbackTitle = $localize`:@@docsModalSelect:Select a document`;
+  protected readonly fallbackHint = $localize`:@@docsModalChoose:Choose a doc to load its content here.`;
   protected readonly selectedDoc = signal<DocItem | null>(null);
-  protected readonly previewText = signal<string>('Select a document to preview its contents here.');
+  protected readonly previewText = signal<string>($localize`:@@docsPreviewPlaceholder:Select a document to preview its contents here.`);
   protected readonly previewError = signal<string | null>(null);
   protected readonly previewLoading = signal(false);
   protected readonly modalOpen = signal(false);

@@ -1,17 +1,19 @@
 <section class="demo" aria-labelledby="a11y-title">
   <header class="demo-header">
-    <p class="eyebrow">A11y &amp; Aria</p>
-    <h3 id="a11y-title">Accessible filter panel</h3>
-    <p class="subtitle">Labels, helper text, and live updates without stealing focus.</p>
+    <p class="eyebrow" i18n="@@a11yDemoEyebrow">A11y &amp; Aria</p>
+    <h3 id="a11y-title" i18n="@@a11yDemoTitle">Accessible filter panel</h3>
+    <p class="subtitle" i18n="@@a11yDemoSubtitle">
+      Labels, helper text, and live updates without stealing focus.
+    </p>
   </header>
 
   <form class="panel" (submit)="applyFilters($event)" aria-describedby="filters-help">
-    <p id="filters-help" class="visually-hidden">
+    <p id="filters-help" class="visually-hidden" i18n="@@a11yDemoHelp">
       All fields are required. Results update in the status region below.
     </p>
 
     <label class="field" for="filter-query">
-      <span class="field__label">Search query</span>
+      <span class="field__label" i18n="@@a11yDemoQueryLabel">Search query</span>
       <input
         id="filter-query"
         type="text"
@@ -20,12 +22,14 @@
         aria-describedby="filter-query-help"
         #queryField
       />
-      <span id="filter-query-help" class="field__meta">Keep it short and specific.</span>
+      <span id="filter-query-help" class="field__meta" i18n="@@a11yDemoQueryHelp">Keep it short and specific.</span>
     </label>
 
     <fieldset class="field" aria-describedby="type-help">
-      <legend class="field__label">Pokemon type</legend>
-      <p id="type-help" class="field__meta">Use arrow keys or tab to move through options.</p>
+      <legend class="field__label" i18n="@@a11yDemoTypeLabel">Pokemon type</legend>
+      <p id="type-help" class="field__meta" i18n="@@a11yDemoTypeHelp">
+        Use arrow keys or tab to move through options.
+      </p>
       <div class="choices">
         @for (type of types; track type) {
           <label class="choice">
@@ -36,13 +40,13 @@
               [checked]="type === activeType()"
               (change)="setType(type)"
             />
-            <span class="choice__label">{{ type }}</span>
+            <span class="choice__label">{{ typeLabel(type) }}</span>
           </label>
         }
       </div>
     </fieldset>
 
-    <button class="apply" type="submit">Apply filters</button>
+    <button class="apply" type="submit" i18n="@@a11yDemoApply">Apply filters</button>
   </form>
 
   <div class="results" aria-live="polite" aria-atomic="true">

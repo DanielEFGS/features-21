@@ -1,11 +1,13 @@
 <section class="demo">
   <header class="demo-header">
-    <p class="eyebrow">Custom build</p>
-    <h3>Pipeline plan checklist</h3>
-    <p class="subtitle">Goals, steps, cache, SSR checks, and rollback.</p>
+    <p class="eyebrow" i18n="@@customDemoEyebrow">Custom build</p>
+    <h3 i18n="@@customDemoTitle">Pipeline plan checklist</h3>
+    <p class="subtitle" i18n="@@customDemoSubtitle">
+      Goals, steps, cache, SSR checks, and rollback.
+    </p>
   </header>
 
-  <ul class="checklist" aria-label="Custom build checklist">
+  <ul class="checklist" aria-label="Custom build checklist" i18n-aria-label="@@customDemoAriaChecklist">
     @for (item of items; track item.key) {
       <li class="check">
         <label>
@@ -22,11 +24,16 @@
   </ul>
 
   <div class="summary" [class.summary--ok]="readiness().missing.length === 0">
-    <p class="score">Readiness: {{ readiness().score }}%</p>
+    <p class="score">
+      <span i18n="@@customDemoReadinessLabel">Readiness:</span> {{ readiness().score }}%
+    </p>
     @if (readiness().missing.length === 0) {
-      <p>Pipeline is planned with cache, SSR checks, and rollback.</p>
+      <p i18n="@@customDemoSummaryOk">Pipeline is planned with cache, SSR checks, and rollback.</p>
     } @else {
-      <p>Missing: {{ readiness().missing.join(', ') }}</p>
+      <p>
+        <span i18n="@@customDemoMissingLabel">Missing:</span>
+        {{ ' ' + readiness().missing.join(', ') }}
+      </p>
     }
   </div>
 </section>

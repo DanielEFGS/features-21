@@ -1,18 +1,20 @@
-<section class="demo">
+﻿<section class="demo">
   <header class="demo-header">
     <div>
-      <p class="eyebrow">RxJS interop</p>
-      <h3>Debounced search helper</h3>
-      <p class="subtitle">Bridge input streams into signals and expose outputs as Observables.</p>
+      <p class="eyebrow" i18n="@@rxjsDemoEyebrow">RxJS interop</p>
+      <h3 i18n="@@rxjsDemoTitle">Debounced search helper</h3>
+      <p class="subtitle" i18n="@@rxjsDemoSubtitle">
+        Bridge input streams into signals and expose outputs as Observables.
+      </p>
     </div>
     <div class="meta">
-      <p class="meta-label">Applied</p>
+      <p class="meta-label" i18n="@@rxjsDemoMetaLabel">Applied</p>
       <p class="meta-value">{{ appliedCount() }}</p>
     </div>
   </header>
 
   <div class="input-row">
-    <label class="field-label" for="rxjs-query">Search term</label>
+    <label class="field-label" for="rxjs-query" i18n="@@rxjsDemoSearchLabel">Search term</label>
     <div class="input-actions">
       <input
         #queryInput
@@ -22,25 +24,27 @@
         (input)="updateInput(queryInput.value)"
         autocomplete="off"
       />
-      <button type="button" (click)="apply()" [disabled]="isApplyDisabled()">Apply</button>
+      <button type="button" (click)="apply()" [disabled]="isApplyDisabled()">
+        <span i18n="@@rxjsDemoApply">Apply</span>
+      </button>
     </div>
   </div>
 
   <div class="chip-row">
     <div class="chip">
-      <p class="chip-label">Debounced signal</p>
+      <p class="chip-label" i18n="@@rxjsDemoDebounced">Debounced signal</p>
       <p class="chip-value">{{ query() || '—' }}</p>
     </div>
     <div class="chip">
-      <p class="chip-label">Normalized via toObservable</p>
+      <p class="chip-label" i18n="@@rxjsDemoNormalized">Normalized via toObservable</p>
       <p class="chip-value">{{ normalizedQuery() || '—' }}</p>
     </div>
   </div>
 
   <div class="log">
-    <p class="log-title">Output stream</p>
+    <p class="log-title" i18n="@@rxjsDemoLogTitle">Output stream</p>
     @if (appliedLog().length === 0) {
-      <p class="empty">No output yet. Click Apply to emit an event.</p>
+      <p class="empty" i18n="@@rxjsDemoEmpty">No output yet. Click Apply to emit an event.</p>
     } @else {
       <ul class="log-list">
         @for (entry of appliedLog(); track entry) {

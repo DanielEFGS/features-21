@@ -1,13 +1,13 @@
 <section class="exercise" [attr.id]="sectionId() || null">
   <header class="exercise-header">
-    <p class="eyebrow">Exercise</p>
+    <p class="eyebrow" i18n="@@labExerciseEyebrow">Exercise</p>
     <h2>{{ exercise().title }}</h2>
     <p class="goal">{{ exercise().goal }}</p>
   </header>
 
   <div class="exercise-grid">
     <div>
-      <h3>Tasks</h3>
+      <h3 i18n="@@labExerciseTasksTitle">Tasks</h3>
       <ol>
         @for (task of exercise().tasks; track task) {
           <li>{{ task }}</li>
@@ -15,7 +15,7 @@
       </ol>
     </div>
     <div>
-      <h3>Success criteria</h3>
+      <h3 i18n="@@labExerciseSuccessTitle">Success criteria</h3>
       <ul>
         @for (item of exercise().success; track item) {
           <li>{{ item }}</li>
@@ -26,7 +26,7 @@
 
   @if (exercise().stretch?.length) {
     <div class="stretch">
-      <h3>Stretch goals</h3>
+      <h3 i18n="@@labExerciseStretchTitle">Stretch goals</h3>
       <ul>
         @for (item of exercise().stretch ?? []; track item) {
           <li>{{ item }}</li>

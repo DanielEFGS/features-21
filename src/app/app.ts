@@ -1,6 +1,6 @@
-import { Component, ElementRef, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, computed, inject, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID } from '@angular/core';
+import { LOCALE_ID, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { filter, fromEvent } from 'rxjs';
 import { TextureLayerDirective } from './shared/texture-layer/texture-layer.directive';
@@ -14,8 +14,17 @@ import { TextureLayerDirective } from './shared/texture-layer/texture-layer.dire
 export class App implements OnInit, OnDestroy {
   private readonly router = inject(Router);
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly localeId = inject(LOCALE_ID);
   private readonly host = inject(ElementRef<HTMLElement>);
   private readonly subscriptions: Array<{ unsubscribe: () => void }> = [];
+
+  readonly currentLocale = signal<'es' | 'en'>(this.detectLocale());
+  readonly localeMenuOpen = signal(false);
+  readonly localeOptions = [
+    { code: 'es', label: 'Español' },
+    { code: 'en', label: 'English' }
+  ] as const;
+  readonly currentLocaleLabel = computed(() => this.currentLocale().toUpperCase());
 
   /**
    * Reinitializes Preline UI components after navigation completes.
@@ -24,6 +33,9 @@ export class App implements OnInit, OnDestroy {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
+
+    document.documentElement.lang = this.currentLocale();
+
     this.router.events
       .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -58,19 +70,35 @@ export class App implements OnInit, OnDestroy {
     }
 
     const menu = this.host.nativeElement.querySelector('details.nav-menu');
-    if (!menu) {
-      return;
-    }
+    const localeMenu = this.host.nativeElement.querySelector('.locale-menu-panel');
+    const localeTrigger = this.host.nativeElement.querySelector('.locale-trigger');
 
-    if (menu.contains(target)) {
+    if (menu && menu.contains(target)) {
+      if (target.closest('.menu-toggle')) {
+        this.closeLocaleMenu();
+      }
       if (target.closest('.nav-menu-backdrop') || target.closest('.nav-menu-panel a')) {
         menu.removeAttribute('open');
       }
       return;
     }
 
-    if (menu.hasAttribute('open')) {
+    if (menu?.hasAttribute('open')) {
       menu.removeAttribute('open');
+    }
+
+    if (
+      this.localeMenuOpen() &&
+      localeMenu &&
+      localeTrigger &&
+      !localeMenu.contains(target) &&
+      !localeTrigger.contains(target)
+    ) {
+      this.closeLocaleMenu();
+    }
+
+    if (localeTrigger && localeTrigger.contains(target)) {
+      this.closeNavMenu();
     }
 
     this.closeActiveSelects(target);
@@ -91,6 +119,10 @@ export class App implements OnInit, OnDestroy {
       menu.removeAttribute('open');
     }
 
+    if (this.localeMenuOpen()) {
+      this.closeLocaleMenu();
+    }
+
     this.closeActiveSelects();
   }
 
@@ -106,5 +138,100 @@ export class App implements OnInit, OnDestroy {
       return;
     }
     hsSelect.closeCurrentlyOpened(target ?? undefined);
+  }
+
+  toggleLocaleMenu(): void {
+    if (!this.localeMenuOpen()) {
+      this.closeNavMenu();
+    }
+    this.localeMenuOpen.update((open) => !open);
+  }
+
+  closeLocaleMenu(): void {
+    this.localeMenuOpen.set(false);
+  }
+
+  chooseLocale(locale: 'es' | 'en'): void {
+    if (locale === this.currentLocale()) {
+      this.closeLocaleMenu();
+      return;
+    }
+
+    this.persistLocale(locale);
+    this.reloadForLocale(locale);
+  }
+
+  private detectLocale(): 'es' | 'en' {
+    if (isPlatformBrowser(this.platformId)) {
+      const htmlLang = document.documentElement.lang;
+      if (htmlLang) {
+        return this.normalizeLocale(htmlLang);
+      }
+
+      const stored = localStorage.getItem('app-locale');
+      if (stored) {
+        return this.normalizeLocale(stored);
+      }
+
+      const navLang = navigator.language || navigator.languages?.[0];
+      if (navLang) {
+        return this.normalizeLocale(navLang);
+      }
+    }
+
+    return this.normalizeLocale(this.localeId ?? 'es');
+  }
+
+  private normalizeLocale(value: string): 'es' | 'en' {
+    return value.toLowerCase().startsWith('en') ? 'en' : 'es';
+  }
+
+  private persistLocale(locale: 'es' | 'en'): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    try {
+      localStorage.setItem('app-locale', locale);
+    } catch {
+      // ignore storage issues (private mode, etc.)
+    }
+  }
+
+  private reloadForLocale(locale: 'es' | 'en'): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    const nextHref = this.buildLocaleHref(locale);
+    this.localeMenuOpen.set(false);
+    window.location.href = nextHref;
+  }
+
+  private buildLocaleHref(locale: 'es' | 'en'): string {
+    const { pathname, search, hash } = window.location;
+    const segments = pathname.split('/').filter(Boolean);
+    if (segments[0] === 'es' || segments[0] === 'en') {
+      segments[0] = locale;
+      return `/${segments.join('/')}${search}${hash}`;
+    }
+
+    if (locale === 'es') {
+      return `${pathname}${search}${hash}`;
+    }
+    return `/${locale}${pathname}${search}${hash}`;
+  }
+
+  onNavMenuToggle(event: Event): void {
+    const details = event.target as HTMLDetailsElement | null;
+    if (details?.open) {
+      this.closeLocaleMenu();
+    }
+    if (!details?.open) {
+      this.closeActiveSelects();
+    }
+  }
+
+  private closeNavMenu(): void {
+    const menu = this.host.nativeElement.querySelector('details.nav-menu');
+    menu?.removeAttribute('open');
   }
 }

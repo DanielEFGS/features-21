@@ -9,11 +9,31 @@ type PerfItem = {
 };
 
 const ITEMS: PerfItem[] = [
-  { key: 'budgets', label: 'Budgets set', description: 'JS/CSS limits defined and monitored.' },
-  { key: 'defer', label: 'Defer plan', description: 'Non-critical views/widgets deferred or lazy.' },
-  { key: 'images', label: 'Images optimized', description: 'NgOptimizedImage + sizes; lazy non-critical.' },
-  { key: 'fonts', label: 'Fonts tamed', description: 'Preconnect + font-display swap.' },
-  { key: 'network', label: 'Network disciplined', description: 'Concurrency capped, dedupe in place.' }
+  {
+    key: 'budgets',
+    label: $localize`:@@perfDemoItemBudgets:Budgets set`,
+    description: $localize`:@@perfDemoItemBudgetsDesc:JS/CSS limits defined and monitored.`
+  },
+  {
+    key: 'defer',
+    label: $localize`:@@perfDemoItemDefer:Defer plan`,
+    description: $localize`:@@perfDemoItemDeferDesc:Non-critical views/widgets deferred or lazy.`
+  },
+  {
+    key: 'images',
+    label: $localize`:@@perfDemoItemImages:Images optimized`,
+    description: $localize`:@@perfDemoItemImagesDesc:NgOptimizedImage + sizes; lazy non-critical.`
+  },
+  {
+    key: 'fonts',
+    label: $localize`:@@perfDemoItemFonts:Fonts tamed`,
+    description: $localize`:@@perfDemoItemFontsDesc:Preconnect + font-display swap.`
+  },
+  {
+    key: 'network',
+    label: $localize`:@@perfDemoItemNetwork:Network disciplined`,
+    description: $localize`:@@perfDemoItemNetworkDesc:Concurrency capped, dedupe in place.`
+  }
 ];
 
 @Component({

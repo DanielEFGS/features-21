@@ -1,11 +1,13 @@
 <section class="demo">
   <header class="demo-header">
-    <p class="eyebrow">CDK</p>
-    <h3>Overlay & focus checklist</h3>
-    <p class="subtitle">Overlay plan, focus trapping, portals, and focus restore.</p>
+    <p class="eyebrow" i18n="@@cdkDemoEyebrow">CDK</p>
+    <h3 i18n="@@cdkDemoTitle">Overlay &amp; focus checklist</h3>
+    <p class="subtitle" i18n="@@cdkDemoSubtitle">
+      Overlay plan, focus trapping, portals, and focus restore.
+    </p>
   </header>
 
-  <ul class="checklist" aria-label="CDK checklist">
+  <ul class="checklist" aria-label="CDK checklist" i18n-aria-label="@@cdkDemoAriaChecklist">
     @for (item of items; track item.key) {
       <li class="check">
         <label>
@@ -22,11 +24,16 @@
   </ul>
 
   <div class="summary" [class.summary--ok]="readiness().missing.length === 0">
-    <p class="score">Readiness: {{ readiness().score }}%</p>
+    <p class="score">
+      <span i18n="@@cdkDemoReadinessLabel">Readiness:</span> {{ readiness().score }}%
+    </p>
     @if (readiness().missing.length === 0) {
-      <p>Overlay plan covers focus, portals, and accessibility.</p>
+      <p i18n="@@cdkDemoSummaryOk">Overlay plan covers focus, portals, and accessibility.</p>
     } @else {
-      <p>Missing: {{ readiness().missing.join(', ') }}</p>
+      <p>
+        <span i18n="@@cdkDemoMissingLabel">Missing:</span>
+        {{ ' ' + readiness().missing.join(', ') }}
+      </p>
     }
   </div>
 </section>

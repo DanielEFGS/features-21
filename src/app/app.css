@@ -224,6 +224,79 @@
 .app-actions {
   display: flex;
   align-items: center;
+  gap: 0.65rem;
+}
+
+.locale-shell {
+  position: relative;
+}
+
+.locale-backdrop {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 30;
+}
+
+.locale-code {
+  font-size: 0.8rem;
+}
+
+.locale-menu-panel {
+  right: 0;
+  top: calc(100% + 0.6rem);
+  min-width: 220px;
+  border: 2px solid var(--ink-900);
+  background: #fff;
+  padding: 0.6rem;
+  box-shadow: 4px 4px 0 var(--ink-900);
+  z-index: 40;
+}
+
+.locale-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.locale-menu-title {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.locale-options {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.locale-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px dashed transparent;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 600;
+}
+
+.locale-option.is-active {
+  border-color: var(--ink-900);
+  background: var(--accent);
+}
+
+.locale-option:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
 }
 
 .cta {
@@ -320,6 +393,7 @@
 
   .app-actions {
     order: 2;
+    gap: 0.5rem;
   }
 
   .nav-menu {

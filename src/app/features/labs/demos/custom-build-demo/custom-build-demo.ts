@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 
 type BuildKey = 'goals' | 'pipeline' | 'cache' | 'ssrChecks' | 'rollback';
 
@@ -9,11 +9,31 @@ type BuildItem = {
 };
 
 const ITEMS: BuildItem[] = [
-  { key: 'goals', label: 'Goals/constraints', description: 'Metrics + constraints written down.' },
-  { key: 'pipeline', label: 'Pipeline steps', description: 'Lint → test → build with tools noted.' },
-  { key: 'cache', label: 'Cache/artifacts', description: 'Cache keys + invalidation plan set.' },
-  { key: 'ssrChecks', label: 'SSR/CSR checks', description: 'Smoke render + hydration watch included.' },
-  { key: 'rollback', label: 'Rollback/observability', description: 'Fallback and logs/metrics defined.' }
+  {
+    key: 'goals',
+    label: $localize`:@@customDemoItemGoals:Goals/constraints`,
+    description: $localize`:@@customDemoItemGoalsDesc:Metrics + constraints written down.`
+  },
+  {
+    key: 'pipeline',
+    label: $localize`:@@customDemoItemPipeline:Pipeline steps`,
+    description: $localize`:@@customDemoItemPipelineDesc:Lint → test → build with tools noted.`
+  },
+  {
+    key: 'cache',
+    label: $localize`:@@customDemoItemCache:Cache/artifacts`,
+    description: $localize`:@@customDemoItemCacheDesc:Cache keys + invalidation plan set.`
+  },
+  {
+    key: 'ssrChecks',
+    label: $localize`:@@customDemoItemSsr:SSR/CSR checks`,
+    description: $localize`:@@customDemoItemSsrDesc:Smoke render + hydration watch included.`
+  },
+  {
+    key: 'rollback',
+    label: $localize`:@@customDemoItemRollback:Rollback/observability`,
+    description: $localize`:@@customDemoItemRollbackDesc:Fallback and logs/metrics defined.`
+  }
 ];
 
 @Component({
