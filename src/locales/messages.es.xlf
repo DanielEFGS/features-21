@@ -31,6 +31,321 @@
         </context-group>
         <target>Buscar documento</target>
       </trans-unit>
+      <trans-unit id="labSignalsSummary" datatype="html">
+        <source>Model local state with signals, derive values with computed, and use effects for side effects.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Modela estado local con signals, deriva valores con computed y usa effects para efectos secundarios.</target>
+      </trans-unit>
+      <trans-unit id="labHttpResourceSummary" datatype="html">
+        <source>Reactive data fetching with resources, loading states, and abortable requests.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Obtén datos de forma reactiva con resources, gestiona estados de carga y solicitudes cancelables.</target>
+      </trans-unit>
+      <trans-unit id="labRxjsInteropSummary" datatype="html">
+        <source>Bridge signals with observables using toSignal and toObservable.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Conecta signals y observables usando toSignal y toObservable.</target>
+      </trans-unit>
+      <trans-unit id="labRoutingSummary" datatype="html">
+        <source>Lazy routes, route data, and guards with modern routing patterns.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Rutas lazy, datos de ruta y guards con patrones de enrutado modernos.</target>
+      </trans-unit>
+      <trans-unit id="labDiSummary" datatype="html">
+        <source>Inject services with inject(), tokens, and route-level providers.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Inyecta servicios con inject(), tokens y proveedores a nivel de ruta.</target>
+      </trans-unit>
+      <trans-unit id="labFormsSummary" datatype="html">
+        <source>Signal Forms with model-driven validation, field state, and schema rules.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Forms con signals, validación basada en modelo, estado de campos y reglas de esquema.</target>
+      </trans-unit>
+      <trans-unit id="labAnimationsSummary" datatype="html">
+        <source>Enter/leave animations, reusable CSS motion, and route transitions.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Animaciones de entrada/salida, motion CSS reutilizable y transiciones de rutas.</target>
+      </trans-unit>
+      <trans-unit id="labStyleGuideSummary" datatype="html">
+        <source>Apply naming, structure, and lint rules consistently across features.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Aplica nomenclatura, estructura y reglas de lint de forma consistente en las features.</target>
+      </trans-unit>
+      <trans-unit id="labTailwindSummary" datatype="html">
+        <source>Build clean UI with utility-first patterns and reuse shared primitives.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Construye UI limpia con patrones utility-first y reutiliza primitivas compartidas.</target>
+      </trans-unit>
+      <trans-unit id="labA11ySummary" datatype="html">
+        <source>Use Angular Aria and CDK focus helpers to keep UI accessible.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Usa Angular Aria y los helpers de foco del CDK para mantener la accesibilidad.</target>
+      </trans-unit>
+      <trans-unit id="labPwaSummary" datatype="html">
+        <source>App shell caching, install flows, and update prompts (no API caching).</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Cachea el app shell, gestiona instalación y avisos de actualización (sin cachear la API).</target>
+      </trans-unit>
+      <trans-unit id="labTestingSummary" datatype="html">
+        <source>Unit patterns with Vitest: SSR-safe specs, HTTP mocks, router harness.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Patrones de unit tests con Vitest: specs seguras para SSR, mocks HTTP, harness de router.</target>
+      </trans-unit>
+      <trans-unit id="labPerformanceSummary" datatype="html">
+        <source>Budgets, defer/lazy strategies, and asset/network guardrails.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Budgets, estrategias defer/lazy y guardrails de assets/red.</target>
+      </trans-unit>
+      <trans-unit id="labCustomBuildSummary" datatype="html">
+        <source>Design a custom build pipeline with cache strategy and SSR checks.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Diseña un pipeline de build personalizado con estrategia de caché y checks de SSR.</target>
+      </trans-unit>
+      <trans-unit id="labCdkSummary" datatype="html">
+        <source>CDK overlays, focus tools, and portals for reusable primitives.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs.data.ts</context>
+        </context-group>
+        <target>Overlays de CDK, herramientas de foco y portals para primitivas reutilizables.</target>
+      </trans-unit>
+      <trans-unit id="labSignalsDemoTitle" datatype="html">
+        <source>Signals quick compare demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo rápida de comparación con Signals</target>
+      </trans-unit>
+      <trans-unit id="labSignalsDemoDescription" datatype="html">
+        <source>Pick up to three Pokemon and see derived state update instantly.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Elige hasta tres Pokémon y observa cómo el estado derivado se actualiza al instante.</target>
+      </trans-unit>
+      <trans-unit id="labHttpResourceDemoTitle" datatype="html">
+        <source>httpResource lookup demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de búsqueda con httpResource</target>
+      </trans-unit>
+      <trans-unit id="labHttpResourceDemoDescription" datatype="html">
+        <source>Fetch a Pokemon by name and track loading and error states.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Busca un Pokémon por nombre y controla estados de carga y error.</target>
+      </trans-unit>
+      <trans-unit id="labRxjsInteropDemoTitle" datatype="html">
+        <source>RxJS interop demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de interoperabilidad RxJS</target>
+      </trans-unit>
+      <trans-unit id="labRxjsInteropDemoDescription" datatype="html">
+        <source>Debounce input into a signal, emit an output, and observe it as a stream.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Haz debounce de la entrada a un signal, emite una salida y obsérvala como stream.</target>
+      </trans-unit>
+      <trans-unit id="labRoutingDemoTitle" datatype="html">
+        <source>Routing demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de routing</target>
+      </trans-unit>
+      <trans-unit id="labRoutingDemoDescription" datatype="html">
+        <source>Swap panels by updating query params without leaving the lab.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Intercambia paneles actualizando query params sin salir del lab.</target>
+      </trans-unit>
+      <trans-unit id="labDiDemoTitle" datatype="html">
+        <source>DI demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de DI</target>
+      </trans-unit>
+      <trans-unit id="labDiDemoDescription" datatype="html">
+        <source>Share notes through a service and compare provider scope.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Comparte notas con un servicio y compara el alcance de los proveedores.</target>
+      </trans-unit>
+      <trans-unit id="labFormsDemoTitle" datatype="html">
+        <source>Signal Forms demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de Signal Forms</target>
+      </trans-unit>
+      <trans-unit id="labFormsDemoDescription" datatype="html">
+        <source>Build a trainer contact form with schema validation and field state feedback.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Crea un formulario de entrenador con validación de esquema y feedback de estado de campos.</target>
+      </trans-unit>
+      <trans-unit id="labAnimationsDemoTitle" datatype="html">
+        <source>Animations demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de animaciones</target>
+      </trans-unit>
+      <trans-unit id="labAnimationsDemoDescription" datatype="html">
+        <source>Enter/leave motion with a staggered toast list.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Animaciones de entrada/salida con una lista de toasts escalonada.</target>
+      </trans-unit>
+      <trans-unit id="labStyleGuideDemoTitle" datatype="html">
+        <source>Style guide demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de guía de estilo</target>
+      </trans-unit>
+      <trans-unit id="labStyleGuideDemoDescription" datatype="html">
+        <source>Validate selectors, class names, and file bases.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Valida selectores, nombres de clases y bases de archivos.</target>
+      </trans-unit>
+      <trans-unit id="labTailwindDemoTitle" datatype="html">
+        <source>Tailwind demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de Tailwind</target>
+      </trans-unit>
+      <trans-unit id="labTailwindDemoDescription" datatype="html">
+        <source>Toggle common utilities and see the resulting class string.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Activa/desactiva utilidades comunes y observa la cadena de clases resultante.</target>
+      </trans-unit>
+      <trans-unit id="labA11yDemoTitle" datatype="html">
+        <source>A11y & Aria demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de A11y y Aria</target>
+      </trans-unit>
+      <trans-unit id="labA11yDemoDescription" datatype="html">
+        <source>Labeled fields, helper text, and a live region for results.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Campos etiquetados, texto de ayuda y una región en vivo para resultados.</target>
+      </trans-unit>
+      <trans-unit id="labPwaDemoTitle" datatype="html">
+        <source>PWA checklist demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de checklist PWA</target>
+      </trans-unit>
+      <trans-unit id="labPwaDemoDescription" datatype="html">
+        <source>App-shell readiness with no API caching and a clear update prompt.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Preparación del app-shell sin caché de API y con un aviso de actualización claro.</target>
+      </trans-unit>
+      <trans-unit id="labTestingDemoTitle" datatype="html">
+        <source>Testing checklist demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de checklist de testing</target>
+      </trans-unit>
+      <trans-unit id="labTestingDemoDescription" datatype="html">
+        <source>SSR-safe specs with HTTP mocks and router harness.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Specs seguras para SSR con mocks HTTP y harness de router.</target>
+      </trans-unit>
+      <trans-unit id="labPerformanceDemoTitle" datatype="html">
+        <source>Performance checklist demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de checklist de performance</target>
+      </trans-unit>
+      <trans-unit id="labPerformanceDemoDescription" datatype="html">
+        <source>Budgets, defer plan, and asset/network guardrails.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Budgets, plan de defer y guardrails de assets/red.</target>
+      </trans-unit>
+      <trans-unit id="labCustomBuildDemoTitle" datatype="html">
+        <source>Custom build checklist demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de checklist de build personalizado</target>
+      </trans-unit>
+      <trans-unit id="labCustomBuildDemoDescription" datatype="html">
+        <source>Goals, pipeline steps, caching, SSR checks, rollback.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Objetivos, pasos del pipeline, caché, checks de SSR y rollback.</target>
+      </trans-unit>
+      <trans-unit id="labCdkDemoTitle" datatype="html">
+        <source>CDK checklist demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Demo de checklist CDK</target>
+      </trans-unit>
+      <trans-unit id="labCdkDemoDescription" datatype="html">
+        <source>Overlay, focus, portal, and focus-restore steps.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/labs/labs-feature-page/labs-feature-page.html</context>
+        </context-group>
+        <target>Pasos de overlay, foco, portal y restauración de foco.</target>
+      </trans-unit>
       <trans-unit id="pokedexTypePlaceholder" datatype="html">
         <source>All types</source>
         <context-group purpose="location">
@@ -2595,7 +2910,7 @@
           <context context-type="sourcefile">src/app/features/labs/labs-index-page/labs-index-page.html</context>
           <context context-type="linenumber">5,7</context>
         </context-group>
-        <target>Ãndice</target>
+        <target>Índice</target>
       </trans-unit>
       <trans-unit id="labsIndexHint" datatype="html">
         <source>Isolated labs per feature to learn and measure.</source>

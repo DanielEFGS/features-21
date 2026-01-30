@@ -8,7 +8,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Beginner',
     duration: '30-40 min',
-    summary: 'Model local state with signals, derive values with computed, and use effects for side effects.'
+    summary: $localize`:@@labSignalsSummary:Model local state with signals, derive values with computed, and use effects for side effects.`
   },
   {
     id: 'httpresource',
@@ -16,7 +16,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '35-45 min',
-    summary: 'Reactive data fetching with resources, loading states, and abortable requests.'
+    summary: $localize`:@@labHttpResourceSummary:Reactive data fetching with resources, loading states, and abortable requests.`
   },
   {
     id: 'rxjs-interop',
@@ -24,7 +24,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '30-40 min',
-    summary: 'Bridge signals with observables using toSignal and toObservable.'
+    summary: $localize`:@@labRxjsInteropSummary:Bridge signals with observables using toSignal and toObservable.`
   },
   {
     id: 'routing',
@@ -32,7 +32,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '40-50 min',
-    summary: 'Lazy routes, route data, and guards with modern routing patterns.'
+    summary: $localize`:@@labRoutingSummary:Lazy routes, route data, and guards with modern routing patterns.`
   },
   {
     id: 'di',
@@ -40,7 +40,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '30-40 min',
-    summary: 'Inject services with inject(), tokens, and route-level providers.'
+    summary: $localize`:@@labDiSummary:Inject services with inject(), tokens, and route-level providers.`
   },
   {
     id: 'forms',
@@ -48,7 +48,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '40-50 min',
-    summary: 'Signal Forms with model-driven validation, field state, and schema rules.'
+    summary: $localize`:@@labFormsSummary:Signal Forms with model-driven validation, field state, and schema rules.`
   },
   {
     id: 'animations',
@@ -56,7 +56,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Beginner',
     duration: '25-35 min',
-    summary: 'Enter/leave animations, reusable CSS motion, and route transitions.'
+    summary: $localize`:@@labAnimationsSummary:Enter/leave animations, reusable CSS motion, and route transitions.`
   },
   {
     id: 'style-guide',
@@ -64,7 +64,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Beginner',
     duration: '20-30 min',
-    summary: 'Apply naming, structure, and lint rules consistently across features.'
+    summary: $localize`:@@labStyleGuideSummary:Apply naming, structure, and lint rules consistently across features.`
   },
   {
     id: 'tailwind',
@@ -72,7 +72,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Beginner',
     duration: '30-40 min',
-    summary: 'Build clean UI with utility-first patterns and reuse shared primitives.'
+    summary: $localize`:@@labTailwindSummary:Build clean UI with utility-first patterns and reuse shared primitives.`
   },
   {
     id: 'a11y-aria',
@@ -80,7 +80,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '30-40 min',
-    summary: 'Use Angular Aria and CDK focus helpers to keep UI accessible.'
+    summary: $localize`:@@labA11ySummary:Use Angular Aria and CDK focus helpers to keep UI accessible.`
   },
   {
     id: 'pwa',
@@ -89,7 +89,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '30-40 min',
-    summary: 'App shell caching, install flows, and update prompts (no API caching).'
+    summary: $localize`:@@labPwaSummary:App shell caching, install flows, and update prompts (no API caching).`
   },
   {
     id: 'testing',
@@ -98,7 +98,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '30-40 min',
-    summary: 'Unit patterns with Vitest: SSR-safe specs, HTTP mocks, router harness.'
+    summary: $localize`:@@labTestingSummary:Unit patterns with Vitest: SSR-safe specs, HTTP mocks, router harness.`
   },
   {
     id: 'performance',
@@ -107,7 +107,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Advanced',
     duration: '35-45 min',
-    summary: 'Budgets, defer/lazy strategies, and asset/network guardrails.'
+    summary: $localize`:@@labPerformanceSummary:Budgets, defer/lazy strategies, and asset/network guardrails.`
   },
   {
     id: 'custom-build',
@@ -116,7 +116,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Advanced',
     duration: '35-45 min',
-    summary: 'Design a custom build pipeline with cache strategy and SSR checks.'
+    summary: $localize`:@@labCustomBuildSummary:Design a custom build pipeline with cache strategy and SSR checks.`
   },
   {
     id: 'cdk',
@@ -125,7 +125,7 @@ export const LAB_CATALOG: LabCatalogItem[] = [
     status: 'done',
     level: 'Intermediate',
     duration: '30-40 min',
-    summary: 'CDK overlays, focus tools, and portals for reusable primitives.'
+    summary: $localize`:@@labCdkSummary:CDK overlays, focus tools, and portals for reusable primitives.`
   }
 ];
 
